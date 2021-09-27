@@ -11,6 +11,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+faketime string's format can be found in faketime's GitHub repo.
 ```
 usage: test-manager.py [-h] -f FAKETIME [-p PRELOAD] [-tz TIMEZONE] args [args ...]
 
