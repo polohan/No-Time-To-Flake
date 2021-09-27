@@ -1,6 +1,15 @@
 # CS-527-Project
 A tool to help developer find time-realted flaky test that utilize the [faketime](https://github.com/wolfcw/libfaketime) library.
 
+## Installation
+
+An automated install tool is coming soon. But as right now, you need to install the faketime tool yourself and guidence can be found [here](https://github.com/wolfcw/libfaketime).
+
+Once faketime is installed, you can install the Python dependencies using:
+```console
+pip install -r requirements.txt
+```
+
 ## Usage
 ```
 usage: test-manager.py [-h] -f FAKETIME [-p PRELOAD] [-tz TIMEZONE] args [args ...]
