@@ -4,6 +4,7 @@ import sys
 import random
 import subprocess
 import argparse
+import tzlocal
 from time import sleep
 from datetime import datetime
 
@@ -18,11 +19,12 @@ def _set_faketime(faketime):
         f.write(faketime)
         f.close()
 
-def _test_runner_simple(command, faketime, output_file_name):
+def _test_runner_simple(command, faketime, timezone, output_file_name):
     # TODO: implement switcher to switch between two faketime while running tests
     test_env = os.environ.copy()
     test_env["LD_PRELOAD"] = LD_PRELOAD_VAL
     test_env["FAKETIME"] = faketime
+    if timezone: test_env["TZ"] = timezone
 
     os.makedirs(LOG_FILE_DIR, exist_ok=True)
     with open(os.path.join(LOG_FILE_DIR, output_file_name), 'w') as f, subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=test_env) as process:
@@ -34,11 +36,11 @@ def _test_runner_simple(command, faketime, output_file_name):
     
     return process.poll() != 0  # if test failed
 
-def _test_runner_switch(command, switch, output_file_name):
+def _test_runner_switch(command, switch, timezone, output_file_name):
     # TODO: use _set_faketime to change the faketime string dynamically
     pass
 
-def _run_test_once(command, faketime='', switch=None):
+def _run_test_once(command, faketime='', switch=None, timezone=''):
     curr_time_str = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S")
     ret = {
         "error": False,
@@ -47,13 +49,14 @@ def _run_test_once(command, faketime='', switch=None):
         "start_time": curr_time_str,
         "end_time": None,
         "command": command,
-        "faketime_params": faketime,
+        "faketime_str": faketime,
+        "timezone": timezone if timezone else tzlocal.get_localzone().key
     }
 
     if not switch:
-        ret["error"] = _test_runner_simple(command, faketime, ret['log_file'])
+        ret["error"] = _test_runner_simple(command, faketime, timezone, ret['log_file'])
     else:
-        ret["error"] = _test_runner_switch(command, switch, ret['log_file'])
+        ret["error"] = _test_runner_switch(command, switch, timezone, ret['log_file'])
 
     ret["end_time"] = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S")
     return ret
@@ -68,6 +71,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Find time-related flaky test.')
     parser.add_argument("-f", "--faketime", type=str, help="the faketime string", required=True)
     parser.add_argument("-p", "--preload", type=str, help="path to the faketime preload library")
+    parser.add_argument("-tz", "--timezone", type=str, help="timezone to run the command in")
     parser.add_argument("command", metavar="args", type=str, nargs='+', help='the arguments used to launch the test cases')
     args = parser.parse_args()
 
@@ -75,5 +79,5 @@ if __name__ == "__main__":
         LD_PRELOAD_VAL = args.preload
 
     # TODO: build complete test sequence instead of hardcode faketime
-    res = _run_test_once(args.command, args.faketime)
+    res = _run_test_once(args.command, args.faketime, timezone=args.timezone)
     print(res)
