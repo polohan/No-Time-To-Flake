@@ -5,11 +5,15 @@ import unittest
 class TestStringMethods(unittest.TestCase):
 
     def test_same_second(self):
-        time_0 = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S %Z")
-        time_1 = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S %Z")
+        # strftime(): return a string representing the date,
+        # controlled by an explicit format string
+        time_0 = datetime.now().strftime("%Y-%m-%dT%H:%M:%S %Z")
+        time_1 = datetime.now().strftime("%Y-%m-%dT%H:%M:%S %Z")
         self.assertEqual(time_0, time_1)
 
     def test_plus_one_second(self):
+        # time(): return the time in seconds since the epoch
+        # as a floating point number 
         time_0 = int(time())
         sleep(1)
         time_1 = int(time())
