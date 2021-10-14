@@ -10,9 +10,6 @@ from datetime import datetime
 
 LOG_FILE_DIR = './output'
 LD_PRELOAD_VAL = '/usr/local/lib/faketime/libfaketime.so.1'
-START_TIME = {
-    
-}
 
 def _set_faketime(faketime):
     with open(os.path.expanduser('~/.faketimerc'), 'w') as f:
@@ -60,12 +57,6 @@ def _run_test_once(command, faketime='', switch=None, timezone=''):
 
     ret["end_time"] = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S")
     return ret
-            
-
-def start_test_sequence(command):
-    pass
-
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Find time-related flaky test.')
