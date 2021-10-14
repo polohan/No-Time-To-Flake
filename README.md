@@ -1,9 +1,9 @@
 # CS-527-Project
-A tool to help developer find time-realted flaky test that utilize the [faketime](https://github.com/wolfcw/libfaketime) library.
+A tool to help developers find time-related flaky tests that utilizes the [faketime](https://github.com/wolfcw/libfaketime) library.
 
 ## Installation
 
-An automated install tool is coming soon. But as right now, you need to install the faketime tool yourself and guidence can be found [here](https://github.com/wolfcw/libfaketime).
+An automated install tool is coming soon. But as of right now, you need to install the faketime tool yourself, and guidance can be found [here](https://github.com/wolfcw/libfaketime).
 
 Once faketime is installed, you can install the Python dependencies using:
 ```console
@@ -31,14 +31,14 @@ optional arguments:
 ```
 
 ## Example use case
-In [fake-test.py](https://github.com/polohan/CS-527-Project/blob/master/fake-test.py), there are two obvious time-related flaky test that could failed under very rare condition.  
+There are two obvious time-related flaky in [fake-test.py](https://github.com/polohan/CS-527-Project/blob/master/fake-test.py) tests that could fail under very rare conditions.  
 Try to run the test using:  
 ```console
 python3 fake-test.py
 ```
-The two tests should passed without problem.
+The two tests should pass without any problem.
 Now try to run the test using the tool that will speed up the clock speed by 10000 times:
 ```console
 python3 test-manager.py -f '+0 x10000' python3 fake-test.py
 ```
-This will make the runtime for the system calls that retrieve the current time 10000 times longer, which makes them likely to cross the second boundary and causing the test cases to fail.
+This will make the runtime for the system calls that retrieve the current time 10000 times longer, which makes them likely to cross the second boundary and cause the test cases to fail.
