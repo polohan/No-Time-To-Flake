@@ -59,7 +59,7 @@ def _run_test_once(command, faketime='', switch=None, timezone=''):
     return ret
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Find time-related flaky test.')
+    parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
     parser.add_argument("-f", "--faketime", type=str, help="the faketime string", required=True)
     parser.add_argument("-p", "--preload", type=str, help="path to the faketime preload library")
     parser.add_argument("-tz", "--timezone", type=str, help="timezone to run the command in")
