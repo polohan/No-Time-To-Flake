@@ -13,7 +13,7 @@ from typing import List
 import docker
 from docker.models.containers import Container
 
-FAKETIME_SOURCE_ZIP_LINK = "https://github.com/wolfcw/libfaketime/archive/refs/tags/v0.9.9.zip"
+BASIC_DEPENDENCY_INSTALLATION_FILE = "./install_basic_dependency.sh"
 
 def _create_container(image_url: str) -> Container:
     """Create the Docker container to run the test sequence in.
@@ -86,14 +86,16 @@ def _prepare_container(image_url: str, dependency_file: str, github_url: str) ->
         dependency_cmd = ["bash", file_name, '/']
         _run_cmds(container, dependency_cmd)
 
-    # install git so we can download project
-    _run_cmds(container, ['apt', 'update'])
-    _run_cmds(container, ['apt', 'install', 'git', '-y'])
+    # install git and libfaketime
+    file_name = BASIC_DEPENDENCY_INSTALLATION_FILE
+    _copy_file(container, file_name, file_name, '/')
+    dependency_cmd = ["bash", file_name, '/']
+    _run_cmds(container, dependency_cmd)
     
     # install project
     _run_cmds(container, ["git", "clone", github_url], '/home')
-
-    # TODO:install libfaketime
+    
+    return container
 
 def start(image_url: str, dependency_file: str, github_url: str, command: str) -> None:
     """Start the whole test process
@@ -104,7 +106,7 @@ def start(image_url: str, dependency_file: str, github_url: str, command: str) -
         github_url (str): the project to test
         command (str): the command to run the project
     """
-    _prepare_container(image_url, dependency_file, github_url)
+    container = _prepare_container(image_url, dependency_file, github_url)
 
 
 
