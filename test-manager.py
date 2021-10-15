@@ -82,12 +82,12 @@ def _prepare_container(image_url: str, dependency_file: str, target_project_url:
     print("Container created.")
 
     # install git and libfaketime
-    print("Installing Git and libfaketime.")
+    print("Installing Git, libfaketime and Python3.")
     file_name = BASIC_DEPENDENCY_INSTALLATION_FILE
     _copy_file(container, file_name, file_name, '/')
     dependency_cmd = ["bash", "-e", file_name, '/']
     _run_cmds(container, dependency_cmd)
-    print("Git and libfaketime installed.")
+    print("Git, libfaketime and Python3 installed.")
     
     # download projects
     print("Downloading projects from GitHub.")
