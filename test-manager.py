@@ -26,7 +26,7 @@ def _create_container(image_url: str) -> Container:
         container: a Docker container obj
     """
     client = docker.from_env()
-    container = client.containers.run(image_url, tty=True, detach=True)
+    container = client.containers.run(image_url, 'bash', tty=True, detach=True)
     return container
 
 # Source: https://stackoverflow.com/a/52716666
