@@ -100,12 +100,14 @@ def _prepare_container(image_url: str, dependency_file: str, target_project_url:
         print("Running dependency script.")
         dependency_file = os.path.abspath(dependency_file)
         file_name = os.path.basename(dependency_file)
+        project_name = target_project_url.split('/')[-1]
+        project_path = os.path.join('/home', project_name)
         
-        _copy_file(container, file_name, dependency_file, '/home')
+        _copy_file(container, file_name, dependency_file, project_path)
 
         # run the file to install additional dependency and install the project (if necessary)
         dependency_cmd = ["bash", "-e", file_name]
-        _run_cmds(container, dependency_cmd, '/home')
+        _run_cmds(container, dependency_cmd, project_path)
         print("Dependency script finished with no error.")
     
     return container
