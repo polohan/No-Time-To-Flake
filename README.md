@@ -1,5 +1,5 @@
 # CS-527-Project
-A tool to help developers find time-related flaky tests that utilizes the [faketime](https://github.com/wolfcw/libfaketime) library.
+A tool to help developers find time-related flaky tests by utilizing the [faketime](https://github.com/wolfcw/libfaketime) library and TZ environment variable.
 
 ## Installation
 
