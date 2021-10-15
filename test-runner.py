@@ -1,12 +1,10 @@
 import argparse
 import os
-import sys
 import random
 import subprocess
-import argparse
-import tzlocal
-from time import sleep
 from datetime import datetime
+
+import tzlocal
 
 LOG_FILE_DIR = './output'
 LD_PRELOAD_VAL = '/usr/local/lib/faketime/libfaketime.so.1'
@@ -25,7 +23,7 @@ def _test_runner_simple(command, faketime, timezone, output_file_name):
 
     os.makedirs(LOG_FILE_DIR, exist_ok=True)
     with open(os.path.join(LOG_FILE_DIR, output_file_name), 'w') as f, subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=test_env) as process:
-        while (process.poll() is None):
+        while process.poll() is None:
             line = process.stdout.readline()
             print(line, end='')
             print(line, end='', file=f)
