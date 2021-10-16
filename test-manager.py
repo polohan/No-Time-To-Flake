@@ -15,8 +15,9 @@ from typing import List
 import docker
 from docker.models.containers import Container
 
-BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "./install_basic_dependency.sh"
-LIBFAKETIME_DOWNLOAD_SCRIPT = "./download_libfaketime.sh"
+SCRIPT_FOLDER = "bash"
+BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "install_basic_dependency.sh"
+LIBFAKETIME_DOWNLOAD_SCRIPT = "download_libfaketime.sh"
 THIS_PROJECT_URL = "https://github.com/polohan/No-Time-To-Flake"
 THIS_PROJECT_FOLDER = "tool"
 TARGET_PROJECT_FOLDER = "target"
@@ -36,16 +37,16 @@ def _create_container(image_url: str) -> Container:
     return container
 
 # Source: https://stackoverflow.com/a/52716666
-def _copy_file(container: Container, file_name: str, src: str, dst: str) -> None:
+def _copy_file(container: Container, src: str, dst: str) -> None:
     """Copy a file into container.
 
     Args:
         container (Container): the target container to copy the file into
-        file_name (str): the file name of the copied file
         src (str): source path of the copied file
         dst (str): destination path of the copied file
     """
     cwd = os.getcwd()
+    file_name = os.path.basename(src)
     os.chdir(os.path.dirname(src))
     tmp_tar_name = f'{file_name}.tar'
     tmp_tar = tarfile.open(tmp_tar_name, mode='w')
@@ -100,7 +101,8 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
     """
     # download and unzip library
     file_name = LIBFAKETIME_DOWNLOAD_SCRIPT
-    _copy_file(container, file_name, file_name, workdir)
+    file_path = os.path.join(SCRIPT_FOLDER, LIBFAKETIME_DOWNLOAD_SCRIPT)
+    _copy_file(container, file_path, workdir)
     dependency_cmd = ["bash", "-e", file_name, workdir]
     _run_cmds(container, dependency_cmd)
 
@@ -152,7 +154,8 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     # install basic dependencies
     print("Installing basic dependencies.")
     file_name = BASIC_DEPENDENCY_INSTALLATION_SCRIPT
-    _copy_file(container, file_name, file_name, '/')
+    file_path = os.path.join(SCRIPT_FOLDER, file_name)
+    _copy_file(container, file_path, '/')
     dependency_cmd = ["bash", "-e", file_name, '/']
     _run_cmds(container, dependency_cmd)
     print("Basic dependencies installed.")
@@ -175,7 +178,7 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
         file_name = os.path.basename(dependency_file)
         project_path = os.path.join('/home', TARGET_PROJECT_FOLDER)
         
-        _copy_file(container, file_name, dependency_file, project_path)
+        _copy_file(container, dependency_file, project_path)
 
         # run the file to install additional dependency and install the project (if necessary)
         dependency_cmd = ["bash", "-e", file_name]
