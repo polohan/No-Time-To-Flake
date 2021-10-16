@@ -1,4 +1,4 @@
-# CS-527-Project
+# No Time To Flake
 A tool to help developers find time-related flaky tests by utilizing the [faketime](https://github.com/wolfcw/libfaketime) library and TZ environment variable.
 
 ## Installation
