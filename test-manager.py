@@ -6,14 +6,18 @@ The test manager that should:
 """
 
 import argparse
+import io
 import os
+import signal
 import tarfile
 from typing import List
 
 import docker
+from io import FileIO
 from docker.models.containers import Container
 
-BASIC_DEPENDENCY_INSTALLATION_FILE = "./install_basic_dependency.sh"
+BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "./install_basic_dependency.sh"
+LIBFAKETIME_DOWNLOAD_SCRIPT = "./download_libfaketime.sh"
 THIS_PROJECT_URL = "https://github.com/polohan/CS-527-Project"
 
 def _create_container(image_url: str) -> Container:
@@ -54,21 +58,75 @@ def _copy_file(container: Container, file_name: str, src: str, dst: str) -> None
     os.remove(tmp_tar_name)
     os.chdir(cwd)
 
-def _run_cmds(container: Container, commands: List[str], workdir: str = None) -> None:
+def _run_cmds(container: Container, commands: List[str], workdir: str = None, stream: bool = False, pipe: FileIO = None) -> None:
     """Run a command inside the container.
 
     Args:
         container (Container): the container to run the commands in
         commands (List[str]): command to be executed
         workdir (str): the working directory to run the command on
+        stream (bool): whether to stream the output
+        pipe (FileIO): a file-like object to stream the output to
     """
-    exit_code, output = container.exec_run(commands, privileged=True, stream=False, workdir=workdir)
-    if exit_code != 0:
-        print(output.decode(), end="")
-        raise Exception(f"exec_run exits with non-zero exit code: {exit_code}")
+    exit_code, output = container.exec_run(commands, privileged=True, stream=stream, workdir=workdir)
+    if not stream:
+        if exit_code != 0:
+            print(output.decode(), end="")
+            raise Exception(f"exec_run exits with non-zero exit code: {exit_code}")
+    else:
+        for data in output:
+            print(data.decode(), end="", file=pipe)
         
+def _test_faketime_compatibility(container: Container) -> bool:
+    """Test whether the faketime will hang in this container.
 
-def _prepare_container(image_url: str, dependency_file: str, target_project_url: str) -> None:
+    Args:
+        container (Container): the container to run the test on
+
+    Returns:
+        bool: whether the faketime test hang or not
+    """
+
+def _install_faketime(container: Container, workdir: str = '/') -> None:
+    """Install libfaketime in this container.
+    If the 'make test' fail, add the CFLAG -DFORCE_MONOTONIC_FIX to
+    src/Makefile.
+
+    Args:
+        container (Container): the container to install the libfaketime on
+        workdir (str): the working directory to use when installing libfaketime
+    """
+    # download and unzip library
+    file_name = LIBFAKETIME_DOWNLOAD_SCRIPT
+    _copy_file(container, file_name, file_name, workdir)
+    dependency_cmd = ["bash", "-e", file_name, workdir]
+    _run_cmds(container, dependency_cmd)
+
+    # run make test and wait to see if it hangs
+    def _handler(signum, frame):
+        print('Faketime hangs when runnning make test.')
+        raise TimeoutError('Faketime hangs when runnning make test.')
+
+    # set the timeout handler
+    signal.signal(signal.SIGALRM, _handler)
+    signal.alarm(60)    # wait 60 sec
+
+    fake_file = io.StringIO()
+
+    try:
+        _run_cmds(container, ['make', 'test'], os.path.join('/', 'libfaketime-0.9.9'), True, fake_file)
+    except TimeoutError:
+        output_lines = fake_file.getvalue().splitlines()
+        if "CLOCK_MONOTONIC" in output_lines[-1]:
+            print("hang!")
+            # TODO: add code to add additional cflag in MAKEFILE
+        else:
+            print(output_lines)
+            raise TimeoutError("Faketime hangs when running make test with unknown cause.")
+    finally:
+        signal.alarm(0) # cancel alarm
+
+def prepare_container(image_url: str, dependency_file: str, target_project_url: str) -> None:
     """Create the container for the test sequence.
 
     Args:
@@ -81,13 +139,18 @@ def _prepare_container(image_url: str, dependency_file: str, target_project_url:
     container = _create_container(image_url)
     print("Container created.")
 
-    # install git and libfaketime
-    print("Installing Git, libfaketime and Python3.")
-    file_name = BASIC_DEPENDENCY_INSTALLATION_FILE
+    # install basic dependencies
+    print("Installing basic dependencies.")
+    file_name = BASIC_DEPENDENCY_INSTALLATION_SCRIPT
     _copy_file(container, file_name, file_name, '/')
     dependency_cmd = ["bash", "-e", file_name, '/']
     _run_cmds(container, dependency_cmd)
-    print("Git, libfaketime and Python3 installed.")
+    print("Basic dependencies installed.")
+
+    # install libfaketime
+    print("Installing libfaketime.")
+    _install_faketime(container)
+    print("libfaketime installed.")
     
     # download projects
     print("Downloading projects from GitHub.")
@@ -95,7 +158,7 @@ def _prepare_container(image_url: str, dependency_file: str, target_project_url:
     _run_cmds(container, ["git", "clone", target_project_url], '/home')
     print("Projects downloaded.")
 
-    # copy dependency_file to container if exist
+    # run dependency_file if exist
     if dependency_file and os.path.isfile(dependency_file):
         print("Running dependency script.")
         dependency_file = os.path.abspath(dependency_file)
@@ -121,7 +184,7 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
         target_project_url (str): the project to test
         command (str): the command to run the project
     """
-    container = _prepare_container(image_url, dependency_file, target_project_url)
+    container = prepare_container(image_url, dependency_file, target_project_url)
 
     project_name = target_project_url.split('/')[-1]
 
