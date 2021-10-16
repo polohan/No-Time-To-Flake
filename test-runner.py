@@ -4,8 +4,6 @@ import random
 import subprocess
 from datetime import datetime
 
-import tzlocal
-
 LOG_FILE_DIR = './output'
 LD_PRELOAD_VAL = '/usr/local/lib/faketime/libfaketime.so.1'
 
@@ -45,7 +43,7 @@ def _run_test_once(command, faketime='', switch=None, timezone=''):
         "end_time": None,
         "command": command,
         "faketime_str": faketime,
-        "timezone": timezone if timezone else tzlocal.get_localzone().key
+        "timezone": timezone if timezone else datetime.now().astimezone().tzinfo
     }
 
     if not switch:
