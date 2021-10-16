@@ -19,6 +19,7 @@ from docker.models.containers import Container
 BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "./install_basic_dependency.sh"
 LIBFAKETIME_DOWNLOAD_SCRIPT = "./download_libfaketime.sh"
 THIS_PROJECT_URL = "https://github.com/polohan/CS-527-Project"
+LIBFAKETIME_FOLDER_NAME = "libfaketime-0.9.9"
 
 def _create_container(image_url: str) -> Container:
     """Create the Docker container to run the test sequence in.
@@ -112,19 +113,27 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
     signal.alarm(60)    # wait 60 sec
 
     fake_file = io.StringIO()
-
+    libfaketime_path = os.path.join(workdir, LIBFAKETIME_FOLDER_NAME)
+    
     try:
-        _run_cmds(container, ['make', 'test'], os.path.join('/', 'libfaketime-0.9.9'), True, fake_file)
+        _run_cmds(container, ['make', 'test'], libfaketime_path, True, fake_file)
     except TimeoutError:
         output_lines = fake_file.getvalue().splitlines()
         if "CLOCK_MONOTONIC" in output_lines[-1]:
-            print("hang!")
-            # TODO: add code to add additional cflag in MAKEFILE
+            print('"CLOCK_MONOTONIC test" apparently hang forever.')
+            print('Adding additional DFORCE_MONOTONIC_FIX CFLAG.')
+            _run_cmds(container, ['sed', '-i', '84 i CFLAGS += -DFORCE_MONOTONIC_FIX', './src/Makefile'],
+                libfaketime_path)
         else:
             print(output_lines)
             raise TimeoutError("Faketime hangs when running make test with unknown cause.")
     finally:
+        _run_cmds(container, ['make', 'clean'], libfaketime_path)
         signal.alarm(0) # cancel alarm
+
+    # install libfaketime
+    print("Performing make install.")
+    _run_cmds(container, ['make', 'install'], libfaketime_path)
 
 def prepare_container(image_url: str, dependency_file: str, target_project_url: str) -> None:
     """Create the container for the test sequence.
