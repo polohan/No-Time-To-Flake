@@ -6,19 +6,20 @@ The test manager that should:
 """
 
 import argparse
-import io
 import os
 import signal
 import tarfile
+from io import FileIO, StringIO
 from typing import List
 
 import docker
-from io import FileIO
 from docker.models.containers import Container
 
 BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "./install_basic_dependency.sh"
 LIBFAKETIME_DOWNLOAD_SCRIPT = "./download_libfaketime.sh"
-THIS_PROJECT_URL = "https://github.com/polohan/CS-527-Project"
+THIS_PROJECT_URL = "https://github.com/polohan/No-Time-To-Flake"
+THIS_PROJECT_FOLDER = "tool"
+TARGET_PROJECT_FOLDER = "target"
 LIBFAKETIME_FOLDER_NAME = "libfaketime-0.9.9"
 
 def _create_container(image_url: str) -> Container:
@@ -112,7 +113,7 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
     signal.signal(signal.SIGALRM, _handler)
     signal.alarm(60)    # wait 60 sec
 
-    fake_file = io.StringIO()
+    fake_file = StringIO()
     libfaketime_path = os.path.join(workdir, LIBFAKETIME_FOLDER_NAME)
     
     try:
@@ -163,8 +164,8 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     
     # download projects
     print("Downloading projects from GitHub.")
-    _run_cmds(container, ["git", "clone", THIS_PROJECT_URL], '/home')
-    _run_cmds(container, ["git", "clone", target_project_url], '/home')
+    _run_cmds(container, ["git", "clone", THIS_PROJECT_URL, THIS_PROJECT_FOLDER], '/home')
+    _run_cmds(container, ["git", "clone", target_project_url, TARGET_PROJECT_FOLDER], '/home')
     print("Projects downloaded.")
 
     # run dependency_file if exist
@@ -172,8 +173,7 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
         print("Running dependency script.")
         dependency_file = os.path.abspath(dependency_file)
         file_name = os.path.basename(dependency_file)
-        project_name = target_project_url.split('/')[-1]
-        project_path = os.path.join('/home', project_name)
+        project_path = os.path.join('/home', TARGET_PROJECT_FOLDER)
         
         _copy_file(container, file_name, dependency_file, project_path)
 
