@@ -20,8 +20,9 @@ BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "install_basic_dependency.sh"
 LIBFAKETIME_DOWNLOAD_SCRIPT = "download_libfaketime.sh"
 THIS_PROJECT_URL = "https://github.com/polohan/No-Time-To-Flake"
 THIS_PROJECT_FOLDER = "tool"
+RUNNER_SCRIPT = "test-runner.py"
 TARGET_PROJECT_FOLDER = "target"
-LIBFAKETIME_FOLDER_NAME = "libfaketime-0.9.9"
+LIBFAKETIME_FOLDER = "libfaketime-0.9.9"
 
 def _create_container(image_url: str) -> Container:
     """Create the Docker container to run the test sequence in.
@@ -116,7 +117,7 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
     signal.alarm(60)    # wait 60 sec
 
     fake_file = StringIO()
-    libfaketime_path = os.path.join(workdir, LIBFAKETIME_FOLDER_NAME)
+    libfaketime_path = os.path.join(workdir, LIBFAKETIME_FOLDER)
     
     try:
         _run_cmds(container, ['make', 'test'], libfaketime_path, True, fake_file)
@@ -138,13 +139,14 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
     print("Performing make install.")
     _run_cmds(container, ['make', 'install'], libfaketime_path)
 
-def prepare_container(image_url: str, dependency_file: str, target_project_url: str) -> None:
+def prepare_container(image_url: str, dependency_file: str, target_project_url: str, project_folder: str = '/home') -> None:
     """Create the container for the test sequence.
 
     Args:
         image_url (str): the image to run
         dependency_file (str): the path to the dependency file
         target_project_url (str): the project to test
+        project_folder (str): the folder to put the project in
     """
     # create container
     print("Creating container.")
@@ -167,8 +169,9 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     
     # download projects
     print("Downloading projects from GitHub.")
-    _run_cmds(container, ["git", "clone", THIS_PROJECT_URL, THIS_PROJECT_FOLDER], '/home')
-    _run_cmds(container, ["git", "clone", target_project_url, TARGET_PROJECT_FOLDER], '/home')
+    _run_cmds(container, ["git", "clone", THIS_PROJECT_URL, THIS_PROJECT_FOLDER], project_folder)
+    _run_cmds(container, ["pip", "install", "-r", "requirements.txt"], os.path.join(project_folder, THIS_PROJECT_FOLDER))
+    _run_cmds(container, ["git", "clone", target_project_url, TARGET_PROJECT_FOLDER], project_folder)
     print("Projects downloaded.")
 
     # run dependency_file if exist
@@ -176,7 +179,7 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
         print("Running dependency script.")
         dependency_file = os.path.abspath(dependency_file)
         file_name = os.path.basename(dependency_file)
-        project_path = os.path.join('/home', TARGET_PROJECT_FOLDER)
+        project_path = os.path.join(project_folder, TARGET_PROJECT_FOLDER)
         
         _copy_file(container, dependency_file, project_path)
 
@@ -186,6 +189,24 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
         print("Dependency script finished with no error.")
     
     return container
+
+def run_test(container: Container, command: str, faketime: str = '', switch: List[str] = None, timezone: str = '', project_folder: str = '/home') -> None:
+    """Run a single test run in the container.
+
+    Args:
+        container (Container): the target container to run the test in
+        command (str): the command to start the test for target project
+        faketime (str, optional): the faketime format string. Defaults to '' if using actual time.
+        switch (List[str], optional): times to switch between. Defaults to None.
+        timezone (str, optional): the TZ timezone string. Defaults to '' if using actual timezone.
+        project_folder (str, optional): the folder that contains the target project and tool. Defaults to '/home'.
+    """
+    target_project_path = os.path.join(project_folder, TARGET_PROJECT_FOLDER)
+    _run_cmds(container, ['python3',
+                            os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
+                            '-f', faketime,
+                            '-tz', timezone
+                        ] + [command], target_project_path, True)
 
 def start(image_url: str, dependency_file: str, target_project_url: str, command: str) -> None:
     """Start the whole test process
@@ -198,8 +219,7 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     """
     container = prepare_container(image_url, dependency_file, target_project_url)
 
-    project_name = target_project_url.split('/')[-1]
-
+    run_test(container, command)    # singly run it without faking time/timezone.
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
