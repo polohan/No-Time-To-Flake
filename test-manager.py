@@ -1,5 +1,5 @@
 """
-The test manager that should:
+The test manager should:
 1. Accepts Docker Image URL, Target Project URL, commands to install dependencies as input
 2. Uses the above information to create a Docker container to run and monitor the test sequences
 3. Generates the reports at the end
