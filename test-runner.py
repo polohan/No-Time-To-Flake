@@ -35,6 +35,7 @@ def _test_runner_switch(command, switch, timezone, output_file_name):
 
 def _run_test_once(command, faketime='', switch=None, timezone=''):
     curr_time_str = datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S")
+    command = command.split()
     ret = {
         "error": False,
         "log_file": f"output-{curr_time_str}-{str(random.randint(0, 9999)).zfill(4)}.log",
@@ -59,7 +60,7 @@ if __name__ == "__main__":
     parser.add_argument("-f", "--faketime", type=str, help="the faketime string", required=True)
     parser.add_argument("-p", "--preload", type=str, help="path to the faketime preload library")
     parser.add_argument("-tz", "--timezone", type=str, help="timezone to run the command in")
-    parser.add_argument("command", metavar="args", type=str, nargs='+', help='the arguments used to launch the test cases')
+    parser.add_argument("command", type=str, help='the arguments used to launch the test cases')
     args = parser.parse_args()
 
     if args.preload:
