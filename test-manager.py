@@ -62,7 +62,7 @@ def _copy_file(container: Container, src: str, dst: str) -> None:
     os.remove(tmp_tar_name)
     os.chdir(cwd)
 
-def _run_cmds(container: Container, commands: List[str], workdir: str = None, stream: bool = False, pipe: FileIO = None) -> None:
+def _run_cmds(container: Container, commands: List[str], workdir: str = None, stream: bool = False, pipe: FileIO = None, force_stdout: bool = False) -> None:
     """Run a command inside the container.
 
     Args:
@@ -70,7 +70,8 @@ def _run_cmds(container: Container, commands: List[str], workdir: str = None, st
         commands (List[str]): command to be executed
         workdir (str): the working directory to run the command on
         stream (bool): whether to stream the output
-        pipe (FileIO): a file-like object to stream the output to
+        pipe (FileIO, None): a file-like object to stream the output to. Default to None
+        force_stdout (bool): whether to also print to stdout when pipe is not None.
     """
     exit_code, output = container.exec_run(commands, privileged=True, stream=stream, workdir=workdir)
     if not stream:
@@ -79,7 +80,12 @@ def _run_cmds(container: Container, commands: List[str], workdir: str = None, st
             raise Exception(f"exec_run exits with non-zero exit code: {exit_code}")
     else:
         for data in output:
-            print(data.decode(), end="", file=pipe)
+            if pipe:
+                print(data.decode(), end="", file=pipe)
+                if force_stdout:
+                    print(data.decode(), end="")
+            else:
+                    print(data.decode(), end="")
         
 def _test_faketime_compatibility(container: Container) -> bool:
     """Test whether the faketime will hang in this container.
@@ -185,12 +191,12 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
 
         # run the file to install additional dependency and install the project (if necessary)
         dependency_cmd = ["bash", "-e", file_name]
-        _run_cmds(container, dependency_cmd, project_path)
+        _run_cmds(container, dependency_cmd, project_path, stream=True)
         print("Dependency script finished with no error.")
     
     return container
 
-def run_test(container: Container, command: str, faketime: str = '', switch: List[str] = None, timezone: str = '', project_folder: str = '/home') -> None:
+def run_test(container: Container, command: str, faketime: str = '', switch: List[str] = None, timezone: str = '', project_folder: str = '/home', output_file: str = '') -> None:
     """Run a single test run in the container.
 
     Args:
@@ -200,15 +206,22 @@ def run_test(container: Container, command: str, faketime: str = '', switch: Lis
         switch (List[str], optional): times to switch between. Defaults to None.
         timezone (str, optional): the TZ timezone string. Defaults to '' if using actual timezone.
         project_folder (str, optional): the folder that contains the target project and tool. Defaults to '/home'.
+        output_file (str, optional): the path of the file to write the output to
     """
     target_project_path = os.path.join(project_folder, TARGET_PROJECT_FOLDER)
+
+    write_pipe = None
+    if output_file:
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        write_pipe = open(output_file, 'w', encoding="utf-8")
+
     _run_cmds(container, ['python3',
                             os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
                             '-f', faketime,
                             '-tz', timezone
-                        ] + [command], target_project_path, True)
+                        ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
 
-def start(image_url: str, dependency_file: str, target_project_url: str, command: str) -> None:
+def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str) -> None:
     """Start the whole test process
 
     Args:
@@ -216,18 +229,31 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
         dependency_file (str): the path to the dependency file
         target_project_url (str): the project to test
         command (str): the command to run the project
+        output_path (str): the dir to put the output files in
     """
-    container = prepare_container(image_url, dependency_file, target_project_url)
+    if target_project_url[-1] == '/':
+        target_project_url = target_project_url[:-1]
 
-    run_test(container, command)    # singly run it without faking time/timezone.
+    container = prepare_container(image_url, dependency_file, target_project_url)
+    target_project_name = target_project_url.split('/')[-1]
+
+    # dry run
+    run_test(container, command)
+    # singly run it without faking time/timezone
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-ori.out'))
+    # run with faketime but don't actual fake anything
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-ref.out'), faketime='+0')
+    # run with faketime with speed up but don't actually speed up
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-ref.out'), faketime='i1.0')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
     parser.add_argument("-i", "--image", type=str, help="the Docker image URL", default="ubuntu:20.04")
     parser.add_argument("-d", "--dependency", type=str,
         help="the path to the files that contains the commands necessary to install all dependencies and the project")
+    parser.add_argument("-p", "--path", type=str, help='the folder to put the output file in', default='./output')
     parser.add_argument("project", type=str, help="the GitHub project URL")
     parser.add_argument("command", type=str, help="the command to run the test")
 
     args = parser.parse_args()
-    start(args.image, args.dependency, args.project, args.command)
+    start(args.image, args.dependency, args.project, args.command, args.path)
