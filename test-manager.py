@@ -80,12 +80,16 @@ def _run_cmds(container: Container, commands: List[str], workdir: str = None, st
             raise Exception(f"exec_run exits with non-zero exit code: {exit_code}")
     else:
         for data in output:
+            try:
+                decoded_data = data.decode()
+            except UnicodeDecodeError:
+                decoded_data = data
             if pipe:
-                print(data.decode(), end="", file=pipe)
+                print(decoded_data, end="", file=pipe)
                 if force_stdout:
-                    print(data.decode(), end="")
+                    print(decoded_data, end="")
             else:
-                    print(data.decode(), end="")
+                    print(decoded_data, end="")
         
 def _test_faketime_compatibility(container: Container) -> bool:
     """Test whether the faketime will hang in this container.
@@ -244,7 +248,23 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     # run with faketime but don't actual fake anything
     run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-ref.out'), faketime='+0')
     # run with faketime with speed up but don't actually speed up
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-ref.out'), faketime='i1.0')
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-ref.out'), faketime='+0 x1.0')
+    # run with faketime with adv increment feature
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-inc-ref.out'), faketime='+0 i1.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-2x.out'), faketime='+0 x2.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-4x.out'), faketime='+0 x4.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-8x.out'), faketime='+0 x8.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-10x.out'), faketime='+0 x10.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-100x.out'), faketime='+0 x100.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-1000x.out'), faketime='+0 x1000.0')
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-10000x.out'), faketime='+0 x10000.0')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
