@@ -1,0 +1,638 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] VRaptor3                                                           [pom]
+[INFO] vraptor                                                            [jar]
+[INFO] vraptor-plugin-gae                                                 [jar]
+[INFO] vraptor-mydvds                                                     [war]
+[INFO] vraptor-blank-project                                              [pom]
+[INFO] vraptor-blank-project-gae                                          [pom]
+[INFO] 
+[INFO] --------------------< br.com.caelum:vraptor-parent >--------------------
+[INFO] Building VRaptor3 3.5.6-SNAPSHOT                                   [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ vraptor-parent ---
+[INFO] 
+[INFO] -----------------------< br.com.caelum:vraptor >------------------------
+[INFO] Building vraptor 3.5.6-SNAPSHOT                                    [2/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ vraptor ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (process-sources) @ vraptor ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ vraptor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ vraptor ---
+[INFO] Compiling 1 source file to /home/target/vraptor-core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ vraptor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ vraptor ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ vraptor ---
+[INFO] Surefire report directory: /home/target/vraptor-core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running br.com.caelum.vraptor.VRaptorTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.136 sec
+Running br.com.caelum.vraptor.converter.LocaleBasedDateConverterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.708 sec
+Running br.com.caelum.vraptor.converter.l10n.LocaleBasedPrimitiveFloatConverterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec
+Running br.com.caelum.vraptor.converter.l10n.LocaleBasedFloatConverterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.191 sec
+Running br.com.caelum.vraptor.converter.l10n.LocaleBasedBigDecimalConverterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 sec
+Running br.com.caelum.vraptor.converter.l10n.LocaleBasedDoubleConverterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 sec
+Running br.com.caelum.vraptor.converter.l10n.LocaleBasedPrimitiveDoubleConverterTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 sec
+Running br.com.caelum.vraptor.converter.EnumConverterTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Running br.com.caelum.vraptor.converter.PrimitiveFloatConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running br.com.caelum.vraptor.converter.IntegerConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 sec
+Running br.com.caelum.vraptor.converter.LocaleBasedTimeConverterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec
+Running br.com.caelum.vraptor.converter.PrimitiveDoubleConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec
+Running br.com.caelum.vraptor.converter.FloatConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running br.com.caelum.vraptor.converter.DoubleConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec
+Running br.com.caelum.vraptor.converter.PrimitiveCharConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.137 sec
+Running br.com.caelum.vraptor.converter.PrimitiveIntConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 sec
+Running br.com.caelum.vraptor.converter.BooleanConverterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.073 sec
+Running br.com.caelum.vraptor.converter.PrimitiveByteConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running br.com.caelum.vraptor.converter.CharacterConverterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running br.com.caelum.vraptor.converter.LongConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec
+Running br.com.caelum.vraptor.converter.ShortConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
+Running br.com.caelum.vraptor.converter.BigDecimalConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec
+Running br.com.caelum.vraptor.converter.BigIntegerConverterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec
+Running br.com.caelum.vraptor.converter.PrimitiveShortConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec
+Running br.com.caelum.vraptor.converter.LocaleBasedCalendarConverterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.19 sec
+Running br.com.caelum.vraptor.converter.ByteConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+Running br.com.caelum.vraptor.converter.PrimitiveLongConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec
+Running br.com.caelum.vraptor.converter.jodatime.DateTimeConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.236 sec
+Running br.com.caelum.vraptor.converter.jodatime.LocaleBasedJodaTimeConverterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 sec
+Running br.com.caelum.vraptor.converter.jodatime.LocalTimeConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec
+Running br.com.caelum.vraptor.converter.jodatime.DateMidnightConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec
+Running br.com.caelum.vraptor.converter.jodatime.LocalDateTimeConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 sec
+Running br.com.caelum.vraptor.converter.jodatime.LocalDateConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec
+Running br.com.caelum.vraptor.converter.PrimitiveBooleanConverterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec
+Running br.com.caelum.vraptor.resource.HttpMethodTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.199 sec
+Running br.com.caelum.vraptor.resource.ResourceNotFoundHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.478 sec
+Running br.com.caelum.vraptor.resource.DefaultMethodNotAllowedHandlerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.174 sec
+Running br.com.caelum.vraptor.http.VRaptorRequestTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.306 sec
+Running br.com.caelum.vraptor.http.ParanamerNameProviderTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.475 sec
+Running br.com.caelum.vraptor.http.DefaultParameterNameProviderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.144 sec
+Running br.com.caelum.vraptor.http.EncodingHandlerFactoryTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.225 sec
+Running br.com.caelum.vraptor.http.DefaultResourceTranslatorTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.349 sec
+Running br.com.caelum.vraptor.http.iogi.IogiParametersProviderTest
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.05 sec
+Running br.com.caelum.vraptor.http.iogi.MiscIogiSupportTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.23 sec
+Running br.com.caelum.vraptor.http.iogi.IogiGenericTypesSupportTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec
+Running br.com.caelum.vraptor.http.ognl.VRaptorConvertersAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.611 sec
+Running br.com.caelum.vraptor.http.ognl.EmptyElementsRemovalTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running br.com.caelum.vraptor.http.ognl.OgnlParametersProviderTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.761 sec
+Running br.com.caelum.vraptor.http.ognl.ArrayAccessorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.298 sec
+Running br.com.caelum.vraptor.http.ognl.ListAccessorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.184 sec
+Running br.com.caelum.vraptor.http.ognl.ListNullHandlerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+Running br.com.caelum.vraptor.http.ognl.MiscOgnlSupportTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.07 sec
+Running br.com.caelum.vraptor.http.ognl.OgnlGenericTypesSupportTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+Running br.com.caelum.vraptor.http.ognl.ReflectionBasedNullHandlerTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.348 sec
+Running br.com.caelum.vraptor.http.ognl.GenericNullHandlerTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec
+Running br.com.caelum.vraptor.http.route.DefaultRouterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.665 sec
+Running br.com.caelum.vraptor.http.route.PathAnnotationRoutesParserTest
+Tests run: 33, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.866 sec
+Running br.com.caelum.vraptor.http.route.DefaultParametersControlTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.312 sec
+Running br.com.caelum.vraptor.http.route.RulesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+Running br.com.caelum.vraptor.http.route.DefaultTypeFinderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running br.com.caelum.vraptor.http.route.JavaEvaluatorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec
+Running br.com.caelum.vraptor.http.route.FixedMethodStrategyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Running br.com.caelum.vraptor.http.route.RouteBuilderTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.343 sec
+Running br.com.caelum.vraptor.http.WebXmlEncodingHandlerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec
+Running br.com.caelum.vraptor.http.DefaultFormatResolverTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec
+Running br.com.caelum.vraptor.core.DefaultInterceptorStackTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.134 sec
+Running br.com.caelum.vraptor.core.ToInstantiateInterceptorHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec
+Running br.com.caelum.vraptor.core.SafeResourceBundleTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running br.com.caelum.vraptor.core.DefaultInterceptorHandlerFactoryTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec
+Running br.com.caelum.vraptor.core.DefaultResultTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.395 sec
+Running br.com.caelum.vraptor.core.LazyInterceptorHandlerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec
+Running br.com.caelum.vraptor.core.DefaultConvertersTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.834 sec
+Running br.com.caelum.vraptor.core.JstlLocalizationTest
+sun.util.ResourceBundleEnumeration@49ee59eb
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec
+Running br.com.caelum.vraptor.core.DefaultMethodInfoTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running br.com.caelum.vraptor.core.ExceptionRecorderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.117 sec
+Running br.com.caelum.vraptor.core.DefaultStaticContentHandlerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.341 sec
+Running br.com.caelum.vraptor.interceptor.ParametersInstantiatorInterceptorTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.451 sec
+Running br.com.caelum.vraptor.interceptor.DefaultInterceptorRegistryTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running br.com.caelum.vraptor.interceptor.FlashInterceptorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec
+Running br.com.caelum.vraptor.interceptor.multipart.NullMultipartInterceptorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running br.com.caelum.vraptor.interceptor.multipart.DefaultUploadedFileTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptorTest
+21:50:29,684  WARN [CommonsUploadMultipartInterceptor] Request have an invalid encoding. Ignoring it
+21:50:29,690  WARN [CommonsUploadMultipartInterceptor] Request have an invalid encoding. Ignoring it
+21:50:36,047  WARN [CommonsUploadMultipartInterceptor] There was some problem parsing this multipart request, or someone is not sending a RFC1867 compatible multipart request.
+org.apache.commons.fileupload.FileUploadException
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptor.intercept(CommonsUploadMultipartInterceptor.java:103)
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptorTest.doNothingWhenFileUploadExceptionOccurs(CommonsUploadMultipartInterceptorTest.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+21:50:36,191  WARN [CommonsUploadMultipartInterceptor] The file size limit was exceeded.
+org.apache.commons.fileupload.FileUploadBase$SizeLimitExceededException: 
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptor.intercept(CommonsUploadMultipartInterceptor.java:103)
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptorTest.shouldValidateWhenSizeLimitExceededExceptionOccurs(CommonsUploadMultipartInterceptorTest.java:244)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+21:50:36,738  WARN [DefaultMultipartConfig] Unable to find temp directory, creating a dir inside the application
+java.io.IOException
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptor.intercept(CommonsUploadMultipartInterceptor.java:96)
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptorTest.shouldCreateDirInsideAppIfTempDirAreNotAvailable(CommonsUploadMultipartInterceptorTest.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+21:50:36,923  WARN [CommonsUploadMultipartInterceptor] There was some problem parsing this multipart request, or someone is not sending a RFC1867 compatible multipart request.
+org.apache.commons.fileupload.FileUploadException
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptor.intercept(CommonsUploadMultipartInterceptor.java:103)
+	at br.com.caelum.vraptor.interceptor.multipart.CommonsUploadMultipartInterceptorTest.handleValidatorMessageWhenFileUploadExceptionOccurs(CommonsUploadMultipartInterceptorTest.java:297)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.699 sec
+Running br.com.caelum.vraptor.interceptor.ExecuteMethodInterceptorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 sec
+Running br.com.caelum.vraptor.interceptor.download.InputStreamDownloadTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec
+Running br.com.caelum.vraptor.interceptor.download.ByteArrayDownloadTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running br.com.caelum.vraptor.interceptor.download.FileDownloadTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
+Running br.com.caelum.vraptor.interceptor.DeserializingInterceptorTest
+21:50:37,804  WARN [DeserializingInterceptor] Request does not have Content-Type and parameters will be not deserialized
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 sec
+Running br.com.caelum.vraptor.interceptor.DownloadInterceptorTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.363 sec
+Running br.com.caelum.vraptor.interceptor.ExceptionHandlerInterceptorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 sec
+Running br.com.caelum.vraptor.interceptor.TopologicalSortedInterceptorRegistryTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.357 sec
+Running br.com.caelum.vraptor.interceptor.InstantiateInterceptorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running br.com.caelum.vraptor.interceptor.ResourceLookupInterceptorTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 sec
+Running br.com.caelum.vraptor.interceptor.OutjectResultTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec
+Running br.com.caelum.vraptor.interceptor.DefaultTypeNameExtractorTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 sec
+Running br.com.caelum.vraptor.restfulie.relation.DefaultRelationBuilderTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec
+Running br.com.caelum.vraptor.restfulie.LinkConverterJSONTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.594 sec
+Running br.com.caelum.vraptor.restfulie.serialization.MethodValueSupportConverterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 sec
+Running br.com.caelum.vraptor.restfulie.serialization.RestfulSerializationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.144 sec
+Running br.com.caelum.vraptor.restfulie.serialization.RestfulSerializationJSONTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec
+Running br.com.caelum.vraptor.restfulie.headers.DefaultRestHeadersHandlerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+Running br.com.caelum.vraptor.restfulie.LinkConverterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.51 sec
+Running br.com.caelum.vraptor.validator.ValidatorAcceptanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.321 sec
+Running br.com.caelum.vraptor.validator.ReplicatorOutjectorTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running br.com.caelum.vraptor.validator.ValidationsTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.172 sec
+Running br.com.caelum.vraptor.validator.BeanValidatorTest
+log4j:WARN No appenders could be found for logger (org.jboss.logging).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+21:50:45,353  WARN [DefaultBeanValidator] skiping validation, input bean is null.
+21:50:45,394  WARN [NullBeanValidator   ] You are willing to validate an object, but there is no bean validation engine registered. Please add the jars of some implementation of Bean Validator.
+21:50:45,455  WARN [NullBeanValidator   ] You are willing to validate an object, but there is no bean validation engine registered. Please add the jars of some implementation of Bean Validator.
+21:50:45,458  WARN [NullBeanValidator   ] You are willing to validate an object, but there is no bean validation engine registered. Please add the jars of some implementation of Bean Validator.
+21:50:46,298  WARN [DefaultBeanValidator] skiping validation, input bean is null.
+21:50:46,428  WARN [DefaultBeanValidator] skiping validation, input bean is null.
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.862 sec
+Running br.com.caelum.vraptor.validator.DefaultValidatorTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.743 sec
+Running br.com.caelum.vraptor.validator.MethodValidatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.042 sec
+Running br.com.caelum.vraptor.serialization.xstream.XStreamXMLSerializationTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.357 sec
+Running br.com.caelum.vraptor.serialization.xstream.XStreamSerializerTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.039 sec
+Running br.com.caelum.vraptor.serialization.xstream.XStreamJSONSerializationTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.216 sec
+Running br.com.caelum.vraptor.serialization.xstream.XStreamJSONPSerializationTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec
+Running br.com.caelum.vraptor.serialization.DefaultXMLConfigurationTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running br.com.caelum.vraptor.serialization.I18nMessageSerializationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 sec
+Running br.com.caelum.vraptor.serialization.PackageComparatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Running br.com.caelum.vraptor.serialization.DefaultRepresentationResultTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.209 sec
+Running br.com.caelum.vraptor.serialization.gson.adapters.MessageSerializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.419 sec
+Running br.com.caelum.vraptor.serialization.gson.GsonJSONSerializationTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.139 sec
+Running br.com.caelum.vraptor.serialization.HTMLSerializationTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Running br.com.caelum.vraptor.view.DefaultValidationViewsFactoryTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.852 sec
+Running br.com.caelum.vraptor.view.LinkToHandlerTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 sec
+Running br.com.caelum.vraptor.view.DefaultLogicResultTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.344 sec
+Running br.com.caelum.vraptor.view.DefaultAcceptHeaderToFormatTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+Running br.com.caelum.vraptor.view.DefaultHttpResultTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 sec
+Running br.com.caelum.vraptor.view.DefaultPathResolverTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+Running br.com.caelum.vraptor.view.DefaultRefererResultTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.137 sec
+Running br.com.caelum.vraptor.view.DefaultPageResultTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.251 sec
+Running br.com.caelum.vraptor.view.DefaultStatusTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.362 sec
+Running br.com.caelum.vraptor.ioc.guice.SessionCustomScopeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.197 sec
+Running br.com.caelum.vraptor.ioc.guice.GuiceProviderTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.851 sec
+Running br.com.caelum.vraptor.ioc.spring.SpringBasedContainerTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.414 sec
+Running br.com.caelum.vraptor.ioc.spring.VRaptorScopeResolverTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running br.com.caelum.vraptor.ioc.spring.SpringProviderRegisteringComponentsTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.245 sec
+Running br.com.caelum.vraptor.ioc.spring.SpringProviderTest
+21:52:30,589 ERROR [ScannotationComponentScanner] There's no occurence of package br.com.caelum.vraptor.ioc.spring.components.registrar in classpath
+21:52:31,045 ERROR [ScannotationComponentScanner] There's no occurence of package br.com.caelum.vraptor.ioc.spring.components.registrar in classpath
+21:52:31,125 ERROR [ScannotationComponentScanner] There's no occurence of package br.com.caelum.vraptor.ioc.spring.components.registrar in classpath
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.845 sec
+Running br.com.caelum.vraptor.ioc.AbstractComponentRegistryTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec
+Running br.com.caelum.vraptor.ioc.ComponentFactoryIntrospectorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running br.com.caelum.vraptor.ioc.pico.PicoComponentRegistryTest
+21:52:32,008  WARN [PicoComponentRegistry] VRaptor was already initialized, the contexts were created but you are registering a component.This is nasty. The original component might already be in use.Avoid doing it: br.com.caelum.vraptor.ioc.pico.PicoComponentRegistryTest$Base
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.488 sec
+Running br.com.caelum.vraptor.ioc.pico.CustomPicoProviderTest
+21:52:41,731  WARN [PicoComponentRegistry] VRaptor was already initialized, the contexts were created but you are registering a component.This is nasty. The original component might already be in use.Avoid doing it: br.com.caelum.vraptor.ioc.GenericContainerTest$MyAppComponent
+21:52:42,191  WARN [PicoComponentRegistry] VRaptor was already initialized, the contexts were created but you are registering a component.This is nasty. The original component might already be in use.Avoid doing it: br.com.caelum.vraptor.ioc.GenericContainerTest$MyAppComponentWithLifecycle
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.089 sec
+Running br.com.caelum.vraptor.ioc.pico.PicoBasedContainerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec
+Running br.com.caelum.vraptor.ioc.pico.PicoProviderTest
+21:52:51,893  WARN [PicoComponentRegistry] VRaptor was already initialized, the contexts were created but you are registering a component.This is nasty. The original component might already be in use.Avoid doing it: br.com.caelum.vraptor.ioc.GenericContainerTest$MyAppComponent
+21:52:52,240  WARN [PicoComponentRegistry] VRaptor was already initialized, the contexts were created but you are registering a component.This is nasty. The original component might already be in use.Avoid doing it: br.com.caelum.vraptor.ioc.GenericContainerTest$MyAppComponentWithLifecycle
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.103 sec
+Running br.com.caelum.vraptor.ioc.InterceptorStereotypeHandlerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Running br.com.caelum.vraptor.deserialization.JsonDeserializerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.306 sec
+Running br.com.caelum.vraptor.deserialization.DeserializesHandlerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running br.com.caelum.vraptor.deserialization.DefaultDeserializersTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec
+Running br.com.caelum.vraptor.deserialization.XStreamXmlDeserializerTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.318 sec
+Running br.com.caelum.vraptor.deserialization.gson.GsonDeserializerTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.465 sec
+Running br.com.caelum.vraptor.proxy.CglibProxifierTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec
+Running br.com.caelum.vraptor.proxy.JavassistProxifierTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 sec
+Running br.com.caelum.vraptor.proxy.ReflectionInstanceCreatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 sec
+Running br.com.caelum.vraptor.extra.ForwardToDefaultViewInterceptorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec
+Running br.com.caelum.vraptor.scan.WebBasedClasspathResolverTest
+21:52:57,275 ERROR [WebBasedClasspathResolver] Could not get class loader from servlet context. Using current thread class loader...
+java.lang.SecurityException: getClassLoader
+	at br.com.caelum.vraptor.scan.WebBasedClasspathResolver.getClassLoader(WebBasedClasspathResolver.java:49)
+	at br.com.caelum.vraptor.scan.WebBasedClasspathResolverTest.callerContextDifferentFromRequestedClassLoaderReturnsCurrentClassLoader(WebBasedClasspathResolverTest.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec
+Running br.com.caelum.vraptor.scan.DynamicWebAppBootstrapTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+Running br.com.caelum.vraptor.scan.JavassistBootstrapGeneratorTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.694 sec
+Running br.com.caelum.vraptor.scan.NullWebAppBootstrapTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running br.com.caelum.vraptor.scan.ScannotationComponentScannerTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 80.667 sec
+Running br.com.caelum.vraptor.util.test.MockSerializationResultTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec
+Running br.com.caelum.vraptor.util.test.MockResultTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.341 sec
+Running br.com.caelum.vraptor.util.test.MockValidatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.247 sec
+Running br.com.caelum.vraptor.util.test.MockHttpServletResponseTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running br.com.caelum.vraptor.util.test.MockHttpResultTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec
+Running br.com.caelum.vraptor.util.ISO8601UtilTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.217 sec
+Running br.com.caelum.vraptor.util.extjs.DefaultExtJsonTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.246 sec
+Running br.com.caelum.vraptor.util.StringnifierTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running br.com.caelum.vraptor.config.ApplicationConfigurationTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
+Running br.com.caelum.vraptor.config.BasicConfigurationTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.303 sec
+
+Results :
+
+Tests run: 1139, Failures: 0, Errors: 0, Skipped: 6
+
+[INFO] 
+[INFO] ------------------< br.com.caelum:vraptor-plugin-gae >------------------
+[INFO] Building vraptor-plugin-gae 3.5.6-SNAPSHOT                         [3/6]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2: https://issues.sonatype.org/browse/MVNCENTRAL-244
+[INFO] 
+[INFO] --------------------< br.com.caelum:vraptor-mydvds >--------------------
+[INFO] Building vraptor-mydvds 3.5.6-SNAPSHOT                             [4/6]
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ vraptor-mydvds ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ vraptor-mydvds ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:compile (default-compile) @ vraptor-mydvds ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ vraptor-mydvds ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/vraptor-mydvds/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.1:testCompile (default-testCompile) @ vraptor-mydvds ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ vraptor-mydvds ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------------< br.com.caelum:vraptor-blank-project >-----------------
+[INFO] Building vraptor-blank-project 3.5.6-SNAPSHOT                      [5/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ vraptor-blank-project ---
+[INFO] 
+[INFO] --------------< br.com.caelum:vraptor-blank-project-gae >---------------
+[INFO] Building vraptor-blank-project-gae 3.5.6-SNAPSHOT                  [6/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ vraptor-blank-project-gae ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for VRaptor3 3.5.6-SNAPSHOT:
+[INFO] 
+[INFO] VRaptor3 ........................................... SUCCESS [  3.613 s]
+[INFO] vraptor ............................................ SUCCESS [04:38 min]
+[INFO] vraptor-plugin-gae ................................. FAILURE [  0.467 s]
+[INFO] vraptor-mydvds ..................................... SUCCESS [  1.371 s]
+[INFO] vraptor-blank-project .............................. SUCCESS [  0.155 s]
+[INFO] vraptor-blank-project-gae .......................... SUCCESS [  0.179 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:45 min
+[INFO] Finished at: 2021-10-31T21:54:23Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project vraptor-plugin-gae: Could not resolve dependencies for project br.com.caelum:vraptor-plugin-gae:jar:3.5.6-SNAPSHOT: Failed to collect dependencies at gmultipart:gmultipart:jar:0.4: Failed to read artifact descriptor for gmultipart:gmultipart:jar:0.4: Could not transfer artifact gmultipart:gmultipart:pom:0.4 from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [gmultipart (http://gmultipart.googlecode.com/svn/repo/m2, default, releases+snapshots)] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :vraptor-plugin-gae
+{'error': True, 'log_file': 'output-2021-10-31T21:49:26-1808.log', 'message': '', 'start_time': '2021-10-31T21:49:26', 'end_time': '2021-10-31T21:50:03', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 x8.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

@@ -1,0 +1,110 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.codehaus.mojo:versions-maven-plugin >---------------
+[INFO] Building Versions Maven Plugin 2.9-SNAPSHOT
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (mojo-enforcer-rules) @ versions-maven-plugin ---
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.6.0:helpmojo (help-mojo) @ versions-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 31 mojo descriptors.
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.6.0:helpmojo (default) @ versions-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 31 mojo descriptors.
+[INFO] 
+[INFO] --- modello-maven-plugin:1.11:xpp3-reader (generate-sources) @ versions-maven-plugin ---
+[INFO] outputDirectory: /home/target/target/generated-sources/modello
+[INFO] Working on model: src/main/mdo/rule.mdo
+[INFO] Generating current version: 2.0.0
+[INFO] 
+[INFO] --- modello-maven-plugin:1.11:xpp3-writer (generate-sources) @ versions-maven-plugin ---
+[INFO] outputDirectory: /home/target/target/generated-sources/modello
+[INFO] Working on model: src/main/mdo/rule.mdo
+[INFO] Generating current version: 2.0.0
+[INFO] 
+[INFO] --- modello-maven-plugin:1.11:java (generate-sources) @ versions-maven-plugin ---
+[INFO] outputDirectory: /home/target/target/generated-sources/modello
+[INFO] Working on model: src/main/mdo/rule.mdo
+[INFO] Generating current version: 2.0.0
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ versions-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ versions-maven-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 90 source files to /home/target/target/classes
+[INFO] /home/target/src/main/java/org/codehaus/mojo/versions/CompareDependenciesMojo.java: Some input files use or override a deprecated API.
+[INFO] /home/target/src/main/java/org/codehaus/mojo/versions/CompareDependenciesMojo.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/target/src/main/java/org/codehaus/mojo/versions/api/PropertyVersions.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/target/src/main/java/org/codehaus/mojo/versions/api/PropertyVersions.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.6.0:descriptor (default-descriptor) @ versions-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 31 mojo descriptors.
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.6.0:descriptor (default) @ versions-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 31 mojo descriptors.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ versions-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ versions-maven-plugin ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ versions-maven-plugin ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.codehaus.mojo.versions.AbstractVersionsUpdaterMojoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,996,192.112 s - in org.codehaus.mojo.versions.AbstractVersionsUpdaterMojoTest
+[INFO] Running org.codehaus.mojo.versions.RequiredMavenVersionFinderTest
+[INFO] Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,491,658.816 s - in org.codehaus.mojo.versions.RequiredMavenVersionFinderTest
+[INFO] Running org.codehaus.mojo.versions.SeparatePatternsForIncludesAnExcludesTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,120,880 s - in org.codehaus.mojo.versions.SeparatePatternsForIncludesAnExcludesTest
+[INFO] Running org.codehaus.mojo.versions.ordering.MercuryVersionComparatorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 576 s - in org.codehaus.mojo.versions.ordering.MercuryVersionComparatorTest
+[INFO] Running org.codehaus.mojo.versions.ordering.VersionComparatorsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14 s - in org.codehaus.mojo.versions.ordering.VersionComparatorsTest
+[INFO] Running org.codehaus.mojo.versions.ordering.MajorMinorIncrementalFilterTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,673,109.296 s - in org.codehaus.mojo.versions.ordering.MajorMinorIncrementalFilterTest
+[INFO] Running org.codehaus.mojo.versions.ordering.NumericVersionComparatorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 81,246 s - in org.codehaus.mojo.versions.ordering.NumericVersionComparatorTest
+[INFO] Running org.codehaus.mojo.versions.ordering.MavenVersionComparatorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 200 s - in org.codehaus.mojo.versions.ordering.MavenVersionComparatorTest
+[INFO] Running org.codehaus.mojo.versions.RewriteWithStAXTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 890,558 s - in org.codehaus.mojo.versions.RewriteWithStAXTest
+[INFO] Running org.codehaus.mojo.versions.api.ArtifactVersionsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10 s - in org.codehaus.mojo.versions.api.ArtifactVersionsTest
+[INFO] Running org.codehaus.mojo.versions.api.PomHelperTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 334,304 s - in org.codehaus.mojo.versions.api.PomHelperTest
+[INFO] Running org.codehaus.mojo.versions.api.DefaultVersionsHelperTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,474,244.112 s - in org.codehaus.mojo.versions.api.DefaultVersionsHelperTest
+[INFO] Running org.codehaus.mojo.versions.utils.PropertiesVersionsFileReaderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96,230 s - in org.codehaus.mojo.versions.utils.PropertiesVersionsFileReaderTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 95, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.20:check (check-java18) @ versions-maven-plugin ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  843 d 00:55 h
+[INFO] Finished at: 2024-03-09T12:02:37Z
+[INFO] ------------------------------------------------------------------------
+{'error': False, 'log_file': 'output-2021-11-01T03:09:49-3099.log', 'message': '', 'start_time': '2021-11-01T03:09:49', 'end_time': '2021-11-01T03:10:53', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i2.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

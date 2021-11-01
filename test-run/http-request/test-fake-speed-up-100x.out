@@ -1,0 +1,73 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.github.kevinsawicki:http-request:jar:6.1-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM com.github.kevinsawicki:http-request:6.1-SNAPSHOT (/home/target/lib/pom.xml) points at com.github.kevinsawicki:http-request-parent instead of org.sonatype.oss:oss-parent, please verify your project structure @ line 5, column 11
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 139, column 24
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] http-request                                                       [jar]
+[INFO] http-request-parent                                                [pom]
+[INFO] 
+[INFO] ----------------< com.github.kevinsawicki:http-request >----------------
+[INFO] Building http-request 6.1-SNAPSHOT                                 [1/2]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ http-request ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ http-request ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/lib/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ http-request ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-bundle-plugin:2.3.7:manifest (bundle-manifest) @ http-request ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ http-request ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/lib/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ http-request ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ http-request ---
+[INFO] Surefire report directory: /home/target/lib/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.kevinsawicki.http.EncodeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.354 sec
+Running com.github.kevinsawicki.http.HttpRequestTest
+2021-10-31 21:00:26.101:INFO:oejs.Server:jetty-8.1.9.v20130131
+2021-10-31 21:00:40.072:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:43203
+2021-10-31 21:00:43.330:INFO:oejs.Server:jetty-8.1.9.v20130131
+2021-10-31 21:00:44.619:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:43543
+Tests run: 161, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 247.119 sec
+
+Results :
+
+Tests run: 163, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------< com.github.kevinsawicki:http-request-parent >-------------
+[INFO] Building http-request-parent 1.0                                   [2/2]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] http-request 6.1-SNAPSHOT .......................... SUCCESS [10:23 min]
+[INFO] http-request-parent 1.0 ............................ SUCCESS [  0.091 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13:13 min
+[INFO] Finished at: 2021-10-31T21:03:27Z
+[INFO] ------------------------------------------------------------------------
+{'error': False, 'log_file': 'output-2021-10-31T20:45:18-0118.log', 'message': '', 'start_time': '2021-10-31T20:45:18', 'end_time': '2021-10-31T20:45:29', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 x100.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

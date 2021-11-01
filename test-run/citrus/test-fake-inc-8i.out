@@ -1,0 +1,899 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Citrus Parent Project                                              [pom]
+[INFO] Citrus Servlet API Dependencies                                    [jar]
+[INFO] Citrus Log Configuration                                           [jar]
+[INFO] Citrus Testing Utilities                                           [jar]
+[INFO] Citrus Common Utilities                                            [jar]
+[INFO] Citrus Generic Type Analyzer                                       [jar]
+[INFO] Citrus Spring Extensions                                           [jar]
+[INFO] SpringExt All-in-one Bundle                                        [jar]
+[INFO] Simple Expression Engine                                           [jar]
+[INFO] Base-classes for Service implementations                           [jar]
+[INFO] Citrus Data Resolver Service                                       [jar]
+[INFO] Citrus Properties-based Configuration                              [jar]
+[INFO] Citrus Resource Loading Service                                    [jar]
+[INFO] Citrus Upload Service                                              [jar]
+[INFO] Hessian Port                                                       [jar]
+[INFO] Citrus Request Context Service                                     [jar]
+[INFO] Citrus Pull Service                                                [jar]
+[INFO] Citrus Form Service                                                [jar]
+[INFO] Citrus Pipeline Service                                            [jar]
+[INFO] Citrus Template Service                                            [jar]
+[INFO] Citrus Module Loading Service                                      [jar]
+[INFO] citrus mapping service                                             [jar]
+[INFO] Citrus JSP Template Engine                                         [jar]
+[INFO] Citrus Velocity Template Engine                                    [jar]
+[INFO] Citrus Freemarker Template Engine                                  [jar]
+[INFO] Citrus URI Broker Service                                          [jar]
+[INFO] Citrus Mail Service                                                [jar]
+[INFO] Citrus Webx Framework                                              [jar]
+[INFO] Citrus Testing Utilities for Webx                                  [jar]
+[INFO] Citrus Webx Turbine-style Implementation                           [jar]
+[INFO] Servlet 3.0 Async Support                                          [jar]
+[INFO] Development mode tools for Webx                                    [jar]
+[INFO] Webx All-in-one Bundle                                             [jar]
+[INFO] Test Utils for Webx                                                [jar]
+[INFO] 
+[INFO] ------------------< com.alibaba.citrus:citrus-parent >------------------
+[INFO] Building Citrus Parent Project 3.2.4                              [1/34]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ citrus-parent ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ citrus-parent ---
+[INFO] Executing tasks
+
+main:
+     [echo] project home:        /home/target
+     [echo] java home:           /opt/java/openjdk/jre
+     [echo] java source version: 1.6
+     [echo] java target version: 1.6
+     [echo] java source charset: UTF-8
+[INFO] Executed tasks
+[INFO] 
+[INFO] --------------< com.alibaba.citrus:citrus-common-servlet >--------------
+[INFO] Building Citrus Servlet API Dependencies 3.2.4                    [2/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ citrus-common-servlet ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ citrus-common-servlet ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/common/servlet/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ citrus-common-servlet ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ citrus-common-servlet ---
+[INFO] Executing tasks
+
+main:
+     [echo] +----------------------------------------------------------------+
+     [echo] ! Servlet 3.1.0 Profile activated                                !
+     [echo] ! To test under Servlet 2, please using argument -Dservlet2      !
+     [echo] ! To test under Servlet 3.0, please using argument -Dservlet30   !
+     [echo] +----------------------------------------------------------------+
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ citrus-common-servlet ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/common/servlet/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ citrus-common-servlet ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ citrus-common-servlet ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------< com.alibaba.citrus:citrus-common-logconfig >-------------
+[INFO] Building Citrus Log Configuration 3.2.4                           [3/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ citrus-common-logconfig ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ citrus-common-logconfig ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ citrus-common-logconfig ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ citrus-common-logconfig ---
+[INFO] Executing tasks
+
+main:
+     [echo] project home:        /home/target/common/logconfig
+     [echo] java home:           /opt/java/openjdk/jre
+     [echo] java source version: 1.6
+     [echo] java target version: 1.6
+     [echo] java source charset: UTF-8
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ citrus-common-logconfig ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ citrus-common-logconfig ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ citrus-common-logconfig ---
+[INFO] Surefire report directory: /home/target/common/logconfig/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.alibaba.citrus.logconfig.LogConfiguratorTests
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,427,528 sec - in com.alibaba.citrus.logconfig.LogConfiguratorTests
+Running com.alibaba.citrus.logconfig.Log4jConfiguratorTests
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,927,231.296 sec - in com.alibaba.citrus.logconfig.Log4jConfiguratorTests
+Running com.alibaba.citrus.logconfig.support.SecurityLoggerTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 184,584 sec - in com.alibaba.citrus.logconfig.support.SecurityLoggerTests
+Running com.alibaba.citrus.logconfig.support.ConfigurableLoggerTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 442,352.704 sec - in com.alibaba.citrus.logconfig.support.ConfigurableLoggerTests
+Running com.alibaba.citrus.logconfig.LogbackConfiguratorTests
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,195,463.296 sec - in com.alibaba.citrus.logconfig.LogbackConfiguratorTests
+Running com.alibaba.citrus.logconfig.LogConfiguratorListenerMultiLogSystemsTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,635,784 sec - in com.alibaba.citrus.logconfig.LogConfiguratorListenerMultiLogSystemsTests
+Running com.alibaba.citrus.logconfig.LogConfiguratorListenerTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 864,168 sec - in com.alibaba.citrus.logconfig.LogConfiguratorListenerTests
+
+Results :
+
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ----------------< com.alibaba.citrus:citrus-test-util >-----------------
+[INFO] Building Citrus Testing Utilities 3.2.4                           [4/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ citrus-test-util ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ citrus-test-util ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ citrus-test-util ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ citrus-test-util ---
+[INFO] Executing tasks
+
+main:
+     [echo] project home:        /home/target/test/util
+     [echo] java home:           /opt/java/openjdk/jre
+     [echo] java source version: 1.6
+     [echo] java target version: 1.6
+     [echo] java source charset: UTF-8
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ citrus-test-util ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/test/util/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ citrus-test-util ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ citrus-test-util ---
+[INFO] Surefire report directory: /home/target/test/util/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.alibaba.citrus.test.TestEnvStaticTests
++-----------------------------------------------------------------------------
+| Set base dir to:          /home/target/test/util
+| Set source dir to:        /home/target/test/util/src/test/config
+| Set destination dir to:   /home/target/test/util/target/test
+| Initializing log system:  file:/home/target/test/util/target/classes/com/alibaba/citrus/test/logback-test-default.xml
++-----------------------------------------------------------------------------
+INFO: configuring "logback" using file:/home/target/test/util/target/classes/com/alibaba/citrus/test/logback-test-default.xml
+ - with property destdir = /home/target/test/util/target/test
+ - with property localAddress = 172.17.0.3
+ - with property localHost = 591efda51dfc
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = /home/target/test/util/target/test
+ - with property srcdir = /home/target/test/util/src/test/config
+
+00:55:16.031 [main] INFO  TestEnvStaticTests[] -  basedir: /home/target/test/util
+05:13:32.031 [main] INFO  TestEnvStaticTests[] -   srcdir: /home/target/test/util/src/test/config
+09:00:44.031 [main] INFO  TestEnvStaticTests[] -  destdir: /home/target/test/util/target/test
+09:37:16.031 [main] INFO  TestEnvStaticTests[] - javaHome: /opt/java/openjdk
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,262,408 sec - in com.alibaba.citrus.test.TestEnvStaticTests
+Running com.alibaba.citrus.test.TestUtilTests
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 62,088 sec - in com.alibaba.citrus.test.TestUtilTests
+Running com.alibaba.citrus.test.TestNameAwareTests
+05:55:32.031 [main] INFO  TestNameAwareTests[test1] - init
+05:55:40.031 [main] INFO  TestNameAwareTests[test1] - test1
+05:56:04.031 [main] INFO  TestNameAwareTests[test1] - dispose
+10:37:08.031 [main] INFO  TestNameAwareTests[test2] - init
+10:37:16.031 [main] INFO  TestNameAwareTests[test2] - test2
+12:27:56.031 [main] INFO  TestNameAwareTests[test2] - dispose
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29,544 sec - in com.alibaba.citrus.test.TestNameAwareTests
+Running com.alibaba.citrus.test.PrototypedTests
+17:00:44.031 [main] INFO  PrototypedTests[test1] - init
+17:01:48.031 [main] INFO  PrototypedTests[test1] - test1
+17:13:48.031 [main] INFO  PrototypedTests[test1] - dispose
+17:26:20.031 [main] INFO  PrototypedTests[test2] - init
+17:27:24.031 [main] INFO  PrototypedTests[test2] - test2
+17:28:36.031 [main] INFO  PrototypedTests[test2] - dispose
+17:40:44.031 [main] INFO  PrototypedTests[test1] - init
+20:30:44.031 [main] INFO  PrototypedTests[test1] - test1
+20:35:08.031 [main] INFO  PrototypedTests[test1] - dispose
+00:19:32.031 [main] INFO  PrototypedTests[test2] - init
+00:19:48.031 [main] INFO  PrototypedTests[test2] - test2
+00:20:04.031 [main] INFO  PrototypedTests[test2] - dispose
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42,512 sec - in com.alibaba.citrus.test.PrototypedTests
+Running com.alibaba.citrus.test.TestEnvTests
++-----------------------------------------------------------------------------
+| Set base dir to:          /home/target/test/util
+| Set source dir to:        /home/target/test/util/src/test/config
+| Set destination dir to:   /home/target/test/util/target/test
+| Initializing log system:  file:/home/target/test/util/target/classes/com/alibaba/citrus/test/logback-test-default.xml
++-----------------------------------------------------------------------------
+INFO: configuring "logback" using file:/home/target/test/util/target/classes/com/alibaba/citrus/test/logback-test-default.xml
+ - with property destdir = /home/target/test/util/target/test
+ - with property localAddress = 172.17.0.3
+ - with property localHost = 591efda51dfc
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = /home/target/test/util/target/test
+ - with property srcdir = /home/target/test/util/src/test/config
+
+19:15:40.031 [main] INFO  TestEnvTests[] - info message
+19:16:12.031 [main] WARN  TestEnvTests[] - warn message
+19:16:36.031 [main] ERROR TestEnvTests[] - error message
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 67,848 sec - in com.alibaba.citrus.test.TestEnvTests
+
+Results :
+
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ---------------< com.alibaba.citrus:citrus-common-util >----------------
+[INFO] Building Citrus Common Utilities 3.2.4                            [5/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ citrus-common-util ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ citrus-common-util ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 13 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ citrus-common-util ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ citrus-common-util ---
+[INFO] Executing tasks
+
+main:
+     [echo] project home:        /home/target/common/util
+     [echo] java home:           /opt/java/openjdk/jre
+     [echo] java source version: 1.6
+     [echo] java target version: 1.6
+     [echo] java source charset: UTF-8
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ citrus-common-util ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ citrus-common-util ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ citrus-common-util ---
+[INFO] Surefire report directory: /home/target/common/util/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.alibaba.citrus.util.StringUtilTests
+Tests run: 75, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 666,088 sec - in com.alibaba.citrus.util.StringUtilTests
+Running com.alibaba.citrus.util.collection.DefaultHashMapTests
+Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21,640 sec - in com.alibaba.citrus.util.collection.DefaultHashMapTests
+Running com.alibaba.citrus.util.collection.IntHashMapTests
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6,680 sec - in com.alibaba.citrus.util.collection.IntHashMapTests
+Running com.alibaba.citrus.util.collection.ArrayHashMapTests
+Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9,304 sec - in com.alibaba.citrus.util.collection.ArrayHashMapTests
+Running com.alibaba.citrus.util.collection.ArrayHashSetTests
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9,816 sec - in com.alibaba.citrus.util.collection.ArrayHashSetTests
+Running com.alibaba.citrus.util.collection.DefaultMapEntryTests
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 400 sec - in com.alibaba.citrus.util.collection.DefaultMapEntryTests
+Running com.alibaba.citrus.util.templatelite.TemplateInputSourceTests
++-----------------------------------------------------------------------------
+| Set base dir to:          /home/target/common/util
+| Set source dir to:        /home/target/common/util/src/test/config
+| Set destination dir to:   /home/target/common/util/target/test
+| Initializing log system:  file:/home/target/test/util/target/classes/com/alibaba/citrus/test/logback-test-default.xml
++-----------------------------------------------------------------------------
+INFO: configuring "logback" using file:/home/target/test/util/target/classes/com/alibaba/citrus/test/logback-test-default.xml
+ - with property destdir = /home/target/common/util/target/test
+ - with property localAddress = 172.17.0.3
+ - with property localHost = 591efda51dfc
+ - with property loggingCharset = UTF-8
+ - with property loggingLevel = INFO
+ - with property loggingRoot = /home/target/common/util/target/test
+ - with property srcdir = /home/target/common/util/src/test/config
+
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1,364,312 sec <<< FAILURE! - in com.alibaba.citrus.util.templatelite.TemplateInputSourceTests
+reloadTemplate(com.alibaba.citrus.util.templatelite.TemplateInputSourceTests)  Time elapsed: 379,728 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[xyz
+${xyz]}> but was:<[abc
+${abc]}>
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at com.alibaba.citrus.util.templatelite.TemplateInputSourceTests.reloadTemplate(TemplateInputSourceTests.java:266)
+
+reloadImportedTemplate(com.alibaba.citrus.util.templatelite.TemplateInputSourceTests)  Time elapsed: 312 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[xyz
+${xyz]}> but was:<[abc
+${abc]}>
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at com.alibaba.citrus.util.templatelite.TemplateInputSourceTests.reloadImportedTemplate(TemplateInputSourceTests.java:292)
+
+Running com.alibaba.citrus.util.templatelite.TemplateVisitTests
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 766,696 sec - in com.alibaba.citrus.util.templatelite.TemplateVisitTests
+Running com.alibaba.citrus.util.templatelite.TemplateParserTests
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 134,352 sec - in com.alibaba.citrus.util.templatelite.TemplateParserTests
+Running com.alibaba.citrus.util.templatelite.TemplateTests
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21,288 sec - in com.alibaba.citrus.util.templatelite.TemplateTests
+Running com.alibaba.citrus.util.FileUtilTests
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36,288 sec - in com.alibaba.citrus.util.FileUtilTests
+Running com.alibaba.citrus.util.ObjectUtilTests
+Tests run: 11, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 18,800 sec <<< FAILURE! - in com.alibaba.citrus.util.ObjectUtilTests
+identityToString(com.alibaba.citrus.util.ObjectUtilTests)  Time elapsed: 7,376 sec  <<< ERROR!
+java.lang.NumberFormatException: For input string: "caab02ba"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:583)
+	at com.alibaba.citrus.util.ObjectUtilTests.identityToString(ObjectUtilTests.java:194)
+
+identityToStringNullStr(com.alibaba.citrus.util.ObjectUtilTests)  Time elapsed: 96 sec  <<< ERROR!
+java.lang.NumberFormatException: For input string: "caab02ba"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:583)
+	at com.alibaba.citrus.util.ObjectUtilTests.identityToStringNullStr(ObjectUtilTests.java:209)
+
+Running com.alibaba.citrus.util.PaginatorTests
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13,992 sec - in com.alibaba.citrus.util.PaginatorTests
+Running com.alibaba.citrus.util.StringEscapeUtilTests
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51,712 sec - in com.alibaba.citrus.util.StringEscapeUtilTests
+Running com.alibaba.citrus.util.ExceptionUtilTests
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23,520 sec - in com.alibaba.citrus.util.ExceptionUtilTests
+Running com.alibaba.citrus.util.ClassUtilTests
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40,912 sec - in com.alibaba.citrus.util.ClassUtilTests
+Running com.alibaba.citrus.util.BasicConstantTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11,760 sec - in com.alibaba.citrus.util.BasicConstantTests
+Running com.alibaba.citrus.util.i18n.UnknownCharsetTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,744 sec - in com.alibaba.citrus.util.i18n.UnknownCharsetTests
+Running com.alibaba.citrus.util.i18n.CharConverterTests
+Dump all chars to /home/target/common/util/target/test/dump_all.txt
+Done in 384424000ms
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 730,024 sec - in com.alibaba.citrus.util.i18n.CharConverterTests
+Running com.alibaba.citrus.util.i18n.LocaleUtilTests
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 146,352 sec - in com.alibaba.citrus.util.i18n.LocaleUtilTests
+Running com.alibaba.citrus.util.i18n.LocaleInfoTests
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,752 sec - in com.alibaba.citrus.util.i18n.LocaleInfoTests
+Running com.alibaba.citrus.util.ArrayUtilTests
+Tests run: 73, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41,240 sec - in com.alibaba.citrus.util.ArrayUtilTests
+Running com.alibaba.citrus.util.internal.IndentableStringBuilderTests
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15,696 sec - in com.alibaba.citrus.util.internal.IndentableStringBuilderTests
+Running com.alibaba.citrus.util.internal.NormalizableStringBuilderTests
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,968 sec - in com.alibaba.citrus.util.internal.NormalizableStringBuilderTests
+Running com.alibaba.citrus.util.internal.Servlet3UtilTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 155,848 sec - in com.alibaba.citrus.util.internal.Servlet3UtilTests
+Running com.alibaba.citrus.util.internal.LazyLoaderTests
+SYNC_LOADER performance test, concurrency 100, loop 100,000, takes 938,856,000 ms
+Creator thread: thread-6
+------------------------------------
+PERTHREAD_LOADER performance test, concurrency 100, loop 100,000, takes 13,568,000 ms
+Creator thread: thread-5
+------------------------------------
+DCL_LOADER performance test, concurrency 100, loop 100,000, takes 10,632,000 ms
+Creator thread: thread-2
+------------------------------------
+Performance Summary:
+  DCL_LOADER(10,632,000 ms) > PERTHREAD_LOADER(13,568,000 ms) > SYNC_LOADER(938,856,000 ms)
+  DCL_LOADER is 1.28 times faster than PERTHREAD_LOADER
+  DCL_LOADER is 88.30 times faster than SYNC_LOADER
+  PERTHREAD_LOADER is 69.20 times faster than SYNC_LOADER
+------------------------------------
+SYNC_LOADER test duration 254,272,000 ms
+   0    0 1000    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+
+------------------------------------
+PERTHREAD_LOADER test duration 224,936,000 ms
+ 611    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0  256    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0  133    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+
+------------------------------------
+DCL_LOADER test duration 174,560,000 ms
+   0    0    0    0 1000    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+   0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0 
+
+------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,792,064 sec - in com.alibaba.citrus.util.internal.LazyLoaderTests
+Running com.alibaba.citrus.util.internal.webpagelite.myprocessor.LastModifiedTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 822,336 sec - in com.alibaba.citrus.util.internal.webpagelite.myprocessor.LastModifiedTests
+Running com.alibaba.citrus.util.internal.webpagelite.myprocessor.RequestProcessorTests
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14,416 sec - in com.alibaba.citrus.util.internal.webpagelite.myprocessor.RequestProcessorTests
+Running com.alibaba.citrus.util.internal.webpagelite.PageComponentTests
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49,600 sec - in com.alibaba.citrus.util.internal.webpagelite.PageComponentTests
+Running com.alibaba.citrus.util.internal.EntitiesTests
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,192 sec - in com.alibaba.citrus.util.internal.EntitiesTests
+Running com.alibaba.citrus.util.internal.InterfaceImplementorBuilderTests
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 512,200 sec - in com.alibaba.citrus.util.internal.InterfaceImplementorBuilderTests
+Running com.alibaba.citrus.util.internal.StaticFunctionDelegatorBuilderTests
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 104,456 sec - in com.alibaba.citrus.util.internal.StaticFunctionDelegatorBuilderTests
+Running com.alibaba.citrus.util.internal.ActionEventUtilTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 108,568 sec - in com.alibaba.citrus.util.internal.ActionEventUtilTests
+Running com.alibaba.citrus.util.internal.impl.CitrusMessageFormatterTests
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27,944 sec - in com.alibaba.citrus.util.internal.impl.CitrusMessageFormatterTests
+Running com.alibaba.citrus.util.internal.ScreenEventUtilTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8,680 sec - in com.alibaba.citrus.util.internal.ScreenEventUtilTests
+Running com.alibaba.citrus.util.internal.MessageFormatterTests
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,288 sec - in com.alibaba.citrus.util.internal.MessageFormatterTests
+Running com.alibaba.citrus.util.internal.apache.lang.HashCodeBuilderTests
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40,168 sec - in com.alibaba.citrus.util.internal.apache.lang.HashCodeBuilderTests
+Running com.alibaba.citrus.util.internal.apache.lang.EqualsBuilderTests
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38,864 sec - in com.alibaba.citrus.util.internal.apache.lang.EqualsBuilderTests
+Running com.alibaba.citrus.util.MessageUtilTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,112 sec - in com.alibaba.citrus.util.MessageUtilTests
+Running com.alibaba.citrus.util.AssertTests
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 504 sec - in com.alibaba.citrus.util.AssertTests
+Running com.alibaba.citrus.util.io.OutputEngineTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 117,184 sec - in com.alibaba.citrus.util.io.OutputEngineTests
+Running com.alibaba.citrus.util.io.ByteArrayInputStreamTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 272 sec - in com.alibaba.citrus.util.io.ByteArrayInputStreamTests
+Running com.alibaba.citrus.util.io.StreamUtilTests
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17,504 sec - in com.alibaba.citrus.util.io.StreamUtilTests
+Running com.alibaba.citrus.util.io.ByteArrayTests
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 328 sec - in com.alibaba.citrus.util.io.ByteArrayTests
+Running com.alibaba.citrus.util.io.ByteArrayOutputStreamTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96 sec - in com.alibaba.citrus.util.io.ByteArrayOutputStreamTests
+Running com.alibaba.citrus.util.UtilsTests
+arrayUtil => com.alibaba.citrus.util.ArrayUtil@dbbcec82
+classLoaderUtil => com.alibaba.citrus.util.ClassLoaderUtil@c3125d98
+classUtil => com.alibaba.citrus.util.ClassUtil@a4c6a474
+exceptionUtil => com.alibaba.citrus.util.ExceptionUtil@eaebeccf
+fileUtil => com.alibaba.citrus.util.FileUtil@65b31127
+localeUtil => com.alibaba.citrus.util.i18n.LocaleUtil@480838b0
+messageUtil => com.alibaba.citrus.util.MessageUtil@50d7170
+objectUtil => com.alibaba.citrus.util.ObjectUtil@b771da26
+streamUtil => com.alibaba.citrus.util.io.StreamUtil@afdd86bf
+stringEscapeUtil => com.alibaba.citrus.util.StringEscapeUtil@c67ac2a4
+stringUtil => com.alibaba.citrus.util.StringUtil@eaec9921
+systemUtil => com.alibaba.citrus.util.SystemUtil@30429de6
+mathUtil => ..StaticFunctionDelegatorBuilderByCGLIB..8361b298..EnhancerByCGLIB..71d7a45e@f0e75d01
+utils => ..StaticFunctionDelegatorBuilderByCGLIB..4362629d..EnhancerByCGLIB..8bf7b5bf@7e45eb9d
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 456,800 sec - in com.alibaba.citrus.util.UtilsTests
+Running com.alibaba.citrus.util.ClassLoaderUtilTests
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 101,976 sec - in com.alibaba.citrus.util.ClassLoaderUtilTests
+Running com.alibaba.citrus.util.UUIDTests
+UUID: requests=200000, concurrency=20
+  Total time: 2,439,112,000 ms.
+Average time: 12,195,560.00 μs.
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,007,215.296 sec - in com.alibaba.citrus.util.UUIDTests
+Running com.alibaba.citrus.util.CollectionUtilTests
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37,624 sec - in com.alibaba.citrus.util.CollectionUtilTests
+Running com.alibaba.citrus.util.ToStringBuilderTests
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20,808 sec - in com.alibaba.citrus.util.ToStringBuilderTests
+Running com.alibaba.citrus.util.regex.RegexpStressTests
+ORO regex - 1,435,336,000 ms for 2,500,000 matches
+574134.4 μs
+JDK regex - 705,056,000 ms for 2,500,000 matches
+282022.4 μs
+ORO regex - 1,650,624,000 ms for 500,000 matches
+3301248.0 μs
+JDK regex - 11,856,000 ms for 500,000 matches
+23712.0 μs
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -458,439.296 sec - in com.alibaba.citrus.util.regex.RegexpStressTests
+Running com.alibaba.citrus.util.regex.WildcardCompilerTests
+Thread_6 takes 17,081m 4s 0ms
+Thread_8 takes 17,299m 12s 0ms
+Thread_7 takes 16,511m 52s 0ms
+Thread_9 takes 17,367m 20s 0ms
+Thread_3 takes 17,440m 48s 0ms
+Thread_4 takes 17,156m 16s 0ms
+Thread_0 takes 17,436m 48s 0ms
+Thread_1 takes 17,550m 32s 0ms
+Thread_2 takes 17,738m 24s 0ms
+Thread_5 takes 17,938m 48s 0ms
+Total time: 17,961m 12s 0ms
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,096,408 sec - in com.alibaba.citrus.util.regex.WildcardCompilerTests
+Running com.alibaba.citrus.util.regex.SubstitutionTests
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 888 sec - in com.alibaba.citrus.util.regex.SubstitutionTests
+Running com.alibaba.citrus.util.HumanReadableSizeTests
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14,432 sec - in com.alibaba.citrus.util.HumanReadableSizeTests
+Running com.alibaba.citrus.util.ServletUtilTests
+Tests run: 120, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35,912 sec - in com.alibaba.citrus.util.ServletUtilTests
+Running com.alibaba.citrus.util.SystemUtilTests
+--------------
+JavaVM Spec. Name:    Java Virtual Machine Specification
+JavaVM Spec. Version: 1.8
+JavaVM Spec. Vendor:  Oracle Corporation
+
+--------------
+JavaVM Name:    Eclipse OpenJ9 VM
+JavaVM Version: openj9-0.26.0
+JavaVM Vendor:  Eclipse OpenJ9
+JavaVM Info:    JRE 1.8.0 Linux amd64-64-Bit Compressed References 20210421_1000 (JIT enabled, AOT enabled)\nOpenJ9   - b4cc246d9\nOMR      - 162e6f729\nJCL      - 2a5e268814 based on jdk8u292-b10
+
+--------------
+Java Spec. Name:    Java Platform API Specification
+Java Spec. Version: 1.8
+Java Spec. Vendor:  Oracle Corporation
+
+--------------
+Java Version:    1.8.0_292
+Java Vendor:     AdoptOpenJDK
+Java Vendor URL: https://adoptopenjdk.net/
+
+--------------
+Java Runtime Name:      OpenJDK Runtime Environment
+Java Runtime Version:   1.8.0_292-b10
+Java Home Dir:          /opt/java/openjdk/jre
+Java Extension Dirs:    /opt/java/openjdk/jre/lib/ext
+Java Endorsed Dirs:     /opt/java/openjdk/jre/lib/endorsed
+Java Class Path:        /home/target/common/util/target/test-classes:/home/target/common/util/target/classes:/root/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/root/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar:/home/target/test/util/target/classes:/home/target/common/logconfig/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/root/.m2/repository/junit/junit/4.10/junit-4.10.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1.jar:/root/.m2/repository/org/httpunit/httpunit/1.7.2/httpunit-1.7.2.jar:/root/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar:/root/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar:/root/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/root/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/root/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.jar:/root/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/root/.m2/repository/org/easymock/easymockclassextension/3.2/easymockclassextension-3.2.jar:/root/.m2/repository/org/easymock/easymock/3.2/easymock-3.2.jar:/root/.m2/repository/org/objenesis/objenesis/1.3/objenesis-1.3.jar:/home/target/common/servlet/target/classes:/root/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.5/jcl-over-slf4j-1.7.5.jar:
+Java Class Version:     52.0
+Java Library Path:      /opt/java/openjdk/jre/lib/amd64/default:/opt/java/openjdk/jre/lib/amd64:/usr/lib64:/usr/lib
+Java Protocol Packages: [n/a]
+
+--------------
+OS Arch:        amd64
+OS Name:        Linux
+OS Version:     5.11.0-38-generic
+File Encoding:  UTF-8
+File Separator: /
+Line Separator: \n
+Path Separator: :
+
+--------------
+User Name:        root
+User Home Dir:    /root
+User Current Dir: /home/target/common/util
+User Temp Dir:    /tmp
+User Language:    en
+User Country:     US
+
+--------------
+Host Name:    591efda51dfc
+Host Address: 172.17.0.3
+
+--------------
+awt.toolkit = sun.awt.X11.XToolkit
+basedir = /home/target/common/util
+com.ibm.cpu.endian = little
+com.ibm.jcl.checkClassPath = 
+com.ibm.oti.configuration = scar
+com.ibm.oti.shared.enabled = true
+com.ibm.oti.vm.bootstrap.library.path = /opt/java/openjdk/jre/lib/amd64/default:/opt/java/openjdk/jre/lib/amd64
+com.ibm.oti.vm.library.version = 29
+com.ibm.system.agent.path = /opt/java/openjdk/jre/lib/amd64
+com.ibm.util.extralibs.properties = 
+com.ibm.vm.bitmode = 64
+com.ibm.zero.version = 2
+file.encoding = UTF-8
+file.encoding.pkg = sun.io
+file.separator = /
+ibm.signalhandling.rs = false
+ibm.signalhandling.sigchain = true
+ibm.signalhandling.sigint = true
+ibm.system.encoding = UTF-8
+java.awt.fonts = 
+java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+java.awt.printerjob = sun.print.PSPrinterJob
+java.class.path = /home/target/common/util/target/test-classes:/home/target/common/util/target/classes:/root/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/root/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar:/home/target/test/util/target/classes:/home/target/common/logconfig/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/root/.m2/repository/junit/junit/4.10/junit-4.10.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1.jar:/root/.m2/repository/org/httpunit/httpunit/1.7.2/httpunit-1.7.2.jar:/root/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar:/root/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar:/root/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/root/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/root/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.jar:/root/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/root/.m2/repository/org/easymock/easymockclassextension/3.2/easymockclassextension-3.2.jar:/root/.m2/repository/org/easymock/easymock/3.2/easymock-3.2.jar:/root/.m2/repository/org/objenesis/objenesis/1.3/objenesis-1.3.jar:/home/target/common/servlet/target/classes:/root/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.5/jcl-over-slf4j-1.7.5.jar:
+java.class.version = 52.0
+java.compiler = j9jit29
+java.endorsed.dirs = /opt/java/openjdk/jre/lib/endorsed
+java.ext.dirs = /opt/java/openjdk/jre/lib/ext
+java.fullversion = 1.8.0_292-b10\nJRE 1.8.0 Linux amd64-64-Bit Compressed References 20210421_1000 (JIT enabled, AOT enabled)\nOpenJ9   - b4cc246d9\nOMR      - 162e6f729\nJCL      - 2a5e268814 based on jdk8u292-b10
+java.home = /opt/java/openjdk/jre
+java.io.tmpdir = /tmp
+java.library.path = /opt/java/openjdk/jre/lib/amd64/default:/opt/java/openjdk/jre/lib/amd64:/usr/lib64:/usr/lib
+java.runtime.name = OpenJDK Runtime Environment
+java.runtime.version = 1.8.0_292-b10
+java.specification.name = Java Platform API Specification
+java.specification.vendor = Oracle Corporation
+java.specification.version = 1.8
+java.vendor = AdoptOpenJDK
+java.vendor.url = https://adoptopenjdk.net/
+java.version = 1.8.0_292
+java.vm.info = JRE 1.8.0 Linux amd64-64-Bit Compressed References 20210421_1000 (JIT enabled, AOT enabled)\nOpenJ9   - b4cc246d9\nOMR      - 162e6f729\nJCL      - 2a5e268814 based on jdk8u292-b10
+java.vm.name = Eclipse OpenJ9 VM
+java.vm.specification.name = Java Virtual Machine Specification
+java.vm.specification.vendor = Oracle Corporation
+java.vm.specification.version = 1.8
+java.vm.vendor = Eclipse OpenJ9
+java.vm.version = openj9-0.26.0
+jdk.extensions.name = Extensions for OpenJDK for Eclipse OpenJ9
+jdk.extensions.version = 8.0.292.0
+line.separator = \n
+localRepository = /root/.m2/repository
+os.arch = amd64
+os.encoding = UTF-8
+os.name = Linux
+os.version = 5.11.0-38-generic
+path.separator = :
+sun.arch.data.model = 64
+sun.boot.class.path = /opt/java/openjdk/jre/lib/amd64/default/jclSC180/vm.jar:/opt/java/openjdk/jre/lib/se-service.jar:/opt/java/openjdk/jre/lib/rt.jar:/opt/java/openjdk/jre/lib/resources.jar:/opt/java/openjdk/jre/lib/jsse.jar:/opt/java/openjdk/jre/lib/charsets.jar:/opt/java/openjdk/jre/lib/jce.jar
+sun.boot.library.path = /opt/java/openjdk/jre/lib/amd64/default:/opt/java/openjdk/jre/lib/amd64
+sun.cpu.endian = little
+sun.io.unicode.encoding = UnicodeLittle
+sun.java.command = /home/target/common/util/target/surefire/surefirebooter2068646132295514731.jar /home/target/common/util/target/surefire/surefire1731264719225069811tmp /home/target/common/util/target/surefire/surefire_28867873515536633592tmp
+sun.java.launcher = SUN_STANDARD
+sun.java.launcher.pid = 4734
+sun.jnu.encoding = UTF-8
+surefire.real.class.path = /home/target/common/util/target/surefire/surefirebooter2068646132295514731.jar
+surefire.test.class.path = /home/target/common/util/target/test-classes:/home/target/common/util/target/classes:/root/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/root/.m2/repository/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar:/home/target/test/util/target/classes:/home/target/common/logconfig/target/classes:/root/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/root/.m2/repository/junit/junit/4.10/junit-4.10.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1.jar:/root/.m2/repository/org/httpunit/httpunit/1.7.2/httpunit-1.7.2.jar:/root/.m2/repository/rhino/js/1.7R2/js-1.7R2.jar:/root/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar:/root/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/root/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/root/.m2/repository/xalan/xalan/2.7.1/xalan-2.7.1.jar:/root/.m2/repository/xalan/serializer/2.7.1/serializer-2.7.1.jar:/root/.m2/repository/org/easymock/easymockclassextension/3.2/easymockclassextension-3.2.jar:/root/.m2/repository/org/easymock/easymock/3.2/easymock-3.2.jar:/root/.m2/repository/org/objenesis/objenesis/1.3/objenesis-1.3.jar:/home/target/common/servlet/target/classes:/root/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.5/jcl-over-slf4j-1.7.5.jar:
+user.country = US
+user.dir = /home/target/common/util
+user.home = /root
+user.language = en
+user.name = root
+user.timezone = GMT
+user.variant = 
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,256 sec - in com.alibaba.citrus.util.SystemUtilTests
+
+Results :
+
+Failed tests: 
+  TemplateInputSourceTests.reloadTemplate:266 expected:<[xyz
+${xyz]}> but was:<[abc
+${abc]}>
+  TemplateInputSourceTests.reloadImportedTemplate:292 expected:<[xyz
+${xyz]}> but was:<[abc
+${abc]}>
+
+Tests in error: 
+  ObjectUtilTests.identityToString:194 » NumberFormat For input string: "caab02b...
+  ObjectUtilTests.identityToStringNullStr:209 » NumberFormat For input string: "...
+
+Tests run: 898, Failures: 2, Errors: 2, Skipped: 0
+
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Generic Type Analyzer
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Spring Extensions
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping SpringExt All-in-one Bundle
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Simple Expression Engine
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Base-classes for Service implementations
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Data Resolver Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Properties-based Configuration
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Resource Loading Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Upload Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --------------< com.alibaba.citrus:citrus-common-hessian >--------------
+[INFO] Building Hessian Port 3.2.4                                       [6/34]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ citrus-common-hessian ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ citrus-common-hessian ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ citrus-common-hessian ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (default) @ citrus-common-hessian ---
+[INFO] Executing tasks
+
+main:
+     [echo] project home:        /home/target/common/hessian
+     [echo] java home:           /opt/java/openjdk/jre
+     [echo] java source version: 1.6
+     [echo] java target version: 1.6
+     [echo] java source charset: UTF-8
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ citrus-common-hessian ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/common/hessian/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ citrus-common-hessian ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ citrus-common-hessian ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Request Context Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Pull Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Form Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Pipeline Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Template Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Module Loading Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping citrus mapping service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus JSP Template Engine
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Velocity Template Engine
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Freemarker Template Engine
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus URI Broker Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Mail Service
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Webx Framework
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Testing Utilities for Webx
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Citrus Webx Turbine-style Implementation
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Servlet 3.0 Async Support
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Development mode tools for Webx
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Webx All-in-one Bundle
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Test Utils for Webx
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Citrus Parent Project 3.2.4:
+[INFO] 
+[INFO] Citrus Parent Project .............................. SUCCESS [28 d 23:06 h]
+[INFO] Citrus Servlet API Dependencies .................... SUCCESS [21 d 13:04 h]
+[INFO] Citrus Log Configuration ........................... SUCCESS [186 d 07:54 h]
+[INFO] Citrus Testing Utilities ........................... SUCCESS [30 d 01:36 h]
+[INFO] Citrus Common Utilities ............................ FAILURE [212 d 11:22 h]
+[INFO] Citrus Generic Type Analyzer ....................... SKIPPED
+[INFO] Citrus Spring Extensions ........................... SKIPPED
+[INFO] SpringExt All-in-one Bundle ........................ SKIPPED
+[INFO] Simple Expression Engine ........................... SKIPPED
+[INFO] Base-classes for Service implementations ........... SKIPPED
+[INFO] Citrus Data Resolver Service ....................... SKIPPED
+[INFO] Citrus Properties-based Configuration .............. SKIPPED
+[INFO] Citrus Resource Loading Service .................... SKIPPED
+[INFO] Citrus Upload Service .............................. SKIPPED
+[INFO] Hessian Port ....................................... SUCCESS [  16:54 h]
+[INFO] Citrus Request Context Service ..................... SKIPPED
+[INFO] Citrus Pull Service ................................ SKIPPED
+[INFO] Citrus Form Service ................................ SKIPPED
+[INFO] Citrus Pipeline Service ............................ SKIPPED
+[INFO] Citrus Template Service ............................ SKIPPED
+[INFO] Citrus Module Loading Service ...................... SKIPPED
+[INFO] citrus mapping service ............................. SKIPPED
+[INFO] Citrus JSP Template Engine ......................... SKIPPED
+[INFO] Citrus Velocity Template Engine .................... SKIPPED
+[INFO] Citrus Freemarker Template Engine .................. SKIPPED
+[INFO] Citrus URI Broker Service .......................... SKIPPED
+[INFO] Citrus Mail Service ................................ SKIPPED
+[INFO] Citrus Webx Framework .............................. SKIPPED
+[INFO] Citrus Testing Utilities for Webx .................. SKIPPED
+[INFO] Citrus Webx Turbine-style Implementation ........... SKIPPED
+[INFO] Servlet 3.0 Async Support .......................... SKIPPED
+[INFO] Development mode tools for Webx .................... SKIPPED
+[INFO] Webx All-in-one Bundle ............................. SKIPPED
+[INFO] Test Utils for Webx ................................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  497 d 11:44 h
+[INFO] Finished at: 2023-05-08T16:11:56Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project citrus-common-util: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/common/util/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :citrus-common-util
+{'error': True, 'log_file': 'output-2021-11-01T03:30:52-7969.log', 'message': '', 'start_time': '2021-11-01T03:30:52', 'end_time': '2021-11-01T03:31:34', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i8.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}
