@@ -252,19 +252,15 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     # run with faketime with adv increment feature
     run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-inc-ref.out'), faketime='+0 i1.0')
 
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-2x.out'), faketime='+0 x2.0')
+    # speed up runs
+    speed_up_factors = [2, 4, 8, 10, 100, 1000, 10000]
+    for factor in speed_up_factors:
+        run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-speed-up-{factor}x.out'), faketime=f'+0 x{factor}.0')
 
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-4x.out'), faketime='+0 x4.0')
-
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-8x.out'), faketime='+0 x8.0')
-
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-10x.out'), faketime='+0 x10.0')
-
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-100x.out'), faketime='+0 x100.0')
-
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-1000x.out'), faketime='+0 x1000.0')
-
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-10000x.out'), faketime='+0 x10000.0')
+    # advanced increment runs
+    increment_factors = [2, 4, 8]
+    for factor in increment_factors:
+        run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-inc-{factor}i.out'), faketime=f'+0 i{factor}.0')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
