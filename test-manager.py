@@ -253,12 +253,12 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-inc-ref.out'), faketime='+0 i1.0')
 
     # speed up runs
-    speed_up_factors = [2, 4, 8, 10, 100, 1000, 10000]
+    speed_up_factors = [2, 1000, 10000]
     for factor in speed_up_factors:
         run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-speed-up-{factor}x.out'), faketime=f'+0 x{factor}.0')
 
     # advanced increment runs
-    increment_factors = [2, 4, 8]
+    increment_factors = [2]
     for factor in increment_factors:
         run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-inc-{factor}i.out'), faketime=f'+0 i{factor}.0')
 
