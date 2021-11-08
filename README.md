@@ -15,7 +15,7 @@ to install required packages.
 ## Usage
 ### test-manager.py
 ```
-usage: test-manager.py [-h] [-i IMAGE] [-d DEPENDENCY] project command
+usage: test-manager.py [-h] [-i IMAGE] [-d DEPENDENCY] [-p PATH] project command
 
 Run command at different time and in different timezone.
 
@@ -30,6 +30,7 @@ optional arguments:
   -d DEPENDENCY, --dependency DEPENDENCY
                         the path to the files that contains the commands necessary to install all
                         dependencies and the project
+  -p PATH, --path PATH  the folder to put the output file in
 ```
 <br/><br/>
 Additionally, test.runner.py can be use as a stand-alone tool to run a command with faked time and/or timezone.
@@ -56,7 +57,7 @@ optional arguments:
 ### test-manager.py
 Current test-manager.py only run whatever command that the user provide without faking neither time nor timezone. But you can still try to use it:
 ```
-python3 test-manager.py https://github.com/alibaba/Sentinel "mvn -fae test" -i maven:3.8.3-jdk-8-openj9
+python3 test-manager.py -i maven:3.8.3-jdk-8 https://github.com/alibaba/Sentinel "mvn -fae test"
 ```
 This will create a Docker container using the "maven:3.8.3-jdk-8-openj9" image and install libfaketime with all the other dependencies automatically. And then, it will run the test-runner.py on "Sentinel" project with the common "mvn -fae test" without faking time or timezone.
 
