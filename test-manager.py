@@ -200,7 +200,7 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     
     return container
 
-def run_test(container: Container, command: str, faketime: str = '', switch: List[str] = None, timezone: str = '', project_folder: str = '/home', output_file: str = '') -> None:
+def run_test(container: Container, command: str, faketime: str = '', switch: List[str] = None, timezone: str = '', project_folder: str = '/home', output_file: str = '', overwrite: bool = False) -> None:
     """Run a single test run in the container.
 
     Args:
@@ -210,12 +210,16 @@ def run_test(container: Container, command: str, faketime: str = '', switch: Lis
         switch (List[str], optional): times to switch between. Defaults to None.
         timezone (str, optional): the TZ timezone string. Defaults to '' if using actual timezone.
         project_folder (str, optional): the folder that contains the target project and tool. Defaults to '/home'.
-        output_file (str, optional): the path of the file to write the output to
+        output_file (str, optional): the path of the file to write the output to.
+        overwrite (bool): whether to replace the old run result if old one already exist. Default to false.
     """
     target_project_path = os.path.join(project_folder, TARGET_PROJECT_FOLDER)
 
     write_pipe = None
     if output_file:
+        if os.path.exists(output_file) and not overwrite:
+            print(f"{output_file} already exists. Skipping test.")
+            return
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         write_pipe = open(output_file, 'w', encoding="utf-8")
 
