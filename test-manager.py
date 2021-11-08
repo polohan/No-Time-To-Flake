@@ -9,6 +9,7 @@ import argparse
 import os
 import signal
 import tarfile
+from datetime import datetime
 from io import FileIO, StringIO
 from typing import List
 
@@ -255,6 +256,24 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-speed-up-ref.out'), faketime='+0 x1.0')
     # run with faketime with adv increment feature
     run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-inc-ref.out'), faketime='+0 i1.0')
+
+    # test with different potentially buggy timezones
+    curr_year = datetime.now().year
+    mock_timezones = [
+        ("+0", "UTC", "UTC-ref"),
+        ("+0", "Asia/Kolkata", None),     # UTC+5:30
+        ("+0", "Australia/Eucla", None),      # UTC+8:45
+        ("+0", "Pacific/Marquesas", None),      # UTC-9:30
+        (f"@{curr_year}-07-01 00:00:00", "Pacific/Chatham", "Chatham"),      # UTC+12:45
+        (f"@{curr_year}-01-01 00:00:00", "Pacific/Chatham", "Chatham-DST"),      # UTC+13:45
+    ]
+    for fake_time, fake_time_zone, name in mock_timezones:
+        if not name:
+            name = fake_time_zone if '/' not in fake_time_zone else fake_time_zone.split('/')[-1]
+        
+        run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-timezone-{name}.out'), faketime=fake_time, timezone=fake_time_zone)
+
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-fake-ref.out'), faketime='+0')
 
     # speed up runs
     speed_up_factors = [2, 1000, 10000]
