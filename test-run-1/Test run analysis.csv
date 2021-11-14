@@ -1,0 +1,122 @@
+Project Name,GitHub Url,Sample Runs,Speed Up Runs,Increment Runs,Timezone Runs,Comments,Further Actions
+aletheia,https://github.com/outbrain/aletheia,All: build success,"2x, 4x, 8x, 10x: build success
+
+100x, 1000x, 10000x: Error assembling JAR: Negative time ",All: There was a timeout or other error in the fork,All: build success,No potential flaky test found.,
+alibaba-rsocket-broker,https://github.com/alibaba/alibaba-rsocket-broker,All: RSocketCompositeMetadataTest.testServiceIdRoutingMetadata:85 expected: <12> but was: <8>,All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,Test case fail without any modification.,
+avro,https://github.com/apache/avro,"All: build success
+
+(Rerun) Original run: build success
+(Rerun) fake-ref, speed-up-ref:
+TestWordCountTether.testJob:118->_runjob:93 » IO Job failed!
+TestWordCountTether.testhtp:129->_runjob:93 » IO Job failed!","2x, 1000x, 10000x:
+TestWordCountTether.testJob:118->_runjob:93 » IO Job failed!
+TestWordCountTether.testhtp:129->_runjob:93 » IO Job failed!
+
+All: same behavior as reference runs","1i, 2i:
+TestWordCountTether.testJob:118->_runjob:93 » IO Job failed!
+TestWordCountTether.testhtp:129->_runjob:93 » IO Job failed!
+
+All: same behavior as reference runs","All:
+TestWordCountTether.testJob:118->_runjob:93 » IO Job failed!
+TestWordCountTether.testhtp:129->_runjob:93 » IO Job failed!
+
+All: same behavior as reference runs","It's highly unlikely that all the other test runs return the exact same errors. It's possible that this occur due to the fact that I try to run multiple projects (in seperate Docker container) at the same times.
+
+(Update) Rerun shows that it's indeed that the libfaketime is interfering the test case, not the actual flakiness that's causing the test to fail.",Need rerun.
+balana,https://github.com/wso2/balana,All: build success,All: build success,All: build success,"Pacific/Chatham, Pacific/Chatham-DST:
+junit.framework.AssertionFailedError at org.wso2.balana.conformance.ConformanceTestV2.testConformanceTestC(ConformanceTestV2.java:206)
+
+All others: build success","Found the first ever time-zone-related flaky test detected by the tool.
+
+Additional manual run are conducted to confirm this test is indeed flaky by running ""TZ=Pacific/Chatham mvn test"".",
+biojava,https://github.com/biojava/biojava,"All:
+Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project biojava-structure: Compilation failure",All: same behavior as sample runs,All: same behavior as sample runs,"Pacific/Marquesas, Asia/Kolkata, Australia/Eucla:
+same behavior as sample runs
+
+UTC:
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false> at org.biojava.nbio.core.util.SequenceToolsTest$PermuteCyclic.permuteCyclicPerformance(SequenceToolsTest.java:77)
+
+Pacific/Chatham, Pacific/Chatham-DST (Caused by date in the past):
+FileDownloadUtilsTest$URLMethods.pingGoogleOK:161 expected: <true> but was: <false>
+BlastXMLParserTest.testCreateObjects:101 » SSLHandshake PKIX path validation f...
+GenbankCookbookTest.testProcess:75 » NullPointer
+Tests run: 16, Failures: 1, Errors: 6, Skipped: 0, Time elapsed: 11.268 s <<< FAILURE! - in org.biojava.nbio.core.sequence.loader.GenbankProxySequenceReaderTest","The test failure from Pacific/Chatham, Pacific/Chatham-DST are proved to originated from the fact that the system time is mocked to an date in the past, not because the timezone.
+
+And for the test failures in ""UTC"" timezone, such errors did occur in later manual rerun, but it turns out that when the tests are ran with just UTC (without faking time), the tests show the exact result as sample runs. But, if ran in UTC with libfaketime (even though it's not actually faking the time), the test will fail.","Need to add tests to see how the code behave when it's a date in the past/future. Some potential dates to mock include 1 min/hour/day/week/month/year in the past/future.
+
+And for some reason, libfaketime and UTC timezone doesn't work well together. Might need further investigation."
+canal,https://github.com/alibaba/canal,"All: testSimple(com.alibaba.otter.canal.parse.DirectLogFetcherTest)  Time elapsed: 0.114 s  <<< FAILURE!
+java.lang.AssertionError: connect /127.0.0.1:3306 failure",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,
+commons-bcel,https://github.com/apache/commons-bcel,"All:
+Too many files with unapproved license",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,Test won't run.,
+commons-csv,https://github.com/apache/commons-csv,"All:
+Too many files with unapproved license",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,Test won't run.,
+compileflow,https://github.com/alibaba/compileflow,"All:
+testProcessEngineBpmn20(com.allibaba.compileflow.test.ProcessEngineTest)  Time elapsed: 0.481 sec  <<< ERROR!
+com.alibaba.compileflow.engine.common.CompileFlowException: compile file[/home/target/.flowclasses/KtvFlow.java] to class[KtvFlow] failed,Pb(235) Syntax error on token ""null"", invalid Name",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,Add timezone runs.
+datasketches-java,https://github.com/apache/datasketches-java,All: build success,All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,Add timezone runs.
+fastjson,https://github.com/alibaba/fastjson,"Original run: build success
+
+fake-ref, speed-up-ref:
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+at com.alibaba.json.bvt.support.spring.data.PageToJSONTest.test_page(PageToJSONTest.java:24)","2x: same behavior as original run
+
+1000x, 10000x:
+java.net.SocketTimeoutException: SocketTimeoutException","All:
+java.net.SocketTimeoutException: SocketTimeoutException","Asia/Kolkata: same behavior as original run
+
+The rest: same behavior as reference run","Upon rerun, it turns out that PageToJSONTest.test_page itself is already flaky.
+(https://github.com/alibaba/fastjson/search?q=violates+its+general+contract&type=issues)
+
+No potential time-realted flaky test found.",
+flink-cdc-connectors,https://github.com/ververica/flink-cdc-connectors,"All:
+java.lang.IllegalStateException: Could not find a valid Docker environment.",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,"Errors are caused by not having Docker installed in the container.
+
+No potential flaky test found.",Add timezone runs.
+hope-boot,https://github.com/java-aodeng/hope-boot,All: build success,All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,Add timezone runs.
+http-request,https://github.com/kevinsawicki/http-request,All: build success,All: same behavior as sample runs,"1i, 2i: same behavior as sample runs
+
+4i, 8i: 
+java.net.SocketException: Unexpected end of file from server
+java.net.SocketTimeoutException",All: same behavior as sample runs,"Errors in increment runs are caused by timeout and socket issues, not by the flakiness in test.
+
+No potential flaky test found.",Add timezone runs.
+innodb-java-reader,https://github.com/alibaba/innodb-java-reader,"All:
+You have 1 PMD violation",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,Test won't run.,
+keycloak,https://github.com/keycloak/keycloak,"All:
+Total meltdown in test",All: no data,All: no data,All: no data,Test won't run.,
+maven-dependency-plugin,https://github.com/apache/maven-dependency-plugin,"All:
+Too many files with unapproved license",All: same behavior as sample runs,All: same behavior as sample runs,All: no data,Test won't run.,
+otter,https://github.com/alibaba/otter,"All:
+Failed to execute goal on project shared.common: Could not resolve dependencies for project",All: same behavior as sample runs,All: same behavior as sample runs,All: no data,Test won't run.,
+querydsl,https://github.com/querydsl/querydsl,All: build success,All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,Add timezone runs.
+riptide,https://github.com/zalando/riptide,"Original run: build success
+
+fake-ref, speed-up-ref:
+shouldRetryOnDemandWithDynamicDelay failure
+shouldRetryWithDelayEpochSeconds failure",All: some timeout errors,All: same behavior as fake-ref run,"All:
+Unpredictable behaviors in each different timezone
+ 
+(Rerun) Pacific/Chatham, Pacific/Chatham-DST: same behavior as reference run
+(Rerun) The rest: same behavior as original run","Apparently the libfaketime does break the test code, which leads to unexpcted behavior.
+
+However, this shouldn't affect the timezone run, as we are just changing the TZ variable. In the current code, the still use the libfaketime in all timezone runs, which should be modified.","Remove unnecessary libfaketime usage from timezone runs.
+
+Rerun tests and update timezone runs' results."
+search-highlighter,https://github.com/wikimedia/search-highlighter,"All:
+Total meltdown in test",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,Test won't run.,
+SmartEngine,https://github.com/alibaba/SmartEngine,All: build success,All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,Add timezone runs.
+spring-context-support,https://github.com/alibaba/spring-context-support,All: build success,All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,Add timezone runs.
+TelegramBots,https://github.com/rubenlagus/TelegramBots,"All:
+Failed to execute goal",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,Test won't run.,
+testable-mock,https://github.com/alibaba/testable-mock,"All:
+Failures in java-demo 1.0.0-SNAPSHOT, kotlin-demo 1.0.0-SNAPSHOT, spock-demo 1.0.0-SNAPSHOT",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,
+wro4j,https://github.com/wro4j/wro4j,"All:
+Failed to execute goal",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,
+wsdoc,https://github.com/versly/wsdoc,"All:
+Failed to execute goal",All: same behavior as sample runs,All: same behavior as sample runs,All: same behavior as sample runs,No potential flaky test found.,
+yawp,https://github.com/feroult/yawp,All: build success,"2x: same behavior as sample runs
+
+1000x, 10000x:
+java.lang.RuntimeException: await timout","All:
+java.lang.RuntimeException: await timout",All: same behavior as sample runs,No potential flaky test found.,
