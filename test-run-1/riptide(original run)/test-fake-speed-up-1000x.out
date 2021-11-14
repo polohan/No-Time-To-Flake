@@ -1,0 +1,1298 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Riptide                                                            [pom]
+[INFO] Riptide: Parent                                                    [pom]
+[INFO] Riptide: Core                                                      [jar]
+[INFO] Riptide: Capture                                                   [jar]
+[INFO] Riptide: HTTP Client                                               [jar]
+[INFO] Riptide: Authorization                                             [jar]
+[INFO] Riptide: Bill of Materials                                         [pom]
+[INFO] Riptide: Chaos                                                     [jar]
+[INFO] Riptide: Problem                                                   [jar]
+[INFO] Riptide: Compatibility                                             [jar]
+[INFO] Riptide: Request Compression                                       [jar]
+[INFO] Riptide: Concurrent                                                [jar]
+[INFO] Riptide: Idempotency                                               [jar]
+[INFO] Riptide: Faults                                                    [jar]
+[INFO] Riptide: Failsafe                                                  [jar]
+[INFO] Riptide: Logbook                                                   [jar]
+[INFO] Riptide: Micrometer                                                [jar]
+[INFO] Riptide: OpenTracing                                               [jar]
+[INFO] Riptide: SOAP                                                      [jar]
+[INFO] Riptide: Stream                                                    [jar]
+[INFO] Riptide: Spring Boot Auto Configuration                            [jar]
+[INFO] Riptide: Spring Boot Starter                                       [jar]
+[INFO] 
+[INFO] ------------------------< org.zalando:riptide >-------------------------
+[INFO] Building Riptide 3.1.0-SNAPSHOT                                   [1/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide ---
+[INFO] Ignoring POM project!
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/target/jacoco.exec
+[INFO] 
+[INFO] ---------------------< org.zalando:riptide-parent >---------------------
+[INFO] Building Riptide: Parent 3.1.0-SNAPSHOT                           [2/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-parent ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-parent ---
+[INFO] Ignoring POM project!
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-parent ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-parent/target/jacoco.exec
+[INFO] 
+[INFO] ----------------------< org.zalando:riptide-core >----------------------
+[INFO] Building Riptide: Core 3.1.0-SNAPSHOT                             [3/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-core ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-core ---
+[INFO] Checking compile classpath
+[INFO] Checking runtime classpath
+[INFO] Checking test classpath
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-core ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-core/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ riptide-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ riptide-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ riptide-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ riptide-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ riptide-core ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.zalando.riptide.EmptyEntityTest
+[main] INFO org.eclipse.jetty.util.log - Logging initialized @4759ms to org.eclipse.jetty.util.log.Slf4jLog
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@104dc1a2{HTTP/1.1, (http/1.1)}{0.0.0.0:46881}
+[main] INFO org.eclipse.jetty.server.Server - Started @6020ms
+[qtp1517266286-19] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@104dc1a2{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@57f83dc7{HTTP/1.1, (http/1.1)}{0.0.0.0:44733}
+[main] INFO org.eclipse.jetty.server.Server - Started @11844ms
+[qtp2103548875-32] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@57f83dc7{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4eb69e8d{HTTP/1.1, (http/1.1)}{0.0.0.0:40089}
+[main] INFO org.eclipse.jetty.server.Server - Started @13248ms
+[qtp319541262-40] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4eb69e8d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9,237.923 s - in org.zalando.riptide.EmptyEntityTest
+[INFO] Running org.zalando.riptide.RequesterImmutabilityTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 267.629 s - in org.zalando.riptide.RequesterImmutabilityTest
+[INFO] Running org.zalando.riptide.StatusDispatchTest
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,373.728 s - in org.zalando.riptide.StatusDispatchTest
+[INFO] Running org.zalando.riptide.InputStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in org.zalando.riptide.InputStreamTest
+[INFO] Running org.zalando.riptide.IOTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@347770a9{HTTP/1.1, (http/1.1)}{0.0.0.0:40657}
+[main] INFO org.eclipse.jetty.server.Server - Started @16800ms
+[qtp882181333-115] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@424ebf5b{HTTP/1.1, (http/1.1)}{0.0.0.0:44983}
+[main] INFO org.eclipse.jetty.server.Server - Started @18316ms
+[qtp2037189443-122] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,025.732 s - in org.zalando.riptide.IOTest
+[INFO] Running org.zalando.riptide.ExecuteTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 546.701 s - in org.zalando.riptide.ExecuteTest
+[INFO] Running org.zalando.riptide.NIOTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@63f093a{HTTP/1.1, (http/1.1)}{0.0.0.0:37167}
+[main] INFO org.eclipse.jetty.server.Server - Started @19769ms
+[qtp1565138220-144] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,303.285 s - in org.zalando.riptide.NIOTest
+[INFO] Running org.zalando.riptide.CallTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,890.311 s - in org.zalando.riptide.CallTest
+[INFO] Running org.zalando.riptide.RoutingTreeTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 424.749 s - in org.zalando.riptide.RoutingTreeTest
+[INFO] Running org.zalando.riptide.NestedDispatchTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,509.165 s - in org.zalando.riptide.NestedDispatchTest
+[INFO] Running org.zalando.riptide.DynamicBaseUrlTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.536 s - in org.zalando.riptide.DynamicBaseUrlTest
+[INFO] Running org.zalando.riptide.SeriesDispatchTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 182.402 s - in org.zalando.riptide.SeriesDispatchTest
+[INFO] Running org.zalando.riptide.RouteTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 522.62 s - in org.zalando.riptide.RouteTest
+[INFO] Running org.zalando.riptide.AnyDispatchTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.7 s - in org.zalando.riptide.AnyDispatchTest
+[INFO] Running org.zalando.riptide.AttributeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 73.842 s - in org.zalando.riptide.AttributeTest
+[INFO] Running org.zalando.riptide.ReasonPhraseDispatchTest
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3,398.817 s - in org.zalando.riptide.ReasonPhraseDispatchTest
+[INFO] Running org.zalando.riptide.StatusCodeDispatchTest
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,269.187 s - in org.zalando.riptide.StatusCodeDispatchTest
+[INFO] Running org.zalando.riptide.RequesterTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 554.758 s - in org.zalando.riptide.RequesterTest
+[INFO] Running org.zalando.riptide.OriginalStackTracePluginTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7d32399a{HTTP/1.1, (http/1.1)}{0.0.0.0:35861}
+[main] INFO org.eclipse.jetty.server.Server - Started @39715ms
+[qtp1956193042-316] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2839ac4c{HTTP/1.1, (http/1.1)}{0.0.0.0:36687}
+[main] INFO org.eclipse.jetty.server.Server - Started @41015ms
+[qtp1335697931-327] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,062.686 s - in org.zalando.riptide.OriginalStackTracePluginTest
+[INFO] Running org.zalando.riptide.HttpResponseExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s - in org.zalando.riptide.HttpResponseExceptionTest
+[INFO] Running org.zalando.riptide.UriTemplateArgTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 303.85 s - in org.zalando.riptide.UriTemplateArgTest
+[INFO] Running org.zalando.riptide.HandlesIOExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.415 s - in org.zalando.riptide.HandlesIOExceptionTest
+[INFO] Running org.zalando.riptide.ForwardingClientHttpResponseTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in org.zalando.riptide.ForwardingClientHttpResponseTest
+[INFO] Running org.zalando.riptide.DefaultRequestArgumentsTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 463.364 s - in org.zalando.riptide.DefaultRequestArgumentsTest
+[INFO] Running org.zalando.riptide.AsyncTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,884.417 s - in org.zalando.riptide.AsyncTest
+[INFO] Running org.zalando.riptide.FailedDispatchTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,556.934 s - in org.zalando.riptide.FailedDispatchTest
+[INFO] Running org.zalando.riptide.ExceptionHandlingTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 352.6 s - in org.zalando.riptide.ExceptionHandlingTest
+[INFO] Running org.zalando.riptide.PluginTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 456.731 s - in org.zalando.riptide.PluginTest
+[INFO] Running org.zalando.riptide.NavigatorsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.201 s - in org.zalando.riptide.NavigatorsTest
+[INFO] Running org.zalando.riptide.RequestUriTest
+[WARNING] Tests run: 864, Failures: 0, Errors: 0, Skipped: 336, Time elapsed: 50,596.42 s - in org.zalando.riptide.RequestUriTest
+[INFO] Running org.zalando.riptide.ThreadAffinityTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@62e099d7{HTTP/1.1, (http/1.1)}{0.0.0.0:34277}
+[main] INFO org.eclipse.jetty.server.Server - Started @99328ms
+[qtp368792881-861] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@31813ea8{HTTP/1.1, (http/1.1)}{0.0.0.0:46575}
+[main] INFO org.eclipse.jetty.server.Server - Started @100976ms
+[qtp1573989633-874] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@fc3fd5b{HTTP/1.1, (http/1.1)}{0.0.0.0:40195}
+[main] INFO org.eclipse.jetty.server.Server - Started @102025ms
+[qtp807903288-881] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@163f56c{HTTP/1.1, (http/1.1)}{0.0.0.0:37411}
+[main] INFO org.eclipse.jetty.server.Server - Started @103988ms
+[qtp1643819107-894] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10,870.291 s - in org.zalando.riptide.ThreadAffinityTest
+[INFO] Running org.zalando.riptide.NoopRouteTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.917 s - in org.zalando.riptide.NoopRouteTest
+[INFO] Running org.zalando.riptide.NoBaseUrlTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in org.zalando.riptide.NoBaseUrlTest
+[INFO] Running org.zalando.riptide.ContentTypeDispatchTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in org.zalando.riptide.ContentTypeDispatchTest
+[INFO] Running org.zalando.riptide.MethodDelegateTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,022.597 s - in org.zalando.riptide.MethodDelegateTest
+[INFO] Running org.zalando.riptide.CompletableFuturesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 179.726 s - in org.zalando.riptide.CompletableFuturesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 1222, Failures: 0, Errors: 0, Skipped: 336
+[INFO] 
+[INFO] 
+[INFO] --------------------< org.zalando:riptide-capture >---------------------
+[INFO] Building Riptide: Capture 3.1.0-SNAPSHOT                          [4/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-capture ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-capture ---
+[INFO] Checking compile classpath
+[INFO] Checking runtime classpath
+[INFO] Checking test classpath
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-capture ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-capture/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ riptide-capture ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-capture/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ riptide-capture ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ riptide-capture ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ riptide-capture ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ riptide-capture ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.zalando.riptide.capture.CaptureTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3,395.339 s - in org.zalando.riptide.capture.CaptureTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -------------------< org.zalando:riptide-httpclient >-------------------
+[INFO] Building Riptide: HTTP Client 3.1.0-SNAPSHOT                      [5/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-httpclient ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-httpclient ---
+[INFO] Checking compile classpath
+[INFO] Checking runtime classpath
+[INFO] Checking test classpath
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-httpclient ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-httpclient/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ riptide-httpclient ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-httpclient/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ riptide-httpclient ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ riptide-httpclient ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ riptide-httpclient ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ riptide-httpclient ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.zalando.riptide.httpclient.ClosingTest
+[main] WARN org.zalando.riptide.httpclient.Closing - IOException thrown while closing Closeable.
+java.io.IOException
+	at org.zalando.riptide.httpclient.Closing.closeQuietly(Closing.java:21)
+	at org.zalando.riptide.httpclient.ClosingTest.swallowsException(ClosingTest.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2,746.733 s - in org.zalando.riptide.httpclient.ClosingTest
+[INFO] Running org.zalando.riptide.httpclient.EmptyInputStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.895 s - in org.zalando.riptide.httpclient.EmptyInputStreamTest
+[INFO] Running org.zalando.riptide.httpclient.ApacheClientHttpResponseBodyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 882.998 s - in org.zalando.riptide.httpclient.ApacheClientHttpResponseBodyTest
+[INFO] Running org.zalando.riptide.httpclient.metrics.HttpConnectionPoolMetricsTest
+[main] INFO org.eclipse.jetty.util.log - Logging initialized @7964ms to org.eclipse.jetty.util.log.Slf4jLog
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@14d1032a{HTTP/1.1, (http/1.1)}{0.0.0.0:40771}
+[main] INFO org.eclipse.jetty.server.Server - Started @9017ms
+[qtp467925240-18] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7,025.13 s - in org.zalando.riptide.httpclient.metrics.HttpConnectionPoolMetricsTest
+[INFO] Running org.zalando.riptide.httpclient.BufferingApacheClientHttpRequestFactoryTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@537231c1{HTTP/1.1, (http/1.1)}{0.0.0.0:40345}
+[main] INFO org.eclipse.jetty.server.Server - Started @15206ms
+[qtp214857672-30] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[qtp214857672-25] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@5708b827{HTTP/1.1, (http/1.1)}{0.0.0.0:39097}
+[main] INFO org.eclipse.jetty.server.Server - Started @17339ms
+[qtp2054611385-40] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /repos/zalando/riptide/contributors
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@16c90eac{HTTP/1.1, (http/1.1)}{0.0.0.0:44453}
+[main] INFO org.eclipse.jetty.server.Server - Started @19065ms
+[qtp200550954-48] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2ff19416{HTTP/1.1, (http/1.1)}{0.0.0.0:40613}
+[main] INFO org.eclipse.jetty.server.Server - Started @20325ms
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@21833d72{HTTP/1.1, (http/1.1)}{0.0.0.0:44399}
+[main] INFO org.eclipse.jetty.server.Server - Started @21441ms
+[qtp1486395980-65] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /wrong-content-type
+[qtp1486395980-67] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /wrong-content-type
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@986deaf{HTTP/1.1, (http/1.1)}{0.0.0.0:42087}
+[main] INFO org.eclipse.jetty.server.Server - Started @24757ms
+[qtp736497727-75] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[ERROR] Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11,564.863 s <<< FAILURE! - in org.zalando.riptide.httpclient.BufferingApacheClientHttpRequestFactoryTest
+[ERROR] shouldReleaseConnection  Time elapsed: 1,273.059 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: execution exceeded timeout of 750 ms by 1138198 ms
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:90)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:70)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:52)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:48)
+	at org.junit.jupiter.api.Assertions.assertTimeout(Assertions.java:3261)
+	at org.zalando.riptide.httpclient.AbstractApacheClientHttpRequestFactoryTest.shouldReleaseConnection(AbstractApacheClientHttpRequestFactoryTest.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+[INFO] Running org.zalando.riptide.httpclient.EndOfStreamAwareInputStreamTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 119.055 s - in org.zalando.riptide.httpclient.EndOfStreamAwareInputStreamTest
+[INFO] Running org.zalando.riptide.httpclient.StreamingApacheClientHttpRequestTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.307 s - in org.zalando.riptide.httpclient.StreamingApacheClientHttpRequestTest
+[INFO] Running org.zalando.riptide.httpclient.StreamingApacheClientHttpRequestFactoryTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3a657773{HTTP/1.1, (http/1.1)}{0.0.0.0:39727}
+[main] INFO org.eclipse.jetty.server.Server - Started @27781ms
+[qtp839576787-87] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[qtp839576787-83] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1bd5577e{HTTP/1.1, (http/1.1)}{0.0.0.0:40391}
+[main] INFO org.eclipse.jetty.server.Server - Started @30753ms
+[qtp429130019-91] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /repos/zalando/riptide/contributors
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7ba92958{HTTP/1.1, (http/1.1)}{0.0.0.0:34431}
+[main] INFO org.eclipse.jetty.server.Server - Started @32005ms
+[qtp763204263-104] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@5aa345a5{HTTP/1.1, (http/1.1)}{0.0.0.0:38689}
+[main] INFO org.eclipse.jetty.server.Server - Started @34135ms
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6c430548{HTTP/1.1, (http/1.1)}{0.0.0.0:43401}
+[main] INFO org.eclipse.jetty.server.Server - Started @36973ms
+[qtp1060100403-119] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /wrong-content-type
+[qtp1060100403-116] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /wrong-content-type
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2d45db20{HTTP/1.1, (http/1.1)}{0.0.0.0:40317}
+[main] INFO org.eclipse.jetty.server.Server - Started @41657ms
+[qtp1601868063-131] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /repos/zalando/riptide/contributors
+[ERROR] Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15,463.142 s <<< FAILURE! - in org.zalando.riptide.httpclient.StreamingApacheClientHttpRequestFactoryTest
+[ERROR] shouldReleaseConnection  Time elapsed: 2,012.839 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: execution exceeded timeout of 750 ms by 1962556 ms
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:90)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:70)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:52)
+	at org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:48)
+	at org.junit.jupiter.api.Assertions.assertTimeout(Assertions.java:3261)
+	at org.zalando.riptide.httpclient.AbstractApacheClientHttpRequestFactoryTest.shouldReleaseConnection(AbstractApacheClientHttpRequestFactoryTest.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   BufferingApacheClientHttpRequestFactoryTest>AbstractApacheClientHttpRequestFactoryTest.shouldReleaseConnection:184 execution exceeded timeout of 750 ms by 1138198 ms
+[ERROR]   StreamingApacheClientHttpRequestFactoryTest>AbstractApacheClientHttpRequestFactoryTest.shouldReleaseConnection:184 execution exceeded timeout of 750 ms by 1962556 ms
+[INFO] 
+[ERROR] Tests run: 29, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Authorization
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ----------------------< org.zalando:riptide-bom >-----------------------
+[INFO] Building Riptide: Bill of Materials 3.1.0-SNAPSHOT                [6/22]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-bom ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-bom ---
+[INFO] Ignoring POM project!
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-bom ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-bom/target/jacoco.exec
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Chaos
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --------------------< org.zalando:riptide-problem >---------------------
+[INFO] Building Riptide: Problem 3.1.0-SNAPSHOT                          [7/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-problem ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-problem ---
+[INFO] Checking compile classpath
+[INFO] Checking runtime classpath
+[INFO] Checking test classpath
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-problem ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-problem/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ riptide-problem ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-problem/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ riptide-problem ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ riptide-problem ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ riptide-problem ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ riptide-problem ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.zalando.riptide.problem.ProblemRouteTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5,582.062 s - in org.zalando.riptide.problem.ProblemRouteTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -----------------< org.zalando:riptide-compatibility >------------------
+[INFO] Building Riptide: Compatibility 3.1.0-SNAPSHOT                    [8/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-compatibility ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-compatibility ---
+[INFO] Checking compile classpath
+[INFO] Checking runtime classpath
+[INFO] Checking test classpath
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-compatibility ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-compatibility/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ riptide-compatibility ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-compatibility/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ riptide-compatibility ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ riptide-compatibility ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-compatibility/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ riptide-compatibility ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ riptide-compatibility ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.zalando.riptide.compatibility.AsyncHttpOperationsTest
+[main] INFO org.eclipse.jetty.util.log - Logging initialized @4548ms to org.eclipse.jetty.util.log.Slf4jLog
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@31120021{HTTP/1.1, (http/1.1)}{0.0.0.0:37665}
+[main] INFO org.eclipse.jetty.server.Server - Started @5739ms
+[qtp2010546406-20] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@31120021{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - QueuedThreadPool[qtp2010546406]@77d680e6{STOPPING,8<=0<=200,i=8,r=-1,q=0}[NO_TRY] Couldn't stop Thread[qtp2010546406-19,5,main]
+[main] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - Stopped without executing or closing null
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@51f91d19{HTTP/1.1, (http/1.1)}{0.0.0.0:38935}
+[main] INFO org.eclipse.jetty.server.Server - Started @13431ms
+[qtp387422846-29] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@51f91d19{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@210e971e{HTTP/1.1, (http/1.1)}{0.0.0.0:45705}
+[main] INFO org.eclipse.jetty.server.Server - Started @14263ms
+[qtp1686518257-39] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@210e971e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@796434a3{HTTP/1.1, (http/1.1)}{0.0.0.0:42097}
+[main] INFO org.eclipse.jetty.server.Server - Started @14948ms
+[qtp355539698-45] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PUT /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@796434a3{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@b45e264{HTTP/1.1, (http/1.1)}{0.0.0.0:45315}
+[main] INFO org.eclipse.jetty.server.Server - Started @15925ms
+[qtp75629578-57] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PUT /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@b45e264{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@270a113f{HTTP/1.1, (http/1.1)}{0.0.0.0:42777}
+[main] INFO org.eclipse.jetty.server.Server - Started @16674ms
+[qtp7530502-69] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PUT /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@270a113f{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] WARN org.eclipse.jetty.util.thread.QueuedThreadPool - QueuedThreadPool[qtp7530502]@72e806{STOPPING,8<=0<=200,i=6,r=-1,q=0}[NO_TRY] Couldn't stop Thread[qtp7530502-64,5,main]
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3e3b41cb{HTTP/1.1, (http/1.1)}{0.0.0.0:37381}
+[main] INFO org.eclipse.jetty.server.Server - Started @17315ms
+[qtp2141994208-80] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3e3b41cb{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6e1d939e{HTTP/1.1, (http/1.1)}{0.0.0.0:40799}
+[main] INFO org.eclipse.jetty.server.Server - Started @17951ms
+[qtp1607476060-89] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@6e1d939e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7ae5f795{HTTP/1.1, (http/1.1)}{0.0.0.0:38765}
+[main] INFO org.eclipse.jetty.server.Server - Started @18655ms
+[qtp800724421-98] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@7ae5f795{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4c1f4817{HTTP/1.1, (http/1.1)}{0.0.0.0:40379}
+[main] INFO org.eclipse.jetty.server.Server - Started @19163ms
+[qtp466491867-109] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: DELETE /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4c1f4817{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2f5a23c1{HTTP/1.1, (http/1.1)}{0.0.0.0:45569}
+[main] INFO org.eclipse.jetty.server.Server - Started @19747ms
+[qtp1604007861-119] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: DELETE /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2f5a23c1{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@550ce3a9{HTTP/1.1, (http/1.1)}{0.0.0.0:44761}
+[main] INFO org.eclipse.jetty.server.Server - Started @20435ms
+[qtp1375395104-129] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: DELETE /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@550ce3a9{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4d5aeea7{HTTP/1.1, (http/1.1)}{0.0.0.0:34073}
+[main] INFO org.eclipse.jetty.server.Server - Started @21219ms
+[qtp1976075614-136] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4d5aeea7{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@fbc1de9{HTTP/1.1, (http/1.1)}{0.0.0.0:32935}
+[main] INFO org.eclipse.jetty.server.Server - Started @22239ms
+[qtp952647931-149] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@fbc1de9{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@16cc5e51{HTTP/1.1, (http/1.1)}{0.0.0.0:43005}
+[main] INFO org.eclipse.jetty.server.Server - Started @22851ms
+[qtp1516032175-159] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@16cc5e51{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@54c15e{HTTP/1.1, (http/1.1)}{0.0.0.0:35119}
+[main] INFO org.eclipse.jetty.server.Server - Started @23328ms
+[qtp227072471-170] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@54c15e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@121ec5c2{HTTP/1.1, (http/1.1)}{0.0.0.0:40627}
+[main] INFO org.eclipse.jetty.server.Server - Started @24500ms
+[qtp319123198-179] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@121ec5c2{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1ef4179{HTTP/1.1, (http/1.1)}{0.0.0.0:43307}
+[main] INFO org.eclipse.jetty.server.Server - Started @24903ms
+[qtp595480281-189] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1ef4179{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1934a7c1{HTTP/1.1, (http/1.1)}{0.0.0.0:33055}
+[main] INFO org.eclipse.jetty.server.Server - Started @25371ms
+[qtp1858454754-199] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1934a7c1{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6dbe6891{HTTP/1.1, (http/1.1)}{0.0.0.0:39457}
+[main] INFO org.eclipse.jetty.server.Server - Started @26243ms
+[qtp1189861498-209] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@6dbe6891{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4c0d7878{HTTP/1.1, (http/1.1)}{0.0.0.0:43329}
+[main] INFO org.eclipse.jetty.server.Server - Started @26985ms
+[qtp218004451-221] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: HEAD /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4c0d7878{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3a7deba5{HTTP/1.1, (http/1.1)}{0.0.0.0:44933}
+[main] INFO org.eclipse.jetty.server.Server - Started @27661ms
+[qtp21387540-224] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: HEAD /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3a7deba5{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@202ed88d{HTTP/1.1, (http/1.1)}{0.0.0.0:36895}
+[main] INFO org.eclipse.jetty.server.Server - Started @28151ms
+[qtp22051779-240] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: HEAD /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@202ed88d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@deb0c0e{HTTP/1.1, (http/1.1)}{0.0.0.0:34657}
+[main] INFO org.eclipse.jetty.server.Server - Started @28815ms
+[qtp1547671064-250] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: OPTIONS /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@deb0c0e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4e8e0052{HTTP/1.1, (http/1.1)}{0.0.0.0:39563}
+[main] INFO org.eclipse.jetty.server.Server - Started @29399ms
+[qtp432990189-259] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: OPTIONS /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4e8e0052{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@26bd2d7d{HTTP/1.1, (http/1.1)}{0.0.0.0:44681}
+[main] INFO org.eclipse.jetty.server.Server - Started @29948ms
+[qtp2102828048-269] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: OPTIONS /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@26bd2d7d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@cc41d2d{HTTP/1.1, (http/1.1)}{0.0.0.0:42477}
+[main] INFO org.eclipse.jetty.server.Server - Started @30735ms
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@cc41d2d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26,860.007 s - in org.zalando.riptide.compatibility.AsyncHttpOperationsTest
+[INFO] Running org.zalando.riptide.compatibility.HttpOutputMessageClientHttpRequestAdapterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,603.722 s - in org.zalando.riptide.compatibility.HttpOutputMessageClientHttpRequestAdapterTest
+[INFO] Running org.zalando.riptide.compatibility.CompletableToListenableFutureAdapterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 268.063 s - in org.zalando.riptide.compatibility.CompletableToListenableFutureAdapterTest
+[INFO] Running org.zalando.riptide.compatibility.HttpOperationsTest
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@652f3a8c{HTTP/1.1, (http/1.1)}{0.0.0.0:39559}
+[main] INFO org.eclipse.jetty.server.Server - Started @32991ms
+[qtp118112620-287] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@652f3a8c{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@751661b{HTTP/1.1, (http/1.1)}{0.0.0.0:38755}
+[main] INFO org.eclipse.jetty.server.Server - Started @33911ms
+[qtp1121364616-296] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@751661b{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@60a07d77{HTTP/1.1, (http/1.1)}{0.0.0.0:45975}
+[main] INFO org.eclipse.jetty.server.Server - Started @34563ms
+[qtp421115312-307] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@60a07d77{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@119aabf3{HTTP/1.1, (http/1.1)}{0.0.0.0:46455}
+[main] INFO org.eclipse.jetty.server.Server - Started @35119ms
+[qtp1644733976-317] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@119aabf3{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4d12e75d{HTTP/1.1, (http/1.1)}{0.0.0.0:35747}
+[main] INFO org.eclipse.jetty.server.Server - Started @35857ms
+[qtp70704621-327] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4d12e75d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6f46764d{HTTP/1.1, (http/1.1)}{0.0.0.0:42143}
+[main] INFO org.eclipse.jetty.server.Server - Started @36595ms
+[qtp927669637-337] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@6f46764d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6fffad6d{HTTP/1.1, (http/1.1)}{0.0.0.0:36417}
+[main] INFO org.eclipse.jetty.server.Server - Started @37359ms
+[qtp189947450-347] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PUT /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@6fffad6d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@19507769{HTTP/1.1, (http/1.1)}{0.0.0.0:43703}
+[main] INFO org.eclipse.jetty.server.Server - Started @38247ms
+[qtp673064503-357] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PUT /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@19507769{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@39b704f7{HTTP/1.1, (http/1.1)}{0.0.0.0:40849}
+[main] INFO org.eclipse.jetty.server.Server - Started @38844ms
+[qtp1843348227-367] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PUT /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@39b704f7{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6c303cdc{HTTP/1.1, (http/1.1)}{0.0.0.0:37329}
+[main] INFO org.eclipse.jetty.server.Server - Started @39539ms
+[qtp270929666-376] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@6c303cdc{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7ec00f98{HTTP/1.1, (http/1.1)}{0.0.0.0:43133}
+[main] INFO org.eclipse.jetty.server.Server - Started @40439ms
+[qtp2058855659-386] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@7ec00f98{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@196e494d{HTTP/1.1, (http/1.1)}{0.0.0.0:43047}
+[main] INFO org.eclipse.jetty.server.Server - Started @41011ms
+[qtp2131088063-397] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@196e494d{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1fc892c{HTTP/1.1, (http/1.1)}{0.0.0.0:43269}
+[main] INFO org.eclipse.jetty.server.Server - Started @41583ms
+[qtp1846728894-405] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: DELETE /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1fc892c{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@42a4e5cb{HTTP/1.1, (http/1.1)}{0.0.0.0:39567}
+[main] INFO org.eclipse.jetty.server.Server - Started @42095ms
+[qtp178210337-417] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: DELETE /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@42a4e5cb{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@709de434{HTTP/1.1, (http/1.1)}{0.0.0.0:36647}
+[main] INFO org.eclipse.jetty.server.Server - Started @42577ms
+[qtp473977770-426] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: DELETE /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@709de434{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@15329cf9{HTTP/1.1, (http/1.1)}{0.0.0.0:41809}
+[main] INFO org.eclipse.jetty.server.Server - Started @43343ms
+[qtp228068780-437] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@15329cf9{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2945a3c1{HTTP/1.1, (http/1.1)}{0.0.0.0:40237}
+[main] INFO org.eclipse.jetty.server.Server - Started @44187ms
+[qtp1977822284-446] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2945a3c1{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@3b63f49e{HTTP/1.1, (http/1.1)}{0.0.0.0:39989}
+[main] INFO org.eclipse.jetty.server.Server - Started @44864ms
+[qtp743142522-458] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@3b63f49e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@29abec7e{HTTP/1.1, (http/1.1)}{0.0.0.0:44313}
+[main] INFO org.eclipse.jetty.server.Server - Started @45255ms
+[qtp1512097170-467] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@29abec7e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1448e2b6{HTTP/1.1, (http/1.1)}{0.0.0.0:33645}
+[main] INFO org.eclipse.jetty.server.Server - Started @45828ms
+[qtp1538161275-473] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1448e2b6{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@721fc0bb{HTTP/1.1, (http/1.1)}{0.0.0.0:46071}
+[main] INFO org.eclipse.jetty.server.Server - Started @46507ms
+[qtp1407090873-482] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@721fc0bb{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@17b4d5ab{HTTP/1.1, (http/1.1)}{0.0.0.0:36405}
+[main] INFO org.eclipse.jetty.server.Server - Started @47247ms
+[qtp1204684191-497] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: GET /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@17b4d5ab{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@6bb01b34{HTTP/1.1, (http/1.1)}{0.0.0.0:38687}
+[main] INFO org.eclipse.jetty.server.Server - Started @47859ms
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@6bb01b34{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4a83c651{HTTP/1.1, (http/1.1)}{0.0.0.0:33847}
+[main] INFO org.eclipse.jetty.server.Server - Started @48115ms
+[qtp1884170233-515] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PATCH /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@4a83c651{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7a54fc29{HTTP/1.1, (http/1.1)}{0.0.0.0:35659}
+[main] INFO org.eclipse.jetty.server.Server - Started @48601ms
+[qtp701317023-524] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PATCH /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@7a54fc29{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@46f322ab{HTTP/1.1, (http/1.1)}{0.0.0.0:40505}
+[main] INFO org.eclipse.jetty.server.Server - Started @49251ms
+[qtp1030039487-533] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: PATCH /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@46f322ab{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2c238bbf{HTTP/1.1, (http/1.1)}{0.0.0.0:41097}
+[main] INFO org.eclipse.jetty.server.Server - Started @49951ms
+[qtp2118072884-545] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@2c238bbf{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@ffad70{HTTP/1.1, (http/1.1)}{0.0.0.0:35313}
+[main] INFO org.eclipse.jetty.server.Server - Started @50492ms
+[qtp855411265-554] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: HEAD /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@ffad70{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@59de440b{HTTP/1.1, (http/1.1)}{0.0.0.0:44443}
+[main] INFO org.eclipse.jetty.server.Server - Started @51487ms
+[qtp1101481055-565] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: HEAD /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@59de440b{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@739fcd31{HTTP/1.1, (http/1.1)}{0.0.0.0:40077}
+[main] INFO org.eclipse.jetty.server.Server - Started @52251ms
+[qtp394500813-575] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: HEAD /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@739fcd31{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@57c06659{HTTP/1.1, (http/1.1)}{0.0.0.0:36149}
+[main] INFO org.eclipse.jetty.server.Server - Started @52791ms
+[qtp1441839718-585] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: OPTIONS /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@57c06659{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@7dd6aa3e{HTTP/1.1, (http/1.1)}{0.0.0.0:42393}
+[main] INFO org.eclipse.jetty.server.Server - Started @53446ms
+[qtp1207389583-595] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: OPTIONS /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@7dd6aa3e{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@b9aca74{HTTP/1.1, (http/1.1)}{0.0.0.0:35889}
+[main] INFO org.eclipse.jetty.server.Server - Started @54055ms
+[qtp6004416-605] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: OPTIONS /users/1
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@b9aca74{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_312-b07
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@b536551{HTTP/1.1, (http/1.1)}{0.0.0.0:38345}
+[main] INFO org.eclipse.jetty.server.Server - Started @54775ms
+[qtp242590008-615] INFO com.github.restdriver.clientdriver.jetty.DefaultClientDriverJettyHandler - Handling: POST /departments/1/users
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@b536551{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+[main] INFO com.github.restdriver.clientdriver.ClientDriver - Beginning verification
+[INFO] Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22,434.824 s - in org.zalando.riptide.compatibility.HttpOperationsTest
+[INFO] Running org.zalando.riptide.compatibility.HttpOutputMessageAsyncClientHttpRequestAdapterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.169 s - in org.zalando.riptide.compatibility.HttpOutputMessageAsyncClientHttpRequestAdapterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 73, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Request Compression
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] -------------------< org.zalando:riptide-concurrent >-------------------
+[INFO] Building Riptide: Concurrent 3.1.0-SNAPSHOT                       [9/22]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ riptide-concurrent ---
+[INFO] 
+[INFO] --- duplicate-finder-maven-plugin:1.5.0:check (default) @ riptide-concurrent ---
+[INFO] Checking compile classpath
+[INFO] Checking runtime classpath
+[INFO] Checking test classpath
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.7:prepare-agent (prepare-agent) @ riptide-concurrent ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/home/target/riptide-concurrent/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ riptide-concurrent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-concurrent/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ riptide-concurrent ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ riptide-concurrent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/riptide-concurrent/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ riptide-concurrent ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ riptide-concurrent ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.zalando.riptide.concurrent.ThreadPoolExecutorsTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,007.099 s - in org.zalando.riptide.concurrent.ThreadPoolExecutorsTest
+[INFO] Running org.zalando.riptide.concurrent.QueueFirstTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.675 s - in org.zalando.riptide.concurrent.QueueFirstTest
+[INFO] Running org.zalando.riptide.concurrent.ScaleFirstTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 905.426 s - in org.zalando.riptide.concurrent.ScaleFirstTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Idempotency
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Faults
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Failsafe
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Logbook
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Micrometer
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: OpenTracing
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: SOAP
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Stream
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Spring Boot Auto Configuration
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Riptide: Spring Boot Starter
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Riptide 3.1.0-SNAPSHOT:
+[INFO] 
+[INFO] Riptide ............................................ SUCCESS [24:56 min]
+[INFO] Riptide: Parent .................................... SUCCESS [04:15 min]
+[INFO] Riptide: Core ...................................... SUCCESS [1 d 08:51 h]
+[INFO] Riptide: Capture ................................... SUCCESS [  02:09 h]
+[INFO] Riptide: HTTP Client ............................... FAILURE [  12:26 h]
+[INFO] Riptide: Authorization ............................. SKIPPED
+[INFO] Riptide: Bill of Materials ......................... SUCCESS [  3.563 s]
+[INFO] Riptide: Chaos ..................................... SKIPPED
+[INFO] Riptide: Problem ................................... SUCCESS [  02:45 h]
+[INFO] Riptide: Compatibility ............................. SUCCESS [  15:38 h]
+[INFO] Riptide: Request Compression ....................... SKIPPED
+[INFO] Riptide: Concurrent ................................ SUCCESS [  01:42 h]
+[INFO] Riptide: Idempotency ............................... SKIPPED
+[INFO] Riptide: Faults .................................... SKIPPED
+[INFO] Riptide: Failsafe .................................. SKIPPED
+[INFO] Riptide: Logbook ................................... SKIPPED
+[INFO] Riptide: Micrometer ................................ SKIPPED
+[INFO] Riptide: OpenTracing ............................... SKIPPED
+[INFO] Riptide: SOAP ...................................... SKIPPED
+[INFO] Riptide: Stream .................................... SKIPPED
+[INFO] Riptide: Spring Boot Auto Configuration ............ SKIPPED
+[INFO] Riptide: Spring Boot Starter ....................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2 d 20:15 h
+[INFO] Finished at: 2021-11-14T19:50:57Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project riptide-httpclient: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/riptide-httpclient/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :riptide-httpclient
+{'error': True, 'log_file': 'output-2021-11-11T23:00:41-5433.log', 'message': '', 'start_time': '2021-11-11T23:00:41', 'end_time': '2021-11-11T23:04:49', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 x1000.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

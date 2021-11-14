@@ -1,0 +1,457 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] biojava                                                            [pom]
+[INFO] biojava-core                                                       [jar]
+[INFO] biojava-alignment                                                  [jar]
+[INFO] biojava-structure                                                  [jar]
+[INFO] biojava-structure-gui                                              [jar]
+[INFO] biojava-genome                                                     [jar]
+[INFO] biojava-modfinder                                                  [jar]
+[INFO] biojava-ws                                                         [jar]
+[INFO] biojava-protein-disorder                                           [jar]
+[INFO] biojava-aa-prop                                                    [jar]
+[INFO] biojava-survival                                                   [jar]
+[INFO] biojava-ontology                                                   [jar]
+[INFO] biojava-protein-comparison-tool                                    [jar]
+[INFO] biojava-integrationtest                                            [jar]
+[INFO] 
+[INFO] ------------------------< org.biojava:biojava >-------------------------
+[INFO] Building biojava 6.0.1-SNAPSHOT                                   [1/14]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java) @ biojava ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ biojava ---
+[INFO] 
+[INFO] ----------------------< org.biojava:biojava-core >----------------------
+[INFO] Building biojava-core 6.0.1-SNAPSHOT                              [2/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java) @ biojava-core ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ biojava-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ biojava-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 24 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ biojava-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ biojava-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 47 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ biojava-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ biojava-core ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.biojava.nbio.core.search.io.SearchIOTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 214,970.112 s - in org.biojava.nbio.core.search.io.SearchIOTest
+[INFO] Running org.biojava.nbio.core.search.io.HspTest
+getAlignment
+hashCode
+equals
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 955,387 s - in org.biojava.nbio.core.search.io.HspTest
+[INFO] Running org.biojava.nbio.core.search.io.blast.BlastTabularParserTest
+createObjects
+getFileExtensions
+setFile
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,098,954.296 s - in org.biojava.nbio.core.search.io.blast.BlastTabularParserTest
+[INFO] Running org.biojava.nbio.core.search.io.blast.BlastXMLParserTest
+createObjects
+getFileExtensions
+setFile
+[ERROR] Tests run: 6, Failures: 0, Errors: 1, Skipped: 2, Time elapsed: 2,062,301 s <<< FAILURE! - in org.biojava.nbio.core.search.io.blast.BlastXMLParserTest
+[ERROR] org.biojava.nbio.core.search.io.blast.BlastXMLParserTest.testCreateObjects  Time elapsed: 2,004,399 s  <<< ERROR!
+javax.net.ssl.SSLHandshakeException: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+	at org.biojava.nbio.core.search.io.blast.BlastXMLParserTest.testCreateObjects(BlastXMLParserTest.java:101)
+Caused by: sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+	at org.biojava.nbio.core.search.io.blast.BlastXMLParserTest.testCreateObjects(BlastXMLParserTest.java:101)
+Caused by: java.security.cert.CertPathValidatorException: validity check failed
+	at org.biojava.nbio.core.search.io.blast.BlastXMLParserTest.testCreateObjects(BlastXMLParserTest.java:101)
+Caused by: java.security.cert.CertificateExpiredException: NotAfter: Wed Aug 10 23:59:59 UTC 2022
+	at org.biojava.nbio.core.search.io.blast.BlastXMLParserTest.testCreateObjects(BlastXMLParserTest.java:101)
+
+[INFO] Running org.biojava.nbio.core.alignment.SimpleProfileTest
+[WARNING] Tests run: 54, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1,037,560 s - in org.biojava.nbio.core.alignment.SimpleProfileTest
+[INFO] Running org.biojava.nbio.core.alignment.SimpleAlignedSequenceTest
+[WARNING] Tests run: 35, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1,152,399 s - in org.biojava.nbio.core.alignment.SimpleAlignedSequenceTest
+[INFO] Running org.biojava.nbio.core.alignment.matrices.SubstitutionMatrixHelperTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,540,915 s - in org.biojava.nbio.core.alignment.matrices.SubstitutionMatrixHelperTest
+[INFO] Running org.biojava.nbio.core.alignment.matrices.DefaultAAIndexProviderTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,253,443 s - in org.biojava.nbio.core.alignment.matrices.DefaultAAIndexProviderTest
+[INFO] Running org.biojava.nbio.core.alignment.matrices.SubstitutionMatrixTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,022,032 s - in org.biojava.nbio.core.alignment.matrices.SubstitutionMatrixTest
+[INFO] Running org.biojava.nbio.core.alignment.matrices.AAindexFactoryTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,255,435 s - in org.biojava.nbio.core.alignment.matrices.AAindexFactoryTest
+[INFO] Running org.biojava.nbio.core.alignment.SimpleSequencePairTest
+[INFO] Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,092,630 s - in org.biojava.nbio.core.alignment.SimpleSequencePairTest
+[INFO] Running org.biojava.nbio.core.fasta.TestFASTAReader
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 862,852 s - in org.biojava.nbio.core.fasta.TestFASTAReader
+[INFO] Running org.biojava.nbio.core.util.TestUncompressInputStream
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 876,247 s - in org.biojava.nbio.core.util.TestUncompressInputStream
+[INFO] Running org.biojava.nbio.core.util.XMLHelperTest
+[INFO] Running org.biojava.nbio.core.util.XMLHelperTest$SelectElements
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 104,970 s - in org.biojava.nbio.core.util.XMLHelperTest$SelectElements
+[INFO] Running org.biojava.nbio.core.util.XMLHelperTest$SelectSingleElement
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6,098 s - in org.biojava.nbio.core.util.XMLHelperTest$SelectSingleElement
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,371,547 s - in org.biojava.nbio.core.util.XMLHelperTest
+[INFO] Running org.biojava.nbio.core.util.CRC64ChecksumTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 313,373 s - in org.biojava.nbio.core.util.CRC64ChecksumTest
+[INFO] Running org.biojava.nbio.core.util.FlatFileCacheTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,304,324 s - in org.biojava.nbio.core.util.FlatFileCacheTest
+[INFO] Running org.biojava.nbio.core.util.StringManipulationHelperTest
+[INFO] Running org.biojava.nbio.core.util.StringManipulationHelperTest$EqualsToXml
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,010,523 s - in org.biojava.nbio.core.util.StringManipulationHelperTest$EqualsToXml
+[INFO] Running org.biojava.nbio.core.util.StringManipulationHelperTest$JoinString
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30,588 s - in org.biojava.nbio.core.util.StringManipulationHelperTest$JoinString
+[INFO] Running org.biojava.nbio.core.util.StringManipulationHelperTest$equalsToIgnoreEndline
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24,041 s - in org.biojava.nbio.core.util.StringManipulationHelperTest$equalsToIgnoreEndline
+[INFO] Running org.biojava.nbio.core.util.StringManipulationHelperTest$InputStreamToString
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 162,288 s - in org.biojava.nbio.core.util.StringManipulationHelperTest$InputStreamToString
+[INFO] Running org.biojava.nbio.core.util.StringManipulationHelperTest$PaddingTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 107,969 s - in org.biojava.nbio.core.util.StringManipulationHelperTest$PaddingTest
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,459,149 s - in org.biojava.nbio.core.util.StringManipulationHelperTest
+[INFO] Running org.biojava.nbio.core.util.EqualsTest
+[INFO] Running org.biojava.nbio.core.util.EqualsTest$ClassEquals
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 76,587 s - in org.biojava.nbio.core.util.EqualsTest$ClassEquals
+[INFO] Running org.biojava.nbio.core.util.EqualsTest$ObjectEquals
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60,768 s - in org.biojava.nbio.core.util.EqualsTest$ObjectEquals
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 340,410 s - in org.biojava.nbio.core.util.EqualsTest
+[INFO] Running org.biojava.nbio.core.util.SoftHashMapTest
+[WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1,086,677 s - in org.biojava.nbio.core.util.SoftHashMapTest
+[INFO] Running org.biojava.nbio.core.util.HashcoderTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 266,492 s - in org.biojava.nbio.core.util.HashcoderTest
+[INFO] Running org.biojava.nbio.core.util.PrettyXMLWriterTest
+<to>
+  <a>22</a>
+  <b>43.22</b>
+  <text>some text</text>
+  <dt tz="UTC">2021-08-15</dt>
+</to>
+
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,185,452 s - in org.biojava.nbio.core.util.PrettyXMLWriterTest
+[INFO] Running org.biojava.nbio.core.util.SequenceToolsTest
+[INFO] Running org.biojava.nbio.core.util.SequenceToolsTest$SequenceFromString
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,534,467 s - in org.biojava.nbio.core.util.SequenceToolsTest$SequenceFromString
+[INFO] Running org.biojava.nbio.core.util.SequenceToolsTest$PercentNucleotideContent
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 228,829 s - in org.biojava.nbio.core.util.SequenceToolsTest$PercentNucleotideContent
+[INFO] Running org.biojava.nbio.core.util.SequenceToolsTest$PermuteCyclic
+7407711000
+1266480000
+[ERROR] Tests run: 9, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 391,470.408 s <<< FAILURE! - in org.biojava.nbio.core.util.SequenceToolsTest$PermuteCyclic
+[ERROR] org.biojava.nbio.core.util.SequenceToolsTest$PermuteCyclic.permuteCyclicPerformance  Time elapsed: 264,737.408 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.biojava.nbio.core.util.SequenceToolsTest$PermuteCyclic.permuteCyclicPerformance(SequenceToolsTest.java:77)
+
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -2,018,625.888 s - in org.biojava.nbio.core.util.SequenceToolsTest
+[INFO] Running org.biojava.nbio.core.util.SingleLinkageClustererTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,249,959 s - in org.biojava.nbio.core.util.SingleLinkageClustererTest
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$DeleteDirectory
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 857,641 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest$DeleteDirectory
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$URLMethods
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: -550,221.776 s <<< FAILURE! - in org.biojava.nbio.core.util.FileDownloadUtilsTest$URLMethods
+[ERROR] org.biojava.nbio.core.util.FileDownloadUtilsTest$URLMethods.pingGoogleOK  Time elapsed: 460,029 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.biojava.nbio.core.util.FileDownloadUtilsTest$URLMethods.pingGoogleOK(FileDownloadUtilsTest.java:161)
+
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$ExpandUserHome
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32,155 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest$ExpandUserHome
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$ToUnixPath
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5,758 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest$ToUnixPath
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$GetFilePrefix
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7,139 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest$GetFilePrefix
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$FileExtension
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9,389 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest$FileExtension
+[INFO] Running org.biojava.nbio.core.util.FileDownloadUtilsTest$FileCopy
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 66,163 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest$FileCopy
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 572,578.224 s - in org.biojava.nbio.core.util.FileDownloadUtilsTest
+[INFO] Running org.biojava.nbio.core.sequence.MultipleSequenceAlignmentTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 964,846 s - in org.biojava.nbio.core.sequence.MultipleSequenceAlignmentTest
+[INFO] Running org.biojava.nbio.core.sequence.TranslationTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,525,020 s - in org.biojava.nbio.core.sequence.TranslationTest
+[INFO] Running org.biojava.nbio.core.sequence.loader.GenbankProxySequenceReaderTest
+05:20:09 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id CP001663.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+22:18:05 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id CP001663.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+09:25:04 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_000932.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+23:24:17 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_000932.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+18:44:15 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_000932.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+02:20:05 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_000932.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+08:23:40 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_000932.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+11:59:33 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_000932.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+18:53:47 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_016912.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+23:30:26 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_016912.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+10:10:24 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_009648.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+04:38:04 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NC_009648.1. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+[ERROR] Tests run: 16, Failures: 1, Errors: 6, Skipped: 0, Time elapsed: 392,273.928 s <<< FAILURE! - in org.biojava.nbio.core.sequence.loader.GenbankProxySequenceReaderTest
+[ERROR] GenbankProxySequenceReaderTest.testProteinSequenceFactoring  Time elapsed: 1,248,415 s  <<< ERROR!
+java.lang.NullPointerException
+
+[ERROR] GenbankProxySequenceReaderTest.testFeatures  Time elapsed: 297,054 s  <<< ERROR!
+java.lang.NullPointerException
+
+[ERROR] GenbankProxySequenceReaderTest.testProteinSequenceFactoring  Time elapsed: 676,343 s  <<< FAILURE!
+java.lang.AssertionError
+
+[ERROR] GenbankProxySequenceReaderTest.testProteinSequenceFactoring  Time elapsed: 211,640 s  <<< ERROR!
+java.lang.NullPointerException
+
+[ERROR] GenbankProxySequenceReaderTest.testFeatures  Time elapsed: 188,568 s  <<< ERROR!
+java.lang.NullPointerException
+
+[ERROR] GenbankProxySequenceReaderTest.testProteinSequenceFactoring  Time elapsed: 274,291 s  <<< ERROR!
+java.lang.NullPointerException
+
+[ERROR] GenbankProxySequenceReaderTest.testFeatures  Time elapsed: 238,547 s  <<< ERROR!
+java.lang.NullPointerException
+
+[INFO] Running org.biojava.nbio.core.sequence.loader.SimpleGenbankProxySequenceReaderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 252,572.704 s - in org.biojava.nbio.core.sequence.loader.SimpleGenbankProxySequenceReaderTest
+[INFO] Running org.biojava.nbio.core.sequence.location.InsdcParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,011,948 s - in org.biojava.nbio.core.sequence.location.InsdcParserTest
+[INFO] Running org.biojava.nbio.core.sequence.location.LocationTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,262,141 s - in org.biojava.nbio.core.sequence.location.LocationTest
+[INFO] Running org.biojava.nbio.core.sequence.location.LocationParserTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 38,620 s - in org.biojava.nbio.core.sequence.location.LocationParserTest
+[INFO] Running org.biojava.nbio.core.sequence.location.TargetedLocationParserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54,871 s - in org.biojava.nbio.core.sequence.location.TargetedLocationParserTest
+[INFO] Running org.biojava.nbio.core.sequence.SequenceViewTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 873,280 s - in org.biojava.nbio.core.sequence.SequenceViewTest
+[INFO] Running org.biojava.nbio.core.sequence.JoiningSequenceReaderTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,024,255 s - in org.biojava.nbio.core.sequence.JoiningSequenceReaderTest
+[INFO] Running org.biojava.nbio.core.sequence.DNATest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,121,048 s - in org.biojava.nbio.core.sequence.DNATest
+[INFO] Running org.biojava.nbio.core.sequence.compound.AmbiguityDNACompoundTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 903,770 s - in org.biojava.nbio.core.sequence.compound.AmbiguityDNACompoundTest
+[INFO] Running org.biojava.nbio.core.sequence.EditSequenceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 966,617 s - in org.biojava.nbio.core.sequence.EditSequenceTest
+[INFO] Running org.biojava.nbio.core.sequence.TestSequenceEquals
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,069,973 s - in org.biojava.nbio.core.sequence.TestSequenceEquals
+[INFO] Running org.biojava.nbio.core.sequence.views.WindowViewTests
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,016,406 s - in org.biojava.nbio.core.sequence.views.WindowViewTests
+[INFO] Running org.biojava.nbio.core.sequence.io.ABITracerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,822,666 s - in org.biojava.nbio.core.sequence.io.ABITracerTest
+[INFO] Running org.biojava.nbio.core.sequence.io.FastaWriterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,081,473 s - in org.biojava.nbio.core.sequence.io.FastaWriterTest
+[INFO] Running org.biojava.nbio.core.sequence.io.FastaReaderTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 913,182 s - in org.biojava.nbio.core.sequence.io.FastaReaderTest
+[INFO] Running org.biojava.nbio.core.sequence.io.embl.EmblReaderTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 91,974 s - in org.biojava.nbio.core.sequence.io.embl.EmblReaderTest
+[INFO] Running org.biojava.nbio.core.sequence.io.GenbankCookbookTest
+06:05:38 [main] ERROR org.biojava.nbio.core.sequence.ProteinSequence - Caught IOException when getting DNA sequence for id NM_000266.4. Error: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: -1,926,212.296 s <<< FAILURE! - in org.biojava.nbio.core.sequence.io.GenbankCookbookTest
+[ERROR] org.biojava.nbio.core.sequence.io.GenbankCookbookTest.testProcess  Time elapsed: 1,435,128 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.biojava.nbio.core.sequence.io.GenbankCookbookTest.testProcess(GenbankCookbookTest.java:75)
+
+[INFO] Running org.biojava.nbio.core.sequence.io.GenbankWriterTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 901,786 s - in org.biojava.nbio.core.sequence.io.GenbankWriterTest
+[INFO] Running org.biojava.nbio.core.sequence.io.GenbankReaderTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,094,582 s - in org.biojava.nbio.core.sequence.io.GenbankReaderTest
+[INFO] Running org.biojava.nbio.core.sequence.io.GenericFastaHeaderParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 824,635 s - in org.biojava.nbio.core.sequence.io.GenericFastaHeaderParserTest
+[INFO] Running org.biojava.nbio.core.sequence.io.CasePreservingProteinSequenceCreatorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 721,009 s - in org.biojava.nbio.core.sequence.io.CasePreservingProteinSequenceCreatorTest
+[INFO] Running org.biojava.nbio.core.TestAmbiguityCompoundSet
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 818,746 s - in org.biojava.nbio.core.TestAmbiguityCompoundSet
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   FileDownloadUtilsTest$URLMethods.pingGoogleOK:161 expected: <true> but was: <false>
+[ERROR]   SequenceToolsTest$PermuteCyclic.permuteCyclicPerformance:77 expected: <true> but was: <false>
+[ERROR] Errors: 
+[ERROR] GenbankProxySequenceReaderTest.testFeatures
+[ERROR]   Run 1: null
+[INFO]   Run 2: PASS
+[ERROR]   Run 3: null
+[INFO]   Run 4: PASS
+[INFO]   Run 5: PASS
+[ERROR]   Run 6: null
+[INFO]   Run 7: PASS
+[INFO]   Run 8: PASS
+[INFO] 
+[ERROR] GenbankProxySequenceReaderTest.testProteinSequenceFactoring
+[ERROR]   Run 1: null
+[ERROR]   Run 2: null
+[ERROR]   Run 3: null
+[INFO]   Run 4: PASS
+[INFO]   Run 5: PASS
+[ERROR]   Run 6: null
+[INFO]   Run 7: PASS
+[INFO]   Run 8: PASS
+[INFO] 
+[ERROR]   BlastXMLParserTest.testCreateObjects:101 » SSLHandshake PKIX path validation f...
+[ERROR]   GenbankCookbookTest.testProcess:75 » NullPointer
+[INFO] 
+[ERROR] Tests run: 403, Failures: 2, Errors: 4, Skipped: 8
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-alignment
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-structure
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-structure-gui
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-genome
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-modfinder
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-ws
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-protein-disorder
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-aa-prop
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --------------------< org.biojava:biojava-survival >--------------------
+[INFO] Building biojava-survival 6.0.1-SNAPSHOT                          [3/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java) @ biojava-survival ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ biojava-survival ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ biojava-survival ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ biojava-survival ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ biojava-survival ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/target/biojava-survival/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ biojava-survival ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ biojava-survival ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --------------------< org.biojava:biojava-ontology >--------------------
+[INFO] Building biojava-ontology 6.0.1-SNAPSHOT                          [4/14]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java) @ biojava-ontology ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ biojava-ontology ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ biojava-ontology ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ biojava-ontology ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 36 source files to /home/target/biojava-ontology/target/classes
+[INFO] /home/target/biojava-ontology/src/main/java/org/biojava/nbio/ontology/Ontology.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/target/biojava-ontology/src/main/java/org/biojava/nbio/ontology/Ontology.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ biojava-ontology ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ biojava-ontology ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ biojava-ontology ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.biojava.nbio.ontology.TestParseOBO
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 836,998 s - in org.biojava.nbio.ontology.TestParseOBO
+[INFO] Running org.biojava.nbio.ontology.TestOboFileParsing
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,359,915 s - in org.biojava.nbio.ontology.TestOboFileParsing
+[INFO] Running org.biojava.nbio.ontology.TestParseSBO
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,180,054 s - in org.biojava.nbio.ontology.TestParseSBO
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-protein-comparison-tool
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping biojava-integrationtest
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for biojava 6.0.1-SNAPSHOT:
+[INFO] 
+[INFO] biojava ............................................ SUCCESS [3 d 06:18 h]
+[INFO] biojava-core ....................................... FAILURE [2250 d 23:25 h]
+[INFO] biojava-alignment .................................. SKIPPED
+[INFO] biojava-structure .................................. SKIPPED
+[INFO] biojava-structure-gui .............................. SKIPPED
+[INFO] biojava-genome ..................................... SKIPPED
+[INFO] biojava-modfinder .................................. SKIPPED
+[INFO] biojava-ws ......................................... SKIPPED
+[INFO] biojava-protein-disorder ........................... SKIPPED
+[INFO] biojava-aa-prop .................................... SKIPPED
+[INFO] biojava-survival ................................... SUCCESS [  23:08 h]
+[INFO] biojava-ontology ................................... SUCCESS [65 d 10:09 h]
+[INFO] biojava-protein-comparison-tool .................... SKIPPED
+[INFO] biojava-integrationtest ............................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2325 d 03:01 h
+[INFO] Finished at: 2028-04-01T22:35:30Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test (default-test) on project biojava-core: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/biojava-core/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :biojava-core
+{'error': True, 'log_file': 'output-2021-11-08T22:17:18-8169.log', 'message': '', 'start_time': '2021-11-08T22:17:18', 'end_time': '2021-11-08T22:18:46', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i1.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

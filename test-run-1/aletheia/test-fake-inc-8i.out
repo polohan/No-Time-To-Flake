@@ -1,0 +1,171 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Aletheia                                                           [pom]
+[INFO] aletheia-envelope                                                  [jar]
+[INFO] Aletheia core                                                      [jar]
+[INFO] Aletheia Kafka Common                                              [jar]
+[INFO] Aletheia Kafka 0.9                                                 [jar]
+[INFO] aletheia-kafka-serde                                               [jar]
+[INFO] Aletheia Kafka 0.10                                                [jar]
+[INFO] Aletheia Log4j                                                     [jar]
+[INFO] Aletheia examples                                                  [jar]
+[INFO] AletheiaStreams examples                                           [jar]
+[INFO] 
+[INFO] -------------------< com.outbrain.aletheia:aletheia >-------------------
+[INFO] Building Aletheia 0.100-SNAPSHOT                                  [1/10]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------< com.outbrain.aletheia:aletheia-envelope >---------------
+[INFO] Building aletheia-envelope 0.100-SNAPSHOT                         [2/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.5:schema (default) @ aletheia-envelope ---
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.5:protocol (default) @ aletheia-envelope ---
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.5:idl-protocol (default) @ aletheia-envelope ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ aletheia-envelope ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/aletheia-envelope/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ aletheia-envelope ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (make-a-jar) @ aletheia-envelope ---
+[INFO] Building jar: /home/target/aletheia-envelope/target/aletheia-envelope-0.100-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ aletheia-envelope ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/aletheia-envelope/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ aletheia-envelope ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ aletheia-envelope ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------------< com.outbrain.aletheia:aletheia-core >-----------------
+[INFO] Building Aletheia core 0.100-SNAPSHOT                             [3/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.5:schema (default) @ aletheia-core ---
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.5:protocol (default) @ aletheia-core ---
+[INFO] 
+[INFO] --- avro-maven-plugin:1.7.5:idl-protocol (default) @ aletheia-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ aletheia-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/aletheia-core/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ aletheia-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (make-a-jar) @ aletheia-core ---
+[INFO] Building jar: /home/target/aletheia-core/target/aletheia-core-0.100-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ aletheia-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ aletheia-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ aletheia-core ---
+[INFO] Surefire report directory: /home/target/aletheia-core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Aletheia Kafka Common
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Aletheia Kafka 0.9
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] -------------< com.outbrain.aletheia:aletheia-kafka-serde >-------------
+[INFO] Building aletheia-kafka-serde 0.100-SNAPSHOT                      [4/10]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ aletheia-kafka-serde ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/aletheia-kafka-serde/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ aletheia-kafka-serde ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (make-a-jar) @ aletheia-kafka-serde ---
+[INFO] Building jar: /home/target/aletheia-kafka-serde/target/aletheia-kafka-serde-0.100-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ aletheia-kafka-serde ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/aletheia-kafka-serde/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ aletheia-kafka-serde ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ aletheia-kafka-serde ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Aletheia Kafka 0.10
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Aletheia Log4j
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Aletheia examples
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping AletheiaStreams examples
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Aletheia 0.100-SNAPSHOT:
+[INFO] 
+[INFO] Aletheia ........................................... SUCCESS [9 d 14:59 h]
+[INFO] aletheia-envelope .................................. SUCCESS [391 d 06:03 h]
+[INFO] Aletheia core ...................................... FAILURE [167 d 03:38 h]
+[INFO] Aletheia Kafka Common .............................. SKIPPED
+[INFO] Aletheia Kafka 0.9 ................................. SKIPPED
+[INFO] aletheia-kafka-serde ............................... SUCCESS [37 d 20:38 h]
+[INFO] Aletheia Kafka 0.10 ................................ SKIPPED
+[INFO] Aletheia Log4j ..................................... SKIPPED
+[INFO] Aletheia examples .................................. SKIPPED
+[INFO] AletheiaStreams examples ........................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  654 d 11:13 h
+[INFO] Finished at: 2024-09-05T20:11:42Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test) on project aletheia-core: There was a timeout or other error in the fork -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :aletheia-core
+{'error': True, 'log_file': 'output-2021-11-07T23:48:46-1303.log', 'message': '', 'start_time': '2021-11-07T23:48:46', 'end_time': '2021-11-07T23:49:00', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i8.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

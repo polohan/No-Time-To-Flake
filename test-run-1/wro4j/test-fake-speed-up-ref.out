@@ -1,0 +1,87 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] wro4j parent                                                       [pom]
+[INFO] wro4j core                                                         [jar]
+[INFO] wro4j extensions                                                   [jar]
+[INFO] wro4j maven plugin                                        [maven-plugin]
+[INFO] 
+[INFO] ---------------------< ro.isdc.wro4j:wro4j-parent >---------------------
+[INFO] Building wro4j parent 1.10.2-SNAPSHOT                              [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ wro4j-parent ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ wro4j-parent ---
+[INFO] ShortRevision tag detected. The value is '8'.
+[INFO] Executing: /bin/sh -c cd '/home/target' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
+[INFO] Working directory: /home/target
+[INFO] Storing buildNumber: 75922b77 at timestamp: 1636668634553
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ wro4j-parent ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/home/target/target/jacoco.exec
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:report (report) @ wro4j-parent ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] ----------------------< ro.isdc.wro4j:wro4j-core >----------------------
+[INFO] Building wro4j core 1.10.2-SNAPSHOT                                [2/4]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ wro4j-core ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ wro4j-core ---
+[INFO] ShortRevision tag detected. The value is '8'.
+[INFO] Executing: /bin/sh -c cd '/home/target/wro4j-core' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
+[INFO] Working directory: /home/target/wro4j-core
+[INFO] Storing buildNumber: 75922b77 at timestamp: 1636668634983
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ wro4j-core ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/home/target/wro4j-core/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ wro4j-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ wro4j-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 242 source files to /home/target/wro4j-core/target/classes
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping wro4j extensions
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping wro4j maven plugin
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for wro4j parent 1.10.2-SNAPSHOT:
+[INFO] 
+[INFO] wro4j parent ....................................... SUCCESS [  1.147 s]
+[INFO] wro4j core ......................................... FAILURE [  0.599 s]
+[INFO] wro4j extensions ................................... SKIPPED
+[INFO] wro4j maven plugin ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.942 s
+[INFO] Finished at: 2021-11-11T22:10:35Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project wro4j-core: Fatal error compiling: invalid target release: 9 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :wro4j-core
+{'error': True, 'log_file': 'output-2021-11-11T22:10:32-1043.log', 'message': '', 'start_time': '2021-11-11T22:10:32', 'end_time': '2021-11-11T22:10:35', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 x1.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

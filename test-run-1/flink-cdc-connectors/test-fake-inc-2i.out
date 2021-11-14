@@ -1,0 +1,1014 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.ververica:flink-connector-debezium:jar:2.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-enforcer-plugin @ com.ververica:flink-cdc-connectors:2.1-SNAPSHOT, /home/target/pom.xml, line 366, column 21
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.ververica:flink-cdc-connectors:pom:2.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-enforcer-plugin @ line 366, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] flink-cdc-connectors                                               [pom]
+[INFO] flink-connector-debezium                                           [jar]
+[INFO] flink-connector-test-util                                          [jar]
+[INFO] flink-connector-mysql-cdc                                          [jar]
+[INFO] flink-connector-postgres-cdc                                       [jar]
+[INFO] flink-connector-oracle-cdc                                         [jar]
+[INFO] flink-connector-mongodb-cdc                                        [jar]
+[INFO] flink-sql-connector-mysql-cdc                                      [jar]
+[INFO] flink-sql-connector-postgres-cdc                                   [jar]
+[INFO] flink-sql-connector-mongodb-cdc                                    [jar]
+[INFO] flink-sql-connector-oracle-cdc                                     [jar]
+[INFO] flink-format-changelog-json                                        [jar]
+[INFO] 
+[INFO] -----------------< com.ververica:flink-cdc-connectors >-----------------
+[INFO] Building flink-cdc-connectors 2.1-SNAPSHOT                        [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-cdc-connectors ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-cdc-connectors ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-cdc-connectors ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-cdc-connectors ---
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-cdc-connectors ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ---------------< com.ververica:flink-connector-debezium >---------------
+[INFO] Building flink-connector-debezium 2.1-SNAPSHOT                    [2/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-connector-debezium ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-connector-debezium ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-connector-debezium ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-connector-debezium ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-connector-debezium ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/flink-connector-debezium/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-connector-debezium ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-connector-debezium ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/flink-connector-debezium/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-connector-debezium ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-connector-debezium ---
+[INFO] 
+[INFO] --------------< com.ververica:flink-connector-test-util >---------------
+[INFO] Building flink-connector-test-util 2.1-SNAPSHOT                   [3/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-connector-test-util ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-connector-test-util ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-connector-test-util ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-connector-test-util ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-connector-test-util ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/flink-connector-test-util/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-connector-test-util ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-connector-test-util ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/flink-connector-test-util/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-connector-test-util ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-connector-test-util ---
+[INFO] 
+[INFO] --------------< com.ververica:flink-connector-mysql-cdc >---------------
+[INFO] Building flink-connector-mysql-cdc 2.1-SNAPSHOT                   [4/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-connector-mysql-cdc ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-connector-mysql-cdc ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-connector-mysql-cdc ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-connector-mysql-cdc ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-connector-mysql-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-connector-mysql-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-connector-mysql-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-connector-mysql-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-connector-mysql-cdc ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ververica.cdc.connectors.mysql.table.MySqlTableSourceFactoryTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,524,952.592 s - in com.ververica.cdc.connectors.mysql.table.MySqlTableSourceFactoryTest
+[INFO] Running com.ververica.cdc.connectors.mysql.LegacyMySqlSourceExampleTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 16,204 s - in com.ververica.cdc.connectors.mysql.LegacyMySqlSourceExampleTest
+[INFO] Running com.ververica.cdc.connectors.mysql.source.assigners.MySqlHybridSplitAssignerTest
+10482428000 [main] INFO  com.ververica.cdc.connectors.mysql.source.MySqlSourceTestBase - Starting containers...
+10652782000 [testcontainers-lifecycle-0] WARN  org.testcontainers.utility.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/root/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /root/.testcontainers.properties (No such file or directory)
+10859892000 [testcontainers-lifecycle-0] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([/usr/local/openjdk-8/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin])
+11263116000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+11263400000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy -     UnixSocketClientProviderStrategy: failed with exception InvalidConfigurationException (Could not find unix domain socket). Root cause NoSuchFileException (/var/run/docker.sock)
+11263696000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - As no valid configuration was found, execution cannot continue
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 791,278 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.source.assigners.MySqlHybridSplitAssignerTest
+[ERROR] com.ververica.cdc.connectors.mysql.source.assigners.MySqlHybridSplitAssignerTest  Time elapsed: 791,274 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssignerTest
+11273314000 [main] INFO  com.ververica.cdc.connectors.mysql.source.MySqlSourceTestBase - Starting containers...
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 55,846 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssignerTest
+[ERROR] com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssignerTest  Time elapsed: 55,732 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.mysql.source.assigners.state.PendingSplitsStateSerializerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -1,513,353.296 s - in com.ververica.cdc.connectors.mysql.source.assigners.state.PendingSplitsStateSerializerTest
+[INFO] Running com.ververica.cdc.connectors.mysql.source.MySqlSourceExampleTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 162 s - in com.ververica.cdc.connectors.mysql.source.MySqlSourceExampleTest
+[INFO] Running com.ververica.cdc.connectors.mysql.source.utils.RecordUtilsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56,544 s - in com.ververica.cdc.connectors.mysql.source.utils.RecordUtilsTest
+[INFO] Running com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReaderTest
+14179940000 [main] INFO  com.ververica.cdc.connectors.mysql.source.MySqlSourceTestBase - Starting containers...
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16,380 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReaderTest
+[ERROR] com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReaderTest  Time elapsed: 16,376 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.mysql.source.split.MySqlSplitStateTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 490,872 s - in com.ververica.cdc.connectors.mysql.source.split.MySqlSplitStateTest
+[INFO] Running com.ververica.cdc.connectors.mysql.source.split.MySqlSplitSerializerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 665,064 s - in com.ververica.cdc.connectors.mysql.source.split.MySqlSplitSerializerTest
+[INFO] Running com.ververica.cdc.connectors.mysql.LegacyMySqlSourceTest
+17556270000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+17760358000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+17760662000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+17762802000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+17763290000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+17790812000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Flink Mini Cluster
+17966576000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Metrics Registry
+18303034000 [main] INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl - No metrics reporter configured, no metrics will be exposed/reported.
+18303524000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting RPC Service(s)
+18701250000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+24876502000 [flink-akka.actor.default-dispatcher-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+29004530000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink
+29547930000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+29893724000 [flink-metrics-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+30133298000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink-metrics
+30748162000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+31077226000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting high-availability services
+31101988000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Created BLOB server storage directory /tmp/junit5790134944832632132/junit5211704984236229625/blobStore-79ddab72-4998-4d25-b54d-9d0baea90bba
+31350874000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Started BLOB server at 0.0.0.0:46283 - max concurrent requests: 50 - max backlog: 1000
+31503394000 [main] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Created BLOB cache storage directory /tmp/junit5790134944832632132/junit5211704984236229625/blobStore-502ea348-18db-4ba4-acc2-6cb8c3c2d207
+31843988000 [main] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Created BLOB cache storage directory /tmp/junit5790134944832632132/junit5211704984236229625/blobStore-22d33a30-7bee-4d87-86c8-be83efd1fad5
+31848790000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting 1 TaskManger(s)
+31897158000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner - Starting TaskManager with ResourceID: 5fd62fca-469b-4da5-bb4d-64e731aa621b
+32339070000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices - Temporary file directory '/tmp/junit5790134944832632132/junit5211704984236229625': total 196 GB, usable 177 GB (90.31% usable)
+32345488000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit5790134944832632132/junit5211704984236229625/flink-io-49931344-26fd-420e-9ed4-51dc7f587de7 for spill files.
+32399436000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit5790134944832632132/junit5211704984236229625/flink-netty-shuffle-cfbbef51-df90-49fc-9502-0071bcd6aa72 for spill files.
+33546000000 [main] INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+34338286000 [main] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Starting the network environment and its components.
+34340382000 [main] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Starting the kvState service and its components.
+35182416000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+35364686000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Start job leader service.
+35366922000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.filecache.FileCache - User file cache uses directory /tmp/junit5790134944832632132/junit5211704984236229625/flink-dist-cache-e36b1898-9199-4e0f-a7c0-ffc8ad63b85e
+35940592000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Starting rest endpoint.
+35945136000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath.
+37074934000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - Log file environment variable 'log.file' is not set.
+37075622000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+38306548000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Rest endpoint listening at localhost:38609
+38534160000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender http://localhost:38609
+38915726000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - http://localhost:38609 was granted leadership with leaderSessionID=34f6b9db-9db4-48e9-85b9-ea5852d3f527
+38916002000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader http://localhost:38609 , session=34f6b9db-9db4-48e9-85b9-ea5852d3f527
+39402772000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+39539374000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+39865042000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Starting the resource manager.
+39865382000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: StandaloneResourceManager
+40150826000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - ResourceManager akka://flink/user/rpc/resourcemanager_1 was granted leadership with fencing token 9def4b56df6198aa031cce0f5471420b
+40643832000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Flink Mini Cluster started successfully
+40690640000 [mini-cluster-io-thread-2] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Start SessionDispatcherLeaderProcess.
+40925810000 [main] INFO  org.apache.flink.configuration.Configuration - Config uses fallback configuration key 'jobmanager.rpc.address' instead of key 'rest.address'
+40929728000 [mini-cluster-io-thread-6] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_1 , session=031cce0f-5471-420b-9def-4b56df6198aa
+41117376000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_1(9def4b56df6198aa031cce0f5471420b).
+41444312000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Recover all persisted job graphs.
+41550316000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Successfully recovered 0 persisted job graphs.
+41713466000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_2 .
+41869942000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_2 , session=6a5fcdb5-f788-4160-b6a4-6a2262e8e84e
+42597754000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Resolved ResourceManager address, beginning registration
+42803638000 [main] INFO  com.ververica.cdc.connectors.mysql.LegacyMySqlTestBase - Starting containers...
+42860236000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Registering TaskManager with ResourceID 5fd62fca-469b-4da5-bb4d-64e731aa621b (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+42886506000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Successful registration at resource manager akka://flink/user/rpc/resourcemanager_1 under registration id f286601c50d23c40ede8bb4436969ce0.
+43078934000 [main] INFO  org.apache.flink.test.util.MiniClusterWithClientResource - Finalization triggered: Cluster shutdown is going to be initiated.
+43899388000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Shutting down Flink Mini Cluster
+43900692000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shutting down rest endpoint.
+43913548000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopping TaskExecutor akka://flink/user/rpc/taskmanager_0.
+43913750000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Close ResourceManager connection e50002eab9a05cc8d96e2569250bf33e.
+43917690000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Closing TaskExecutor connection 5fd62fca-469b-4da5-bb4d-64e731aa621b because: The TaskExecutor is shutting down.
+44157126000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+44157164000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager - Shutting down TaskExecutorLocalStateStoresManager.
+44741152000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit5790134944832632132/junit5211704984236229625/flink-io-49931344-26fd-420e-9ed4-51dc7f587de7
+44742662000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Shutting down the network environment and its components.
+44746408000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit5790134944832632132/junit5211704984236229625/flink-netty-shuffle-cfbbef51-df90-49fc-9502-0071bcd6aa72
+44778634000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Shutting down the kvState service and its components.
+44778856000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+44779348000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.filecache.FileCache - removed file cache directory /tmp/junit5790134944832632132/junit5211704984236229625/flink-dist-cache-e36b1898-9199-4e0f-a7c0-ffc8ad63b85e
+44843308000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Removing cache directory /tmp/flink-web-ui
+44942588000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shut down complete.
+44950826000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+44951322000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent - Closing components.
+45034496000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Stopping SessionDispatcherLeaderProcess.
+45034504000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping dispatcher akka://flink/user/rpc/dispatcher_2.
+45034506000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping all currently running jobs of dispatcher akka://flink/user/rpc/dispatcher_2.
+45042336000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Closing the slot manager.
+45042522000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Suspending the slot manager.
+45391886000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopped dispatcher akka://flink/user/rpc/dispatcher_2.
+47196324000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopped TaskExecutor akka://flink/user/rpc/taskmanager_0.
+47203508000 [AkkaRpcService-Supervisor-Termination-Future-Executor-thread-1] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+48466480000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+48535546000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+49694688000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Shutting down BLOB cache
+49695216000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Shutting down BLOB cache
+49751290000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.blob.BlobServer - Stopped BLOB server at 0.0.0.0:46283
+49822602000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 719,327.632 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.LegacyMySqlSourceTest
+[ERROR] com.ververica.cdc.connectors.mysql.LegacyMySqlSourceTest  Time elapsed: 711,119.632 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.mysql.debezium.reader.SnapshotSplitReaderTest
+50474594000 [main] INFO  com.ververica.cdc.connectors.mysql.source.MySqlSourceTestBase - Starting containers...
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 442,086 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.debezium.reader.SnapshotSplitReaderTest
+[ERROR] com.ververica.cdc.connectors.mysql.debezium.reader.SnapshotSplitReaderTest  Time elapsed: 429,744 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.mysql.debezium.reader.BinlogSplitReaderTest
+50916048000 [main] INFO  com.ververica.cdc.connectors.mysql.source.MySqlSourceTestBase - Starting containers...
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 734 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.debezium.reader.BinlogSplitReaderTest
+[ERROR] com.ververica.cdc.connectors.mysql.debezium.reader.BinlogSplitReaderTest  Time elapsed: 578 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.mysql.MySqlValidatorTest
+51207658000 [main] INFO  com.ververica.cdc.connectors.mysql.MySqlValidatorTest - Starting containers...
+51466868000 [main] INFO  com.ververica.cdc.connectors.mysql.MySqlValidatorTest - Starting containers...
+51545614000 [main] INFO  com.ververica.cdc.connectors.mysql.MySqlValidatorTest - Starting containers...
+51867020000 [main] INFO  com.ververica.cdc.connectors.mysql.MySqlValidatorTest - Starting containers...
+52655126000 [main] INFO  com.ververica.cdc.connectors.mysql.MySqlValidatorTest - Starting containers...
+53340462000 [main] INFO  com.ververica.cdc.connectors.mysql.MySqlValidatorTest - Starting containers...
+[ERROR] Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: -2,099,451.296 s <<< FAILURE! - in com.ververica.cdc.connectors.mysql.MySqlValidatorTest
+[ERROR] testValidateBinlogRowImage[runIncrementalSnapshot = true](com.ververica.cdc.connectors.mysql.MySqlValidatorTest)  Time elapsed: 174,852 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testValidateVersion[runIncrementalSnapshot = true](com.ververica.cdc.connectors.mysql.MySqlValidatorTest)  Time elapsed: 136,952 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testValidateBinlogFormat[runIncrementalSnapshot = true](com.ververica.cdc.connectors.mysql.MySqlValidatorTest)  Time elapsed: 176,108 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testValidateBinlogRowImage[runIncrementalSnapshot = false](com.ververica.cdc.connectors.mysql.MySqlValidatorTest)  Time elapsed: 763,522 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testValidateVersion[runIncrementalSnapshot = false](com.ververica.cdc.connectors.mysql.MySqlValidatorTest)  Time elapsed: 723,422 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testValidateBinlogFormat[runIncrementalSnapshot = false](com.ververica.cdc.connectors.mysql.MySqlValidatorTest)  Time elapsed: 55,934 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   LegacyMySqlSourceTest.com.ververica.cdc.connectors.mysql.LegacyMySqlSourceTest » Completion
+[ERROR]   MySqlValidatorTest.testValidateBinlogFormat[runIncrementalSnapshot = false] » Completion
+[ERROR]   MySqlValidatorTest.testValidateBinlogFormat[runIncrementalSnapshot = true] » Completion
+[ERROR]   MySqlValidatorTest.testValidateBinlogRowImage[runIncrementalSnapshot = false] » Completion
+[ERROR]   MySqlValidatorTest.testValidateBinlogRowImage[runIncrementalSnapshot = true] » Completion
+[ERROR]   MySqlValidatorTest.testValidateVersion[runIncrementalSnapshot = false] » Completion
+[ERROR]   MySqlValidatorTest.testValidateVersion[runIncrementalSnapshot = true] » Completion
+[ERROR]   BinlogSplitReaderTest.com.ververica.cdc.connectors.mysql.debezium.reader.BinlogSplitReaderTest » Completion
+[ERROR]   SnapshotSplitReaderTest.com.ververica.cdc.connectors.mysql.debezium.reader.SnapshotSplitReaderTest » Completion
+[ERROR]   MySqlHybridSplitAssignerTest.com.ververica.cdc.connectors.mysql.source.assigners.MySqlHybridSplitAssignerTest » Completion
+[ERROR]   MySqlSnapshotSplitAssignerTest.com.ververica.cdc.connectors.mysql.source.assigners.MySqlSnapshotSplitAssignerTest » Completion
+[ERROR]   MySqlSourceReaderTest.com.ververica.cdc.connectors.mysql.source.reader.MySqlSourceReaderTest » Completion
+[INFO] 
+[ERROR] Tests run: 39, Failures: 0, Errors: 12, Skipped: 2
+[INFO] 
+[INFO] 
+[INFO] -------------< com.ververica:flink-connector-postgres-cdc >-------------
+[INFO] Building flink-connector-postgres-cdc 2.1-SNAPSHOT                [5/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-connector-postgres-cdc ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-connector-postgres-cdc ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-connector-postgres-cdc ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-connector-postgres-cdc ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-connector-postgres-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-connector-postgres-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-connector-postgres-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-connector-postgres-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-connector-postgres-cdc ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ververica.cdc.connectors.postgres.table.PostgreSQLTableFactoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -5,584.592 s - in com.ververica.cdc.connectors.postgres.table.PostgreSQLTableFactoryTest
+[INFO] Running com.ververica.cdc.connectors.postgres.PostgreSQLSourceTest
+12291474000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+12320142000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+12342648000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+12372370000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+12372630000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+12412480000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Flink Mini Cluster
+12444734000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Metrics Registry
+12720090000 [main] INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl - No metrics reporter configured, no metrics will be exposed/reported.
+12878330000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting RPC Service(s)
+12984040000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+16216492000 [flink-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+18408820000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink
+18608476000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+19380946000 [flink-metrics-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+19889820000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink-metrics
+20414400000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+20842640000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting high-availability services
+21019222000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Created BLOB server storage directory /tmp/junit1041485785407010103/junit537569282548360748/blobStore-29e31218-dca5-4383-8387-305e6ae142ed
+21227440000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Started BLOB server at 0.0.0.0:45841 - max concurrent requests: 50 - max backlog: 1000
+21241952000 [main] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Created BLOB cache storage directory /tmp/junit1041485785407010103/junit537569282548360748/blobStore-5a6d8859-6d3d-4cff-a58a-e07a29098cbe
+21249482000 [main] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Created BLOB cache storage directory /tmp/junit1041485785407010103/junit537569282548360748/blobStore-621ff359-13c7-499b-92ae-de15fe89442b
+21267990000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting 1 TaskManger(s)
+21273804000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner - Starting TaskManager with ResourceID: 4bb0fa37-11b3-463d-ac79-e9805c6668b0
+22341982000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices - Temporary file directory '/tmp/junit1041485785407010103/junit537569282548360748': total 196 GB, usable 177 GB (90.31% usable)
+22353200000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit1041485785407010103/junit537569282548360748/flink-io-d201616f-a044-401d-a579-b05c2d3028f0 for spill files.
+22606390000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit1041485785407010103/junit537569282548360748/flink-netty-shuffle-00270255-e34e-4395-b370-b7aec9e9b88f for spill files.
+23070204000 [main] INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+23153892000 [main] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Starting the network environment and its components.
+23157458000 [main] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Starting the kvState service and its components.
+24637622000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+24798804000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Start job leader service.
+24801384000 [flink-akka.actor.default-dispatcher-3] INFO  org.apache.flink.runtime.filecache.FileCache - User file cache uses directory /tmp/junit1041485785407010103/junit537569282548360748/flink-dist-cache-e298d8e3-f02e-42a4-8b08-4743b907695e
+25483644000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Starting rest endpoint.
+25488066000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath.
+28284814000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - Log file environment variable 'log.file' is not set.
+28286400000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+33536614000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Rest endpoint listening at localhost:46411
+33753508000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender http://localhost:46411
+33971256000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - http://localhost:46411 was granted leadership with leaderSessionID=9a4eec7d-7d6e-49c9-9d34-2b8cee3d8e98
+33971656000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader http://localhost:46411 , session=9a4eec7d-7d6e-49c9-9d34-2b8cee3d8e98
+35415608000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+35653830000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+35855128000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Starting the resource manager.
+35855344000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: StandaloneResourceManager
+36021726000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - ResourceManager akka://flink/user/rpc/resourcemanager_1 was granted leadership with fencing token beacccb45df0dcef3e3cf87d7403484e
+36312390000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Flink Mini Cluster started successfully
+36366658000 [mini-cluster-io-thread-2] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Start SessionDispatcherLeaderProcess.
+36376950000 [main] INFO  org.apache.flink.configuration.Configuration - Config uses fallback configuration key 'jobmanager.rpc.address' instead of key 'rest.address'
+36704272000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Recover all persisted job graphs.
+36704276000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Successfully recovered 0 persisted job graphs.
+37250014000 [main] INFO  com.ververica.cdc.connectors.postgres.PostgresTestBase - Starting containers...
+37297194000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_2 .
+37334880000 [mini-cluster-io-thread-6] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_1 , session=3e3cf87d-7403-484e-beac-ccb45df0dcef
+38114314000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_1(beacccb45df0dcef3e3cf87d7403484e).
+38126914000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_2 , session=cb5f9f04-cbc5-4b09-b658-2964f724d559
+38639878000 [testcontainers-lifecycle-0] WARN  org.testcontainers.utility.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/root/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /root/.testcontainers.properties (No such file or directory)
+38847298000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Resolved ResourceManager address, beginning registration
+39042102000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Registering TaskManager with ResourceID 4bb0fa37-11b3-463d-ac79-e9805c6668b0 (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+39051866000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Successful registration at resource manager akka://flink/user/rpc/resourcemanager_1 under registration id 1566a4a56353df93d8a99c81deb1a2c8.
+39294696000 [testcontainers-lifecycle-0] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([/usr/local/openjdk-8/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin])
+40269720000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+40270862000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy -     UnixSocketClientProviderStrategy: failed with exception InvalidConfigurationException (Could not find unix domain socket). Root cause NoSuchFileException (/var/run/docker.sock)
+40271080000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - As no valid configuration was found, execution cannot continue
+40271654000 [main] INFO  org.apache.flink.test.util.MiniClusterWithClientResource - Finalization triggered: Cluster shutdown is going to be initiated.
+41885638000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Shutting down Flink Mini Cluster
+42030194000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopping TaskExecutor akka://flink/user/rpc/taskmanager_0.
+42030204000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Close ResourceManager connection 2782b3c8cf031f2f1071131f75ca20f0.
+42030206000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shutting down rest endpoint.
+42031222000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Closing TaskExecutor connection 4bb0fa37-11b3-463d-ac79-e9805c6668b0 because: The TaskExecutor is shutting down.
+42361122000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+42361548000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager - Shutting down TaskExecutorLocalStateStoresManager.
+42742286000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit1041485785407010103/junit537569282548360748/flink-io-d201616f-a044-401d-a579-b05c2d3028f0
+42742288000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Shutting down the network environment and its components.
+42780394000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit1041485785407010103/junit537569282548360748/flink-netty-shuffle-00270255-e34e-4395-b370-b7aec9e9b88f
+42780886000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Shutting down the kvState service and its components.
+42781040000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+42781602000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.filecache.FileCache - removed file cache directory /tmp/junit1041485785407010103/junit537569282548360748/flink-dist-cache-e298d8e3-f02e-42a4-8b08-4743b907695e
+43324810000 [ForkJoinPool.commonPool-worker-3] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Removing cache directory /tmp/flink-web-ui
+43340318000 [ForkJoinPool.commonPool-worker-3] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shut down complete.
+43344706000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+43345664000 [ForkJoinPool.commonPool-worker-3] INFO  org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent - Closing components.
+43346610000 [ForkJoinPool.commonPool-worker-3] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Stopping SessionDispatcherLeaderProcess.
+43346844000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping dispatcher akka://flink/user/rpc/dispatcher_2.
+43346948000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping all currently running jobs of dispatcher akka://flink/user/rpc/dispatcher_2.
+43347910000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Closing the slot manager.
+43347994000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Suspending the slot manager.
+43407740000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopped dispatcher akka://flink/user/rpc/dispatcher_2.
+43914584000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopped TaskExecutor akka://flink/user/rpc/taskmanager_0.
+45108662000 [mini-cluster-io-thread-14] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+45731964000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+45925886000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+46511322000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Shutting down BLOB cache
+46512308000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Shutting down BLOB cache
+46562546000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.blob.BlobServer - Stopped BLOB server at 0.0.0.0:45841
+46566750000 [flink-akka.actor.default-dispatcher-7] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 647,379.632 s <<< FAILURE! - in com.ververica.cdc.connectors.postgres.PostgreSQLSourceTest
+[ERROR] com.ververica.cdc.connectors.postgres.PostgreSQLSourceTest  Time elapsed: 647,223.632 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   PostgreSQLSourceTest.com.ververica.cdc.connectors.postgres.PostgreSQLSourceTest » Completion
+[INFO] 
+[ERROR] Tests run: 5, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --------------< com.ververica:flink-connector-oracle-cdc >--------------
+[INFO] Building flink-connector-oracle-cdc 2.1-SNAPSHOT                  [6/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-connector-oracle-cdc ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-connector-oracle-cdc ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-connector-oracle-cdc ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-connector-oracle-cdc ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-connector-oracle-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-connector-oracle-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-connector-oracle-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-connector-oracle-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-connector-oracle-cdc ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ververica.cdc.connectors.oracle.OracleSourceTest
+7847308000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+7905280000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+7905618000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+7908456000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+7908758000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+7920362000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Flink Mini Cluster
+8075764000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Metrics Registry
+9106792000 [main] INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl - No metrics reporter configured, no metrics will be exposed/reported.
+9107014000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting RPC Service(s)
+9470770000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+15424858000 [flink-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+18749954000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink
+19089038000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+19789206000 [flink-metrics-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20820412000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink-metrics
+21300034000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+22056584000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting high-availability services
+22338486000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Created BLOB server storage directory /tmp/junit8879397927126289494/junit4573453090739486854/blobStore-50c4077c-808d-4c08-9ed4-498c331e4407
+22556098000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Started BLOB server at 0.0.0.0:35633 - max concurrent requests: 50 - max backlog: 1000
+22605252000 [main] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Created BLOB cache storage directory /tmp/junit8879397927126289494/junit4573453090739486854/blobStore-4942b3fd-e0ba-4e3c-a6ee-060e3ddc09cf
+22874216000 [main] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Created BLOB cache storage directory /tmp/junit8879397927126289494/junit4573453090739486854/blobStore-5a7186b4-605f-4bee-affe-dde499399623
+22963180000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting 1 TaskManger(s)
+23125728000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner - Starting TaskManager with ResourceID: f848e505-4db2-4a24-b0ec-0ee1f6ed4ec6
+23880008000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices - Temporary file directory '/tmp/junit8879397927126289494/junit4573453090739486854': total 196 GB, usable 177 GB (90.31% usable)
+23885682000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit8879397927126289494/junit4573453090739486854/flink-io-de71b28f-5839-454b-ab69-636d651f81d3 for spill files.
+24116330000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit8879397927126289494/junit4573453090739486854/flink-netty-shuffle-d1259b08-c0b4-40d2-8f0a-499f669f9757 for spill files.
+24763638000 [main] INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+25525586000 [main] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Starting the network environment and its components.
+25527656000 [main] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Starting the kvState service and its components.
+25688826000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+25972772000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Start job leader service.
+26195044000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Starting rest endpoint.
+26199494000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath.
+26126394000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.filecache.FileCache - User file cache uses directory /tmp/junit8879397927126289494/junit4573453090739486854/flink-dist-cache-e24e81ea-e762-4faf-8cef-c8f1dfa7e24d
+32527566000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - Log file environment variable 'log.file' is not set.
+32528412000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+33798902000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Rest endpoint listening at localhost:36869
+33817498000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender http://localhost:36869
+33951848000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - http://localhost:36869 was granted leadership with leaderSessionID=0320f13c-d19f-440e-b4ae-05211e37601d
+33952564000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader http://localhost:36869 , session=0320f13c-d19f-440e-b4ae-05211e37601d
+34146460000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+34271636000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+34424602000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Starting the resource manager.
+34424946000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: StandaloneResourceManager
+34518724000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Flink Mini Cluster started successfully
+34538956000 [main] INFO  org.apache.flink.configuration.Configuration - Config uses fallback configuration key 'jobmanager.rpc.address' instead of key 'rest.address'
+34653744000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - ResourceManager akka://flink/user/rpc/resourcemanager_1 was granted leadership with fencing token be09cda9397a7be92597914977a24997
+35416336000 [mini-cluster-io-thread-2] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Start SessionDispatcherLeaderProcess.
+35594426000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+================================================================================
+Test testCheckpointAndRestore(com.ververica.cdc.connectors.oracle.OracleSourceTest) is running.
+--------------------------------------------------------------------------------
+35598038000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - Starting containers...
+35806112000 [mini-cluster-io-thread-6] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_1 , session=25979149-77a2-4997-be09-cda9397a7be9
+35891346000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Recover all persisted job graphs.
+35891684000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Successfully recovered 0 persisted job graphs.
+35939522000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_2 .
+35952366000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_1(be09cda9397a7be92597914977a24997).
+36169156000 [testcontainers-lifecycle-0] WARN  org.testcontainers.utility.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/root/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /root/.testcontainers.properties (No such file or directory)
+36170822000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Resolved ResourceManager address, beginning registration
+36233126000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_2 , session=6cc36b60-8795-4b17-b001-6b4c6570b8e8
+36262312000 [testcontainers-lifecycle-0] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([/usr/local/openjdk-8/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin])
+36569472000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Registering TaskManager with ResourceID f848e505-4db2-4a24-b0ec-0ee1f6ed4ec6 (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+36846034000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Successful registration at resource manager akka://flink/user/rpc/resourcemanager_1 under registration id b9b5cebea90096811b971c0b3e35ace6.
+37268558000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+37268786000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy -     UnixSocketClientProviderStrategy: failed with exception InvalidConfigurationException (Could not find unix domain socket). Root cause NoSuchFileException (/var/run/docker.sock)
+37268792000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - As no valid configuration was found, execution cannot continue
+37727906000 [main] ERROR com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+--------------------------------------------------------------------------------
+Test testCheckpointAndRestore(com.ververica.cdc.connectors.oracle.OracleSourceTest) failed with:
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:722)
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:701)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.lambda$getFirstValidStrategy$7(DockerClientProviderStrategy.java:215)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:207)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:136)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:178)
+	at org.testcontainers.LazyDockerClient.getDockerClient(LazyDockerClient.java:14)
+	at org.testcontainers.LazyDockerClient.authConfig(LazyDockerClient.java:12)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:310)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:719)
+	... 5 more
+
+================================================================================
+37736036000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+================================================================================
+Test testConsumingEmptyTable(com.ververica.cdc.connectors.oracle.OracleSourceTest) is running.
+--------------------------------------------------------------------------------
+37736266000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - Starting containers...
+37938530000 [main] ERROR com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+--------------------------------------------------------------------------------
+Test testConsumingEmptyTable(com.ververica.cdc.connectors.oracle.OracleSourceTest) failed with:
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:722)
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:701)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:109)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:136)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:178)
+	at org.testcontainers.LazyDockerClient.getDockerClient(LazyDockerClient.java:14)
+	at org.testcontainers.LazyDockerClient.authConfig(LazyDockerClient.java:12)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:310)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:719)
+	... 5 more
+
+================================================================================
+37940270000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+================================================================================
+Test testRecoverFromRenameOperation(com.ververica.cdc.connectors.oracle.OracleSourceTest) is running.
+--------------------------------------------------------------------------------
+37940422000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - Starting containers...
+38516804000 [main] ERROR com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+--------------------------------------------------------------------------------
+Test testRecoverFromRenameOperation(com.ververica.cdc.connectors.oracle.OracleSourceTest) failed with:
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:722)
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:701)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:109)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:136)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:178)
+	at org.testcontainers.LazyDockerClient.getDockerClient(LazyDockerClient.java:14)
+	at org.testcontainers.LazyDockerClient.authConfig(LazyDockerClient.java:12)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:310)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:719)
+	... 5 more
+
+================================================================================
+38631972000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+================================================================================
+Test testConsumingAllEvents(com.ververica.cdc.connectors.oracle.OracleSourceTest) is running.
+--------------------------------------------------------------------------------
+38632170000 [main] INFO  com.ververica.cdc.connectors.oracle.OracleSourceTest - Starting containers...
+38802284000 [main] ERROR com.ververica.cdc.connectors.oracle.OracleSourceTest - 
+--------------------------------------------------------------------------------
+Test testConsumingAllEvents(com.ververica.cdc.connectors.oracle.OracleSourceTest) failed with:
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:722)
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:701)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+	at org.testcontainers.dockerclient.DockerClientProviderStrategy.getFirstValidStrategy(DockerClientProviderStrategy.java:109)
+	at org.testcontainers.DockerClientFactory.getOrInitializeStrategy(DockerClientFactory.java:136)
+	at org.testcontainers.DockerClientFactory.client(DockerClientFactory.java:178)
+	at org.testcontainers.LazyDockerClient.getDockerClient(LazyDockerClient.java:14)
+	at org.testcontainers.LazyDockerClient.authConfig(LazyDockerClient.java:12)
+	at org.testcontainers.containers.GenericContainer.start(GenericContainer.java:310)
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:719)
+	... 5 more
+
+================================================================================
+38804086000 [main] INFO  org.apache.flink.test.util.MiniClusterWithClientResource - Finalization triggered: Cluster shutdown is going to be initiated.
+40231588000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Shutting down Flink Mini Cluster
+40232084000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopping TaskExecutor akka://flink/user/rpc/taskmanager_0.
+40232176000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Close ResourceManager connection e6b605bdb6a540f07cfb75ce0e7bd2b2.
+40232402000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Closing TaskExecutor connection f848e505-4db2-4a24-b0ec-0ee1f6ed4ec6 because: The TaskExecutor is shutting down.
+40232474000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shutting down rest endpoint.
+40477474000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+40477604000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager - Shutting down TaskExecutorLocalStateStoresManager.
+40757700000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit8879397927126289494/junit4573453090739486854/flink-io-de71b28f-5839-454b-ab69-636d651f81d3
+40758108000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Shutting down the network environment and its components.
+40762382000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit8879397927126289494/junit4573453090739486854/flink-netty-shuffle-d1259b08-c0b4-40d2-8f0a-499f669f9757
+40762658000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Shutting down the kvState service and its components.
+40762768000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+40763078000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.filecache.FileCache - removed file cache directory /tmp/junit8879397927126289494/junit4573453090739486854/flink-dist-cache-e24e81ea-e762-4faf-8cef-c8f1dfa7e24d
+41566396000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Removing cache directory /tmp/flink-web-ui
+41737568000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shut down complete.
+41742016000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+41742570000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent - Closing components.
+41775928000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Stopping SessionDispatcherLeaderProcess.
+41778112000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping dispatcher akka://flink/user/rpc/dispatcher_2.
+41778286000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping all currently running jobs of dispatcher akka://flink/user/rpc/dispatcher_2.
+41779054000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Closing the slot manager.
+41779168000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Suspending the slot manager.
+42101648000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopped dispatcher akka://flink/user/rpc/dispatcher_2.
+43050370000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopped TaskExecutor akka://flink/user/rpc/taskmanager_0.
+43366532000 [AkkaRpcService-Supervisor-Termination-Future-Executor-thread-1] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+44960144000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+44995866000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+45230680000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Shutting down BLOB cache
+45238978000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Shutting down BLOB cache
+45334936000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.blob.BlobServer - Stopped BLOB server at 0.0.0.0:35633
+45376376000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+[ERROR] Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 589,741.04 s <<< FAILURE! - in com.ververica.cdc.connectors.oracle.OracleSourceTest
+[ERROR] testCheckpointAndRestore(com.ververica.cdc.connectors.oracle.OracleSourceTest)  Time elapsed: 2,138,266 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+
+[ERROR] testConsumingEmptyTable(com.ververica.cdc.connectors.oracle.OracleSourceTest)  Time elapsed: 204,284 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testRecoverFromRenameOperation(com.ververica.cdc.connectors.oracle.OracleSourceTest)  Time elapsed: 691,802 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[ERROR] testConsumingAllEvents(com.ververica.cdc.connectors.oracle.OracleSourceTest)  Time elapsed: 182,858 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker environment failed. Will not retry. Please see logs and check configuration
+
+[INFO] Running com.ververica.cdc.connectors.oracle.table.OracleTableSourceFactoryTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,308,808 s - in com.ververica.cdc.connectors.oracle.table.OracleTableSourceFactoryTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   OracleSourceTest.testCheckpointAndRestore » Completion java.lang.IllegalStateE...
+[ERROR]   OracleSourceTest.testConsumingAllEvents » Completion java.lang.IllegalStateExc...
+[ERROR]   OracleSourceTest.testConsumingEmptyTable » Completion java.lang.IllegalStateEx...
+[ERROR]   OracleSourceTest.testRecoverFromRenameOperation » Completion java.lang.Illegal...
+[INFO] 
+[ERROR] Tests run: 9, Failures: 0, Errors: 4, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -------------< com.ververica:flink-connector-mongodb-cdc >--------------
+[INFO] Building flink-connector-mongodb-cdc 2.1-SNAPSHOT                 [7/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-connector-mongodb-cdc ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-connector-mongodb-cdc ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-connector-mongodb-cdc ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-connector-mongodb-cdc ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-connector-mongodb-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-connector-mongodb-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-connector-mongodb-cdc ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-connector-mongodb-cdc ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-connector-mongodb-cdc ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ververica.cdc.connectors.mongodb.table.MongoDBTableFactoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: -670,428.592 s - in com.ververica.cdc.connectors.mongodb.table.MongoDBTableFactoryTest
+[INFO] Running com.ververica.cdc.connectors.mongodb.MongoDBSourceTest
+13276912000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.cpu.cores required for local execution is not set, setting it to the maximal possible value.
+13358086000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.heap.size required for local execution is not set, setting it to the maximal possible value.
+13358860000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.task.off-heap.size required for local execution is not set, setting it to the maximal possible value.
+13376810000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.min required for local execution is not set, setting it to its default value 64 mb.
+13377196000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutorResourceUtils - The configuration option taskmanager.memory.network.max required for local execution is not set, setting it to its default value 64 mb.
+13395004000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Flink Mini Cluster
+13529614000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting Metrics Registry
+14096850000 [main] INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl - No metrics reporter configured, no metrics will be exposed/reported.
+14097096000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting RPC Service(s)
+14401174000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+17889358000 [flink-akka.actor.default-dispatcher-3] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+19826054000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink
+20080546000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Trying to start local actor system
+20492652000 [flink-metrics-2] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+20786630000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils - Actor system started at akka://flink-metrics
+21293892000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+21404340000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting high-availability services
+21426718000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Created BLOB server storage directory /tmp/junit4970131400079744706/junit6672226710904491866/blobStore-315bacb3-b742-4363-9d39-32786d2dbc80
+21868734000 [main] INFO  org.apache.flink.runtime.blob.BlobServer - Started BLOB server at 0.0.0.0:40385 - max concurrent requests: 50 - max backlog: 1000
+21945744000 [main] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Created BLOB cache storage directory /tmp/junit4970131400079744706/junit6672226710904491866/blobStore-88e9cc71-fd14-4b53-bb86-46a8b048ccc7
+22154158000 [main] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Created BLOB cache storage directory /tmp/junit4970131400079744706/junit6672226710904491866/blobStore-4e99a8c5-0cf3-4188-b09f-0b0e7e2af8b8
+22413650000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Starting 1 TaskManger(s)
+22528128000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner - Starting TaskManager with ResourceID: ab0e609b-b1cd-4b35-bd05-1eaeea42374e
+23986386000 [main] INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices - Temporary file directory '/tmp/junit4970131400079744706/junit6672226710904491866': total 196 GB, usable 177 GB (90.31% usable)
+24175102000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit4970131400079744706/junit6672226710904491866/flink-io-fc6c420e-339a-4fdb-b9fe-2e9734f8a728 for spill files.
+24439222000 [main] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager uses directory /tmp/junit4970131400079744706/junit6672226710904491866/flink-netty-shuffle-387a773a-d82e-42d4-aa53-a5c51edd6a6e for spill files.
+25165062000 [main] INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+25612988000 [main] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Starting the network environment and its components.
+25698296000 [main] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Starting the kvState service and its components.
+26267154000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+26302944000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Start job leader service.
+26305024000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.filecache.FileCache - User file cache uses directory /tmp/junit4970131400079744706/junit6672226710904491866/flink-dist-cache-181c9889-db16-47ec-bb99-5680cbbd2c8a
+27274004000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Starting rest endpoint.
+27550362000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Failed to load web based job submission extension. Probable reason: flink-runtime-web is not in the classpath.
+30016240000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - Log file environment variable 'log.file' is not set.
+30016244000 [main] WARN  org.apache.flink.runtime.webmonitor.WebMonitorUtils - JobManager log files are unavailable in the web dashboard. Log file location not found in environment variable 'log.file' or configuration key 'web.log.path'.
+33137688000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Rest endpoint listening at localhost:33983
+33160566000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender http://localhost:33983
+33243558000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - http://localhost:33983 was granted leadership with leaderSessionID=d46dffda-3fea-4d7a-be1c-d9499eb5c039
+33243896000 [mini-cluster-io-thread-1] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader http://localhost:33983 , session=d46dffda-3fea-4d7a-be1c-d9499eb5c039
+33383244000 [main] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+33438252000 [main] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: DefaultDispatcherRunner
+34135836000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Flink Mini Cluster started successfully
+34137616000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Starting the resource manager.
+34137850000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Proposing leadership to contender LeaderContender: StandaloneResourceManager
+34168566000 [main] INFO  org.apache.flink.configuration.Configuration - Config uses fallback configuration key 'jobmanager.rpc.address' instead of key 'rest.address'
+34273742000 [mini-cluster-io-thread-2] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Start SessionDispatcherLeaderProcess.
+34300546000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - ResourceManager akka://flink/user/rpc/resourcemanager_1 was granted leadership with fencing token b4b0b0d3677beeb7c73a1b5524494273
+34695252000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Recover all persisted job graphs.
+34695272000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Successfully recovered 0 persisted job graphs.
+34943912000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_2 .
+35162580000 [mini-cluster-io-thread-6] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/resourcemanager_1 , session=c73a1b55-2449-4273-b4b0-b0d3677beeb7
+35667878000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Connecting to ResourceManager akka://flink/user/rpc/resourcemanager_1(b4b0b0d3677beeb7c73a1b5524494273).
+35679840000 [mini-cluster-io-thread-5] INFO  org.apache.flink.runtime.highavailability.nonha.embedded.EmbeddedLeaderService - Received confirmation of leadership for leader akka://flink/user/rpc/dispatcher_2 , session=5f3ea617-b4e7-41bb-817e-1aee895ab49f
+36430866000 [main] INFO  com.ververica.cdc.connectors.mongodb.MongoDBTestBase - Starting containers...
+36695110000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Resolved ResourceManager address, beginning registration
+37136602000 [testcontainers-lifecycle-0] WARN  org.testcontainers.utility.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/root/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /root/.testcontainers.properties (No such file or directory)
+37286360000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Registering TaskManager with ResourceID ab0e609b-b1cd-4b35-bd05-1eaeea42374e (akka://flink/user/rpc/taskmanager_0) at ResourceManager
+37293348000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Successful registration at resource manager akka://flink/user/rpc/resourcemanager_1 under registration id 922ba123bb9c0b70f8cc7d388d6356c2.
+37473316000 [testcontainers-lifecycle-0] INFO  org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([/usr/local/openjdk-8/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin])
+38224172000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - Could not find a valid Docker environment. Please check configuration. Attempted configurations were:
+38224440000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy -     UnixSocketClientProviderStrategy: failed with exception InvalidConfigurationException (Could not find unix domain socket). Root cause NoSuchFileException (/var/run/docker.sock)
+38224546000 [testcontainers-lifecycle-0] ERROR org.testcontainers.dockerclient.DockerClientProviderStrategy - As no valid configuration was found, execution cannot continue
+38225748000 [main] INFO  org.apache.flink.test.util.MiniClusterWithClientResource - Finalization triggered: Cluster shutdown is going to be initiated.
+39681946000 [main] INFO  org.apache.flink.runtime.minicluster.MiniCluster - Shutting down Flink Mini Cluster
+39707094000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopping TaskExecutor akka://flink/user/rpc/taskmanager_0.
+39707320000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Close ResourceManager connection b12b17a693ddb38d608a0829b61f04a9.
+39708990000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Closing TaskExecutor connection ab0e609b-b1cd-4b35-bd05-1eaeea42374e because: The TaskExecutor is shutting down.
+40261508000 [main] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shutting down rest endpoint.
+40294134000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+40294274000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager - Shutting down TaskExecutorLocalStateStoresManager.
+41227222000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit4970131400079744706/junit6672226710904491866/flink-io-fc6c420e-339a-4fdb-b9fe-2e9734f8a728
+41236394000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment - Shutting down the network environment and its components.
+41239644000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.io.disk.FileChannelManagerImpl - FileChannelManager removed spill file directory /tmp/junit4970131400079744706/junit6672226710904491866/flink-netty-shuffle-387a773a-d82e-42d4-aa53-a5c51edd6a6e
+41239978000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.KvStateService - Shutting down the kvState service and its components.
+41240104000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService - Stop job leader service.
+41240468000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.filecache.FileCache - removed file cache directory /tmp/junit4970131400079744706/junit6672226710904491866/flink-dist-cache-181c9889-db16-47ec-bb99-5680cbbd2c8a
+42348742000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Removing cache directory /tmp/flink-web-ui
+42428144000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.DispatcherRestEndpoint - Shut down complete.
+42433800000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager - Shut down cluster because application is in CANCELED, diagnostics DispatcherResourceManagerComponent has been closed..
+42483912000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent - Closing components.
+42628924000 [ForkJoinPool.commonPool-worker-2] INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess - Stopping SessionDispatcherLeaderProcess.
+42628934000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping dispatcher akka://flink/user/rpc/dispatcher_2.
+42628936000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopping all currently running jobs of dispatcher akka://flink/user/rpc/dispatcher_2.
+42628944000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Closing the slot manager.
+42628946000 [flink-akka.actor.default-dispatcher-2] INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager - Suspending the slot manager.
+43086032000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher - Stopped dispatcher akka://flink/user/rpc/dispatcher_2.
+44298696000 [flink-akka.actor.default-dispatcher-4] INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor - Stopped TaskExecutor akka://flink/user/rpc/taskmanager_0.
+44455068000 [AkkaRpcService-Supervisor-Termination-Future-Executor-thread-1] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+45772228000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopping Akka RPC service.
+45772732000 [flink-metrics-2] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+46370696000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.blob.PermanentBlobCache - Shutting down BLOB cache
+46494478000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.blob.TransientBlobCache - Shutting down BLOB cache
+46619548000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.blob.BlobServer - Stopped BLOB server at 0.0.0.0:40385
+46781594000 [flink-akka.actor.default-dispatcher-5] INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService - Stopped Akka RPC service.
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 855,375.632 s <<< FAILURE! - in com.ververica.cdc.connectors.mongodb.MongoDBSourceTest
+[ERROR] com.ververica.cdc.connectors.mongodb.MongoDBSourceTest  Time elapsed: 855,095.632 s  <<< ERROR!
+java.util.concurrent.CompletionException: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+Caused by: java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   MongoDBSourceTest.com.ververica.cdc.connectors.mongodb.MongoDBSourceTest » Completion
+[INFO] 
+[ERROR] Tests run: 5, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping flink-sql-connector-mysql-cdc
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping flink-sql-connector-postgres-cdc
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping flink-sql-connector-mongodb-cdc
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping flink-sql-connector-oracle-cdc
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] -------------< com.ververica:flink-format-changelog-json >--------------
+[INFO] Building flink-format-changelog-json 2.1-SNAPSHOT                 [8/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless-maven-plugin:2.4.2:check (spotless-check) @ flink-format-changelog-json ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ flink-format-changelog-json ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-maven-version) @ flink-format-changelog-json ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ flink-format-changelog-json ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ flink-format-changelog-json ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ flink-format-changelog-json ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ flink-format-changelog-json ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ flink-format-changelog-json ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ flink-format-changelog-json ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ververica.cdc.formats.json.ChangelogJsonSerDeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,420,492.704 s - in com.ververica.cdc.formats.json.ChangelogJsonSerDeTest
+[INFO] Running com.ververica.cdc.formats.json.ChangelogJsonFormatFactoryTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 422,610 s - in com.ververica.cdc.formats.json.ChangelogJsonFormatFactoryTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for flink-cdc-connectors 2.1-SNAPSHOT:
+[INFO] 
+[INFO] flink-cdc-connectors ............................... SUCCESS [90 d 08:16 h]
+[INFO] flink-connector-debezium ........................... SUCCESS [193 d 01:18 h]
+[INFO] flink-connector-test-util .......................... SUCCESS [58 d 14:55 h]
+[INFO] flink-connector-mysql-cdc .......................... FAILURE [839 d 16:10 h]
+[INFO] flink-connector-postgres-cdc ....................... FAILURE [586 d 16:49 h]
+[INFO] flink-connector-oracle-cdc ......................... FAILURE [583 d 03:00 h]
+[INFO] flink-connector-mongodb-cdc ........................ FAILURE [598 d 11:03 h]
+[INFO] flink-sql-connector-mysql-cdc ...................... SKIPPED
+[INFO] flink-sql-connector-postgres-cdc ................... SKIPPED
+[INFO] flink-sql-connector-mongodb-cdc .................... SKIPPED
+[INFO] flink-sql-connector-oracle-cdc ..................... SKIPPED
+[INFO] flink-format-changelog-json ........................ SUCCESS [105 d 20:08 h]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3059 d 19:08 h
+[INFO] Finished at: 2030-04-18T18:53:57Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project flink-connector-mysql-cdc: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/flink-connector-mysql-cdc/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project flink-connector-postgres-cdc: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/flink-connector-postgres-cdc/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project flink-connector-oracle-cdc: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/flink-connector-oracle-cdc/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project flink-connector-mongodb-cdc: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/flink-connector-mongodb-cdc/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :flink-connector-mysql-cdc
+{'error': True, 'log_file': 'output-2021-11-08T01:15:41-8599.log', 'message': '', 'start_time': '2021-11-08T01:15:41', 'end_time': '2021-11-08T01:16:52', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i2.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

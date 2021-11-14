@@ -1,0 +1,33 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.apache.bcel:bcel >------------------------
+[INFO] Building Apache Commons BCEL 6.6.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-version) @ bcel ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-3) @ bcel ---
+[INFO] 
+[INFO] --- apache-rat-plugin:0.13:check (rat-check) @ bcel ---
+[INFO] Enabled default license matchers.
+[INFO] Will parse SCM ignores for exclusions...
+[INFO] Parsing exclusions from /home/target/.gitignore
+[INFO] Finished adding exclusions from SCM ignore files.
+[INFO] 70 implicit excludes (use -debug for more details).
+[INFO] 18 explicit excludes (use -debug for more details).
+[INFO] 584 resources included (use -debug for more details)
+[INFO] Rat check: Summary over all files. Unapproved: 9, unknown: 9, generated: 0, approved: 555 licenses.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  93 d 10:33 h
+[INFO] Finished at: 2022-03-05T16:37:20Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.rat:apache-rat-plugin:0.13:check (rat-check) on project bcel: Too many files with unapproved license: 9 See RAT report in: /home/target/target/rat.txt -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+{'error': True, 'log_file': 'output-2021-11-08T03:23:10-6947.log', 'message': '', 'start_time': '2021-11-08T03:23:10', 'end_time': '2021-11-08T03:23:13', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i2.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

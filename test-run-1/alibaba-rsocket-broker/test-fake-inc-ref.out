@@ -1,0 +1,437 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: aarch_64
+[INFO] os.detected.bitness: 64
+[INFO] os.detected.version: 5.11
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 11
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-aarch_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: linux
+[INFO] os.detected.arch: aarch_64
+[INFO] os.detected.version: 5.11
+[INFO] os.detected.version.major: 5
+[INFO] os.detected.version.minor: 11
+[INFO] os.detected.release: debian
+[INFO] os.detected.release.version: 11
+[INFO] os.detected.release.like.debian: true
+[INFO] os.detected.classifier: linux-aarch_64
+[WARNING] The project com.alibaba.rsocket:alibaba-rsocket-broker-parent:pom:1.1.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Alibaba RSocket Broker Parent                                      [pom]
+[INFO] alibaba-rsocket-service-common                                     [jar]
+[INFO] Alibaba RSocket Core                                               [jar]
+[INFO] Alibaba RSocket Spring Boot Starter                                [jar]
+[INFO] Alibaba RSocket Broker Spring Boot Starter                         [jar]
+[INFO] Alibaba RSocket Broker Server                                      [jar]
+[INFO] Alibaba RSocket Broker for Spring Cloud Registry                   [jar]
+[INFO] Alibaba RSocket Broker for Spring Cloud Config                     [jar]
+[INFO] Alibaba RSocket Broker Gateway for HTTP                            [jar]
+[INFO] Alibaba RSocket Broker Gateway for gRPC                            [jar]
+[INFO] Alibaba RSocket Broker Example Parent                              [pom]
+[INFO] user-service-api                                                   [jar]
+[INFO] user-service-spring-boot-starter                                   [jar]
+[INFO] rsocket-requester                                                  [jar]
+[INFO] RSocket Responder                                                  [jar]
+[INFO] rsocket-cloud-function                                             [jar]
+[INFO] 
+[INFO] ---------< com.alibaba.rsocket:alibaba-rsocket-broker-parent >----------
+[INFO] Building Alibaba RSocket Broker Parent 1.1.2-SNAPSHOT             [1/16]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- git-commit-id-plugin:4.0.5:revision (default) @ alibaba-rsocket-broker-parent ---
+[INFO] skip is enabled, skipping execution!
+[INFO] 
+[INFO] ---------< com.alibaba.rsocket:alibaba-rsocket-service-common >---------
+[INFO] Building alibaba-rsocket-service-common 1.1.2-SNAPSHOT            [2/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- git-commit-id-plugin:4.0.5:revision (default) @ alibaba-rsocket-service-common ---
+[INFO] skip is enabled, skipping execution!
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ alibaba-rsocket-service-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/alibaba-rsocket-service-common/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ alibaba-rsocket-service-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ alibaba-rsocket-service-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/alibaba-rsocket-service-common/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ alibaba-rsocket-service-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ alibaba-rsocket-service-common ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --------------< com.alibaba.rsocket:alibaba-rsocket-core >--------------
+[INFO] Building Alibaba RSocket Core 1.1.2-SNAPSHOT                      [3/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- git-commit-id-plugin:4.0.5:revision (default) @ alibaba-rsocket-core ---
+[INFO] skip is enabled, skipping execution!
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.5.31:compile (compile) @ alibaba-rsocket-core ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.5.31:test-compile (test-compile) @ alibaba-rsocket-core ---
+[WARNING] No sources found skipping Kotlin compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ alibaba-rsocket-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ alibaba-rsocket-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ alibaba-rsocket-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ alibaba-rsocket-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ alibaba-rsocket-core ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.alibaba.rsocket.loadbalance.RandomSelectorTest
+2
+2
+1
+1
+2
+2
+1
+3
+3
+2
+1
+3
+2
+1
+2
+3
+2
+3
+1
+1
+2
+3
+2
+2
+1
+3
+2
+3
+1
+2
+1
+3
+1
+3
+3
+3
+3
+1
+3
+1
+1
+3
+1
+1
+1
+3
+1
+3
+3
+1
+1
+1
+2
+2
+1
+2
+1
+2
+3
+3
+3
+1
+1
+3
+2
+3
+3
+1
+1
+1
+2
+1
+3
+2
+1
+2
+1
+1
+2
+2
+1
+2
+3
+1
+2
+2
+1
+3
+1
+1
+2
+2
+1
+2
+2
+1
+3
+1
+3
+2
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 101,702 s - in com.alibaba.rsocket.loadbalance.RandomSelectorTest
+[INFO] Running com.alibaba.rsocket.invocation.ReactiveMethodMetadataTest
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 690,824 s - in com.alibaba.rsocket.invocation.ReactiveMethodMetadataTest
+[INFO] Running com.alibaba.rsocket.invocation.RSocketRequesterRpcProxyTest
+args1 hashcode:-1335391363
+args1 Deep hashcode:-1335391363
+args2 hashcode:-1335391363
+args2 Deep hashcode:-1335391363
+Null Deep hashcode:0
+Empty Array Deep hashcode:1
+Array2 with all Null Deep hashcode:961
+Array2 with all Null Deep hashcode:961
+Array4 with all Null Deep hashcode:923521
+Hashcode for 'good morning': -1001961631
+Hashcode for 'good morning': -1001961631
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 456 s - in com.alibaba.rsocket.invocation.RSocketRequesterRpcProxyTest
+[INFO] Running com.alibaba.rsocket.MutableContextTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 359,860 s - in com.alibaba.rsocket.MutableContextTest
+[INFO] Running com.alibaba.rsocket.encoding.hessian.io.HessianTest
+我是🐻
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 519,678 s - in com.alibaba.rsocket.encoding.hessian.io.HessianTest
+[INFO] Running com.alibaba.rsocket.encoding.impl.RSocketEncodingFacadeImplTest
+leijuan
+leijuan
+leijuan
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,254,317 s - in com.alibaba.rsocket.encoding.impl.RSocketEncodingFacadeImplTest
+[INFO] Running com.alibaba.rsocket.encoding.impl.ObjectEncodingHandlerJsonImplTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 147,995 s - in com.alibaba.rsocket.encoding.impl.ObjectEncodingHandlerJsonImplTest
+[INFO] Running com.alibaba.rsocket.rpc.LocalReactiveServiceCallerImplTest
+=======Reactive Service Interface=====
+com.alibaba.rsocket.rpc
+DemoReactiveService
+===============Operations=====================
+findNickById
+reactor.core.publisher.Mono
+java.lang.String
+deprecated: false
+===============Parameters=====================
+id
+int
+null
+================================
+findNickByEmail
+reactor.core.publisher.Mono
+java.lang.String
+deprecated: true
+===============Parameters=====================
+email
+java.lang.String
+null
+================================
+findNicks
+reactor.core.publisher.Flux
+java.lang.String
+deprecated: false
+===============Parameters=====================
+ids
+reactor.core.publisher.Flux
+java.lang.Integer
+================================
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17,599 s - in com.alibaba.rsocket.rpc.LocalReactiveServiceCallerImplTest
+[INFO] Running com.alibaba.rsocket.transport.NetworkUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 87,096 s - in com.alibaba.rsocket.transport.NetworkUtilTest
+[INFO] Running com.alibaba.rsocket.metadata.RSocketCompositeMetadataTest
+null
+Json
+-48
+message/x.rsocket.mime-type.v0
+[ERROR] Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 133,901 s <<< FAILURE! - in com.alibaba.rsocket.metadata.RSocketCompositeMetadataTest
+[ERROR] testServiceIdRoutingMetadata  Time elapsed: 1,384 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <12> but was: <8>
+	at com.alibaba.rsocket.metadata.RSocketCompositeMetadataTest.testServiceIdRoutingMetadata(RSocketCompositeMetadataTest.java:85)
+
+[INFO] Running com.alibaba.rsocket.metadata.GSVRoutingMetadataTest
+dc1!com.alibaba.UserService:1.0.0
+com.alibaba.UserService
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 292 s - in com.alibaba.rsocket.metadata.GSVRoutingMetadataTest
+[INFO] Running com.alibaba.rsocket.metadata.BearerTokenMetadataTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 131 s - in com.alibaba.rsocket.metadata.BearerTokenMetadataTest
+[INFO] Running com.alibaba.rsocket.event.CloudEventTest
+{"specversion":"1.0","id":"87051187-0e2a-47b1-8521-48350aaf9359","source":"/trigger","type":"java.util.HashMap","datacontenttype":"application/json","time":"2022-05-02T15:57:35.875Z","data":{"id":1,"welcome":"欢迎"}}
+{"id":1,"welcome":"leijuan"}
+{"specversion":"1.0","id":"9bb5f795-b19c-4e15-92f3-82f767d42cbe","source":"app://534a5f5e-fa50-4982-bc3a-7ee1ca56031d/?ip=172.17.0.7","type":"java.lang.String","datacontenttype":"application/json","time":"2022-05-04T08:50:50.875Z","data":"Hello"}
+Hello
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103,110 s - in com.alibaba.rsocket.event.CloudEventTest
+[INFO] Running com.alibaba.rsocket.cloudevents.CloudEventRSocketTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4,403 s - in com.alibaba.rsocket.cloudevents.CloudEventRSocketTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   RSocketCompositeMetadataTest.testServiceIdRoutingMetadata:85 expected: <12> but was: <8>
+[INFO] 
+[ERROR] Tests run: 25, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Spring Boot Starter
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Broker Spring Boot Starter
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Broker Server
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Broker for Spring Cloud Registry
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Broker for Spring Cloud Config
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Broker Gateway for HTTP
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping Alibaba RSocket Broker Gateway for gRPC
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------< com.alibaba.broker.example:alibaba-broker-example-parent >------
+[INFO] Building Alibaba RSocket Broker Example Parent 1.0.0-SNAPSHOT     [4/16]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] ------------< com.alibaba.broker.example:user-service-api >-------------
+[INFO] Building user-service-api 1.0.0-SNAPSHOT                          [5/16]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.6.1:compile (default) @ user-service-api ---
+[INFO] Compiling 1 proto file(s) to /home/target/example/user-service-api/target/generated-sources/protobuf/java
+[WARNING] PROTOC: account.proto:9:1: warning: Import google/protobuf/wrappers.proto is unused.
+account.proto:8:1: warning: Import google/protobuf/any.proto is unused.
+
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ user-service-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/example/user-service-api/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ user-service-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /home/target/example/user-service-api/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ user-service-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/example/user-service-api/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ user-service-api ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ user-service-api ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping user-service-spring-boot-starter
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping rsocket-requester
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping RSocket Responder
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping rsocket-cloud-function
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Alibaba RSocket Broker Parent 1.1.2-SNAPSHOT ....... SUCCESS [3 d 07:16 h]
+[INFO] alibaba-rsocket-service-common 1.1.2-SNAPSHOT ...... SUCCESS [6 d 22:36 h]
+[INFO] Alibaba RSocket Core 1.1.2-SNAPSHOT ................ FAILURE [147 d 14:09 h]
+[INFO] Alibaba RSocket Spring Boot Starter 1.1.2-SNAPSHOT . SKIPPED
+[INFO] Alibaba RSocket Broker Spring Boot Starter 1.1.2-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Server 1.1.2-SNAPSHOT ....... SKIPPED
+[INFO] Alibaba RSocket Broker for Spring Cloud Registry 1.1.2-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker for Spring Cloud Config 1.1.2-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Gateway for HTTP 1.1.2-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Gateway for gRPC 1.1.2-SNAPSHOT SKIPPED
+[INFO] Alibaba RSocket Broker Example Parent 1.0.0-SNAPSHOT SUCCESS [04:19 min]
+[INFO] user-service-api 1.0.0-SNAPSHOT .................... SUCCESS [23 d 20:58 h]
+[INFO] user-service-spring-boot-starter 1.0.0-SNAPSHOT .... SKIPPED
+[INFO] rsocket-requester 1.0.0-SNAPSHOT ................... SKIPPED
+[INFO] RSocket Responder 1.0.0-SNAPSHOT ................... SKIPPED
+[INFO] rsocket-cloud-function 1.0.0-SNAPSHOT .............. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  189 d 14:40 h
+[INFO] Finished at: 2022-05-29T23:29:03Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project alibaba-rsocket-core: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/alibaba-rsocket-core/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :alibaba-rsocket-core
+{'error': True, 'log_file': 'output-2021-11-08T01:24:46-7878.log', 'message': '', 'start_time': '2021-11-08T01:24:46', 'end_time': '2021-11-08T01:24:58', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i1.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

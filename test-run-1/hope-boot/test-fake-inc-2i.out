@@ -1,0 +1,266 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.hope:hope-admin:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.commons:commons-lang3:jar -> version ${commons.lang3.version} vs ${commons-lang3.version} @ com.hope:hope-boot:0.0.1-SNAPSHOT, /home/target/pom.xml, line 178, column 25
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mybatis.spring.boot:mybatis-spring-boot-starter:jar -> version ${mybatis.spring.boot.starter.version} vs ${mybatis.spring.boot} @ com.hope:hope-boot:0.0.1-SNAPSHOT, /home/target/pom.xml, line 184, column 25
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.hope:hope-boot:pom:0.0.1-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.commons:commons-lang3:jar -> version ${commons.lang3.version} vs ${commons-lang3.version} @ line 178, column 25
+[WARNING] 'dependencyManagement.dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.mybatis.spring.boot:mybatis-spring-boot-starter:jar -> version ${mybatis.spring.boot.starter.version} vs ${mybatis.spring.boot} @ line 184, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] hope-boot                                                          [pom]
+[INFO] hope-framework                                                     [jar]
+[INFO] hope-core                                                          [jar]
+[INFO] hope-admin                                                         [jar]
+[INFO] hope-sso-server                                                    [jar]
+[INFO] hope-generator                                                     [jar]
+[INFO] hope-quartz                                                        [jar]
+[INFO] hope-flyway                                                        [jar]
+[INFO] 
+[INFO] -------------------------< com.hope:hope-boot >-------------------------
+[INFO] Building hope-boot 0.0.1-SNAPSHOT                                  [1/8]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] ----------------------< com.hope:hope-framework >-----------------------
+[INFO] Building hope-framework 0.0.1-SNAPSHOT                             [2/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-framework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-framework ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-framework ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-framework/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-framework ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-framework ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------------------< com.hope:hope-core >-------------------------
+[INFO] Building hope-core 0.0.1-SNAPSHOT                                  [3/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-core/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-core ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------< com.hope:hope-admin >-------------------------
+[INFO] Building hope-admin 0.0.1-SNAPSHOT                                 [4/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-admin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 579 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-admin ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-admin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-admin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-admin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-admin ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------------------< com.hope:hope-sso-server >----------------------
+[INFO] Building hope-sso-server 0.0.1-SNAPSHOT                            [5/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-sso-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 93 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-sso-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-sso-server ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-sso-server/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-sso-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-sso-server ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ----------------------< com.hope:hope-generator >-----------------------
+[INFO] Building hope-generator 0.0.1-SNAPSHOT                             [6/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-generator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 110 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-generator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-generator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-generator/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-generator ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-generator ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] ------------------------< com.hope:hope-quartz >------------------------
+[INFO] Building hope-quartz 0.0.1-SNAPSHOT                                [7/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-quartz ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-quartz ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-quartz ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-quartz/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-quartz ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-quartz ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.hope.quartz.HopeQuartzApplicationTests
+09:37:10.425 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hope.quartz.HopeQuartzApplicationTests], using SpringBootContextLoader
+00:44:16.425 logback [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.hope.quartz.HopeQuartzApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:15:00.425 logback [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.hope.quartz.HopeQuartzApplicationTests]: HopeQuartzApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:24:14.425 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.hope.quartz.HopeQuartzApplication for test class com.hope.quartz.HopeQuartzApplicationTests
+17:44:48.425 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:59:42.425 logback [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6c779568, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f381794, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2cdd0d4b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e9131d5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2e1d27ba, org.springframework.test.context.transaction.TransactionalTestExecutionListener@61d6015a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2525ff7e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@524d6d96, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@152aa092, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44a7bfbc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4ef37659, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@776b83cc]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+02:21:20.425 logback [main] INFO  c.h.q.HopeQuartzApplicationTests - Starting HopeQuartzApplicationTests on d3328853284c with PID 2291 (started by root in /home/target/hope-quartz)
+02:31:00.425 logback [main] INFO  c.h.q.HopeQuartzApplicationTests - No active profile set, falling back to default profiles: default
+03:49:26.425 logback [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@70ed52de: startup date [Sun Mar 27 03:46:38 UTC 2022]; root of context hierarchy
+10:21:08.425 logback [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+12:56:40.425 logback [main] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+03:46:56.425 logback [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+08:53:10.425 logback [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+09:29:44.425 logback [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+09:38:44.425 logback [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+09:45:00.425 logback [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+09:53:00.425 logback [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: com.hope.quartz.config.SpringJobFactory@57f791c6
+05:21:02.425 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:11:32.425 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@70ed52de: startup date [Sun Mar 27 03:46:38 UTC 2022]; root of context hierarchy
+20:41:42.425 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/quartz/get_all_jobs]}" onto public java.util.List<com.hope.quartz.model.vo.QuartzJobsVO> com.hope.quartz.controller.ManageQuartzJobs.getAllJobs()
+12:38:24.425 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13:21:48.425 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:59:38.425 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+02:11:48.425 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:16:50.425 logback [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+11:07:28.425 logback [main] INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+01:46:32.425 logback [main] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+21:46:48.425 logback [main] INFO  c.h.q.HopeQuartzApplicationTests - Started HopeQuartzApplicationTests in 1.4104096E7 seconds (JVM running for 4.249)
+12:06:42.425 logback [main] INFO  com.hope.quartz.start.StartupRunner - >>>>>>>>>>scheduleJobsRun 定时任务启动！<<<<<<<<<<<
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,112,176.816 s - in com.hope.quartz.HopeQuartzApplicationTests
+TestJob1 执行
+TestJob1 执行
+TestJob1 执行
+12:14:38.425 logback [Thread-2] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@70ed52de: startup date [Sun Mar 27 03:46:38 UTC 2022]; root of context hierarchy
+07:44:12.425 logback [Thread-2] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+18:21:04.425 logback [Thread-2] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+00:20:54.425 logback [Thread-2] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutting down.
+01:19:46.425 logback [Thread-2] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactoryBean_$_NON_CLUSTERED paused.
+21:09:58.425 logback [Thread-2] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactoryBean_$_NON_CLUSTERED shutdown complete.
+21:13:14.425 logback [Thread-2] INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------< com.hope:hope-flyway >------------------------
+[INFO] Building hope-flyway 0.0.1-SNAPSHOT                                [8/8]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ hope-flyway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ hope-flyway ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ hope-flyway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/hope-flyway/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ hope-flyway ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ hope-flyway ---
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for hope-boot 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] hope-boot .......................................... SUCCESS [32:38 min]
+[INFO] hope-framework ..................................... SUCCESS [32 d 22:40 h]
+[INFO] hope-core .......................................... SUCCESS [2 d 20:38 h]
+[INFO] hope-admin ......................................... SUCCESS [4 d 19:35 h]
+[INFO] hope-sso-server .................................... SUCCESS [  20:33 h]
+[INFO] hope-generator ..................................... SUCCESS [1 d 00:00 h]
+[INFO] hope-quartz ........................................ SUCCESS [244 d 21:23 h]
+[INFO] hope-flyway ........................................ SUCCESS [  14:20 h]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  294 d 19:12 h
+[INFO] Finished at: 2022-09-23T16:41:08Z
+[INFO] ------------------------------------------------------------------------
+{'error': False, 'log_file': 'output-2021-11-08T00:47:32-9119.log', 'message': '', 'start_time': '2021-11-08T00:47:32', 'end_time': '2021-11-08T00:47:39', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 i2.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}

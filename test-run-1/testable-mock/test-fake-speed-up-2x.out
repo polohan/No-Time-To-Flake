@@ -1,0 +1,495 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] testable-parent                                                    [pom]
+[INFO] testable-processor                                                 [jar]
+[INFO] testable-core                                                      [jar]
+[INFO] testable-agent                                                     [jar]
+[INFO] testable-all                                                       [jar]
+[INFO] testable-maven-plugin                                     [maven-plugin]
+[INFO] java-demo                                                          [jar]
+[INFO] kotlin-demo                                                        [jar]
+[INFO] spock-demo                                                         [jar]
+[INFO] demos                                                              [pom]
+[INFO] testable-aggregate                                                 [pom]
+[INFO] 
+[INFO] ----------------< com.alibaba.testable:testable-parent >----------------
+[INFO] Building testable-parent 0.6.10                                   [1/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------< com.alibaba.testable:testable-processor >---------------
+[INFO] Building testable-processor 0.6.10                                [2/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ testable-processor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ testable-processor ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ testable-processor ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-processor/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ testable-processor ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ testable-processor ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.alibaba.testable.processor.util.StringUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s - in com.alibaba.testable.processor.util.StringUtilTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -----------------< com.alibaba.testable:testable-core >-----------------
+[INFO] Building testable-core 0.6.10                                     [3/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ testable-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-core/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ testable-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ testable-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-core/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ testable-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ testable-core ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.alibaba.testable.core.tool.PrivateAccessorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s - in com.alibaba.testable.core.tool.PrivateAccessorTest
+[INFO] Running com.alibaba.testable.core.tool.OmniConstructorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.alibaba.testable.core.tool.OmniConstructorTest
+[INFO] Running com.alibaba.testable.core.tool.OmniAccessorTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s - in com.alibaba.testable.core.tool.OmniAccessorTest
+[INFO] Running com.alibaba.testable.core.util.MockAssociationUtilTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.alibaba.testable.core.util.MockAssociationUtilTest
+[INFO] Running com.alibaba.testable.core.util.CollectionUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.alibaba.testable.core.util.CollectionUtilTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ----------------< com.alibaba.testable:testable-agent >-----------------
+[INFO] Building testable-agent 0.6.10                                    [4/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ testable-agent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-agent/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ testable-agent ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ testable-agent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-agent/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ testable-agent ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ testable-agent ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.alibaba.testable.agent.tool.ComparableWeakRefTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.148 s - in com.alibaba.testable.agent.tool.ComparableWeakRefTest
+[INFO] Running com.alibaba.testable.agent.util.ClassUtilTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.alibaba.testable.agent.util.ClassUtilTest
+[INFO] Running com.alibaba.testable.agent.util.PathUtilTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.alibaba.testable.agent.util.PathUtilTest
+[INFO] Running com.alibaba.testable.agent.util.CollectionUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.alibaba.testable.agent.util.CollectionUtilTest
+[INFO] Running com.alibaba.testable.agent.util.MethodUtilTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in com.alibaba.testable.agent.util.MethodUtilTest
+[INFO] Running com.alibaba.testable.agent.util.StringUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.alibaba.testable.agent.util.StringUtilTest
+[INFO] Running com.alibaba.testable.agent.util.AnnotationUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.alibaba.testable.agent.util.AnnotationUtilTest
+[INFO] Running com.alibaba.testable.agent.handler.SourceClassHandlerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in com.alibaba.testable.agent.handler.SourceClassHandlerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -----------------< com.alibaba.testable:testable-all >------------------
+[INFO] Building testable-all 0.6.10                                      [5/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ testable-all ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-all/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ testable-all ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ testable-all ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-all/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ testable-all ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ testable-all ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------< com.alibaba.testable:testable-maven-plugin >-------------
+[INFO] Building testable-maven-plugin 0.6.10                             [6/11]
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ testable-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-maven-plugin/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ testable-maven-plugin ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.6.0:descriptor (default-descriptor) @ testable-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 1 mojo descriptor.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ testable-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/target/testable-maven-plugin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ testable-maven-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ testable-maven-plugin ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------------< com.alibaba.testable:java-demo >-------------------
+[INFO] Building java-demo 1.0.0-SNAPSHOT                                 [7/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.6:prepare-agent (prepare-agent) @ java-demo ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/home/target/demo/java-demo/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ java-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/target/demo/java-demo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ java-demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ java-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ java-demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ java-demo ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[ERROR] Error occurred during initialization of VM
+[ERROR] Error opening zip file or JAR manifest missing : /root/.m2/repository/com/alibaba/testable/testable-agent/0.6.10/testable-agent-0.6.10.jar
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /home/target/demo/java-demo/target/surefire-reports/2021-11-14T02-47-33_645-jvmRun1.dumpstream
+[INFO] 
+[INFO] ------------------< com.alibaba.testable:kotlin-demo >------------------
+[INFO] Building kotlin-demo 1.0.0-SNAPSHOT                               [8/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- testable-maven-plugin:0.6.10:prepare (prepare) @ kotlin-demo ---
+[INFO] argLine set to -javaagent:/home/target/testable-agent/target/classes
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.6:prepare-agent (prepare-agent) @ kotlin-demo ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/home/target/demo/kotlin-demo/target/jacoco.exec -javaagent:/home/target/testable-agent/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ kotlin-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/target/demo/kotlin-demo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ kotlin-demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.3.72:compile (compile) @ kotlin-demo ---
+[WARNING] /home/target/demo/kotlin-demo/src/main/kotlin/com/alibaba/demo/basic/DemoMatcher.kt: (21, 34) Parameter 'a1' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/main/kotlin/com/alibaba/demo/basic/DemoMatcher.kt: (21, 44) Parameter 'a2' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/main/kotlin/com/alibaba/demo/basic/DemoMatcher.kt: (28, 34) Parameter 'a' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/main/kotlin/com/alibaba/demo/basic/DemoMock.kt: (54, 27) Parameter 's' is never used
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ kotlin-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ kotlin-demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.3.72:test-compile (test-compile) @ kotlin-demo ---
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoInheritTest.kt: (31, 34) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoInheritTest.kt: (36, 39) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoInheritTest.kt: (41, 42) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoInheritTest.kt: (46, 45) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMatcherTest.kt: (21, 43) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMatcherTest.kt: (25, 41) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMatcherTest.kt: (25, 60) Parameter 'a1' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMatcherTest.kt: (25, 69) Parameter 'a2' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMatcherTest.kt: (29, 45) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMatcherTest.kt: (29, 64) Parameter 'a' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMockTest.kt: (38, 25) Parameter 'i' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMockTest.kt: (38, 33) Parameter 'j' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMockTest.kt: (41, 32) Parameter 's' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoMockTest.kt: (49, 31) Parameter 'color' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoTemplateTest.kt: (18, 33) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoTemplateTest.kt: (19, 68) Unchecked cast: String to T
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoTemplateTest.kt: (23, 35) Parameter 'self' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoTemplateTest.kt: (24, 73) Unchecked cast: String to V
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/basic/DemoTemplateTest.kt: (36, 46) Unchecked cast: String to E
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/java2kotlin/PathDemoTest.kt: (29, 20) Parameter 'f' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/one2multi/ASvcMock.kt: (8, 18) Parameter 'format' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/one2multi/ASvcMock.kt: (8, 41) Parameter 'args' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/one2multi/BSvcMock.kt: (8, 18) Parameter 'format' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/one2multi/BSvcMock.kt: (8, 41) Parameter 'args' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/one2multi/CSvcMock.kt: (8, 18) Parameter 'format' is never used
+[WARNING] /home/target/demo/kotlin-demo/src/test/kotlin/com/alibaba/demo/one2multi/CSvcMock.kt: (8, 41) Parameter 'args' is never used
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ kotlin-demo ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[ERROR] Error opening zip file or JAR manifest missing : /home/target/testable-agent/target/classes
+[ERROR] Error occurred during initialization of VM
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /home/target/demo/kotlin-demo/target/surefire-reports/2021-11-14T02-47-33_645-jvmRun1.dumpstream
+[INFO] 
+[INFO] ------------------< com.alibaba.testable:spock-demo >-------------------
+[INFO] Building spock-demo 1.0.0-SNAPSHOT                                [9/11]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spock-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/target/demo/spock-demo/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ spock-demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.12.0:compile (default) @ spock-demo ---
+[INFO] No sources specified for compilation. Skipping.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ spock-demo ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/target/demo/spock-demo/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ spock-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.12.0:compileTests (default) @ spock-demo ---
+[INFO] Using isolated classloader, without GMavenPlus classpath.
+[INFO] Using Groovy 3.0.7 to perform compileTests.
+[INFO] Parallel parsing disabled.
+[INFO] Compiled 2 files.
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ spock-demo ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[ERROR] Error occurred during initialization of VM
+[ERROR] Error opening zip file or JAR manifest missing : /root/.m2/repository/com/alibaba/testable/testable-agent/0.6.10/testable-agent-0.6.10.jar
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /home/target/demo/spock-demo/target/surefire-reports/2021-11-14T02-47-33_645-jvmRun1.dumpstream
+[INFO] 
+[INFO] ---------------------< com.alibaba.testable:demo >----------------------
+[INFO] Building demos 1.0.0-SNAPSHOT                                    [10/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------< com.alibaba.testable:testable-aggregate >---------------
+[INFO] Building testable-aggregate 1.0.0-SNAPSHOT                       [11/11]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] testable-parent 0.6.10 ............................. SUCCESS [  0.002 s]
+[INFO] testable-processor 0.6.10 .......................... SUCCESS [  3.090 s]
+[INFO] testable-core 0.6.10 ............................... SUCCESS [  1.266 s]
+[INFO] testable-agent 0.6.10 .............................. SUCCESS [  2.402 s]
+[INFO] testable-all 0.6.10 ................................ SUCCESS [  0.277 s]
+[INFO] testable-maven-plugin 0.6.10 ....................... SUCCESS [  1.987 s]
+[INFO] java-demo 1.0.0-SNAPSHOT ........................... FAILURE [  0.518 s]
+[INFO] kotlin-demo 1.0.0-SNAPSHOT ......................... FAILURE [ 18.051 s]
+[INFO] spock-demo 1.0.0-SNAPSHOT .......................... FAILURE [  2.728 s]
+[INFO] demos 1.0.0-SNAPSHOT ............................... SUCCESS [  0.000 s]
+[INFO] testable-aggregate 1.0.0-SNAPSHOT .................. SUCCESS [  0.000 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.556 s
+[INFO] Finished at: 2021-11-14T02:48:02Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test (default-test) on project java-demo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/demo/java-demo/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /home/target/demo/java-demo && /usr/local/openjdk-8/jre/bin/java -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/home/target/demo/java-demo/target/jacoco.exec -javaagent:/root/.m2/repository/com/alibaba/testable/testable-agent/0.6.10/testable-agent-0.6.10.jar -jar /home/target/demo/java-demo/target/surefire/surefirebooter4334904763584791708.jar /home/target/demo/java-demo/target/surefire 2021-11-14T02-47-33_645-jvmRun1 surefire7746807506749707780tmp surefire_32767089605491950286tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /home/target/demo/java-demo && /usr/local/openjdk-8/jre/bin/java -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/home/target/demo/java-demo/target/jacoco.exec -javaagent:/root/.m2/repository/com/alibaba/testable/testable-agent/0.6.10/testable-agent-0.6.10.jar -jar /home/target/demo/java-demo/target/surefire/surefirebooter4334904763584791708.jar /home/target/demo/java-demo/target/surefire 2021-11-14T02-47-33_645-jvmRun1 surefire7746807506749707780tmp surefire_32767089605491950286tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:748)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:305)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:265)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1314)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1159)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:932)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:972)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
+[ERROR] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[ERROR] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[ERROR] 	at java.lang.reflect.Method.invoke(Method.java:498)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test (default-test) on project kotlin-demo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/demo/kotlin-demo/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /home/target/demo/kotlin-demo && /usr/local/openjdk-8/jre/bin/java -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/home/target/demo/kotlin-demo/target/jacoco.exec -javaagent:/home/target/testable-agent/target/classes -jar /home/target/demo/kotlin-demo/target/surefire/surefirebooter5469972684536608736.jar /home/target/demo/kotlin-demo/target/surefire 2021-11-14T02-47-33_645-jvmRun1 surefire1588994072703438149tmp surefire_47150278531296501632tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /home/target/demo/kotlin-demo && /usr/local/openjdk-8/jre/bin/java -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/home/target/demo/kotlin-demo/target/jacoco.exec -javaagent:/home/target/testable-agent/target/classes -jar /home/target/demo/kotlin-demo/target/surefire/surefirebooter5469972684536608736.jar /home/target/demo/kotlin-demo/target/surefire 2021-11-14T02-47-33_645-jvmRun1 surefire1588994072703438149tmp surefire_47150278531296501632tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:748)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:305)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:265)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1314)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1159)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:932)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:972)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
+[ERROR] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[ERROR] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[ERROR] 	at java.lang.reflect.Method.invoke(Method.java:498)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5:test (default-test) on project spock-demo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/target/demo/spock-demo/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /home/target/demo/spock-demo && /usr/local/openjdk-8/jre/bin/java -javaagent:/root/.m2/repository/com/alibaba/testable/testable-agent/0.6.10/testable-agent-0.6.10.jar -jar /home/target/demo/spock-demo/target/surefire/surefirebooter1946151949962637521.jar /home/target/demo/spock-demo/target/surefire 2021-11-14T02-47-33_645-jvmRun1 surefire7013039876944311172tmp surefire_51735433457538728474tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /home/target/demo/spock-demo && /usr/local/openjdk-8/jre/bin/java -javaagent:/root/.m2/repository/com/alibaba/testable/testable-agent/0.6.10/testable-agent-0.6.10.jar -jar /home/target/demo/spock-demo/target/surefire/surefirebooter1946151949962637521.jar /home/target/demo/spock-demo/target/surefire 2021-11-14T02-47-33_645-jvmRun1 surefire7013039876944311172tmp surefire_51735433457538728474tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:748)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:305)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:265)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1314)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1159)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:932)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:972)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)
+[ERROR] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[ERROR] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[ERROR] 	at java.lang.reflect.Method.invoke(Method.java:498)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :java-demo
+[WARNING] ForkStarter IOException: Stream closed. See the dump file /home/target/demo/spock-demo/target/surefire-reports/2021-11-14T02-47-33_645-jvmRun1.dumpstream
+{'error': True, 'log_file': 'output-2021-11-14T02:47:30-3631.log', 'message': '', 'start_time': '2021-11-14T02:47:30', 'end_time': '2021-11-14T02:47:46', 'command': ['mvn', '-fae', 'test'], 'faketime_str': '+0 x2.0', 'timezone': datetime.timezone(datetime.timedelta(0), 'UTC')}
