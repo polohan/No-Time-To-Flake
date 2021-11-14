@@ -260,10 +260,10 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     # test with different potentially buggy timezones
     curr_year = datetime.now().year
     mock_timezones = [
-        ("+0", "UTC", "UTC-ref"),
-        ("+0", "Asia/Kolkata", None),     # UTC+5:30
-        ("+0", "Australia/Eucla", None),      # UTC+8:45
-        ("+0", "Pacific/Marquesas", None),      # UTC-9:30
+        ("", "UTC", "UTC-ref"),
+        ("", "Asia/Kolkata", None),     # UTC+5:30
+        ("", "Australia/Eucla", None),      # UTC+8:45
+        ("", "Pacific/Marquesas", None),      # UTC-9:30
         (f"@{curr_year}-07-01 00:00:00", "Pacific/Chatham", "Chatham"),      # UTC+12:45
         (f"@{curr_year}-01-01 00:00:00", "Pacific/Chatham", "Chatham-DST"),      # UTC+13:45
     ]
