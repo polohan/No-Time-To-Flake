@@ -40,6 +40,19 @@ def _create_container(image_url: str) -> Container:
     container = client.containers.run(image_url, 'bash', tty=True, detach=True)
     return container
 
+def _get_container(container_id: str) -> Container:
+    """Get the Docker container to run the test sequence in.
+
+    Args:
+        container_id (str): the container id
+
+    Returns:
+        container: a Docker container obj
+    """
+    client = docker.from_env()
+    container = client.containers.get(container_id)
+    return container
+
 # Source: https://stackoverflow.com/a/52716666
 def _copy_file(container: Container, src: str, dst: str) -> None:
     """Copy a file into container.
@@ -156,7 +169,7 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
     print("Performing make install.")
     _run_cmds(container, ['make', 'install'], libfaketime_path)
 
-def prepare_container(image_url: str, dependency_file: str, target_project_url: str, project_folder: str = '/home') -> None:
+def prepare_container(image_url: str, dependency_file: str, target_project_url: str, project_folder: str = '/home', container_id: str = '') -> None:
     """Create the container for the test sequence.
 
     Args:
@@ -164,11 +177,18 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
         dependency_file (str): the path to the dependency file
         target_project_url (str): the project to test
         project_folder (str): the folder to put the project in
+        container_id (str): the id of the container to run the test in. Defaults to ''.
     """
-    # create container
-    print("Creating container.")
-    container = _create_container(image_url)
-    print("Container created.")
+    if not container_id:
+        # create container
+        print("Creating container.")
+        container = _create_container(image_url)
+        print("Container created.")
+    else:
+        # get container
+        print("Getting container.")
+        container = _get_container(container_id)
+        return container
 
     # install basic dependencies
     print("Installing basic dependencies.")
@@ -248,7 +268,7 @@ def run_test(container: Container, command: str, faketime: str = '', switch: Lis
                             '-tz', timezone
                         ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
 
-def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str) -> None:
+def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str, container_id: str = '') -> None:
     """Start the whole test process
 
     Args:
@@ -257,11 +277,12 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
         target_project_url (str): the project to test
         command (str): the command to run the project
         output_path (str): the dir to put the output files in
+        container_id (str): the id of the container to run the test in. Defaults to ''.
     """
     if target_project_url[-1] == '/':
         target_project_url = target_project_url[:-1]
 
-    container = prepare_container(image_url, dependency_file, target_project_url)
+    container = prepare_container(image_url, dependency_file, target_project_url, container_id=container_id)
     target_project_name = target_project_url.split('/')[-1]
 
     # dry run
@@ -309,8 +330,9 @@ if __name__ == "__main__":
     parser.add_argument("-d", "--dependency", type=str,
         help="the path to the files that contains the commands necessary to install all dependencies and the project")
     parser.add_argument("-p", "--path", type=str, help='the folder to put the output file in', default='./output')
+    parser.add_argument("--id", type=str, help="the Docker container ID to run in")
     parser.add_argument("project", type=str, help="the GitHub project URL")
     parser.add_argument("command", type=str, help="the command to run the test")
 
     args = parser.parse_args()
-    start(args.image, args.dependency, args.project, args.command, args.path)
+    start(args.image, args.dependency, args.project, args.command, args.path, args.id)
