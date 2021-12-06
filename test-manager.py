@@ -18,6 +18,8 @@ from docker.models.containers import Container
 
 SCRIPT_FOLDER = "bash"
 BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "install_basic_dependency.sh"
+TEST_RUNNER_SCRIPT = "test-runner.py"
+TEST_RUNNER_DEPENDENCY_FILE = "requirements.txt"
 LIBFAKETIME_DOWNLOAD_SCRIPT = "download_libfaketime.sh"
 THIS_PROJECT_URL = "https://github.com/polohan/No-Time-To-Flake"
 THIS_PROJECT_FOLDER = "tool"
@@ -182,10 +184,22 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     _install_faketime(container)
     print("libfaketime installed.")
     
-    # download projects
+
+    # copy other necessary file
+    this_project_path_in_container = os.path.join(project_folder, THIS_PROJECT_FOLDER)
+    _run_cmds(container, ["mkdir", THIS_PROJECT_FOLDER], project_folder)
+
+    file_name = TEST_RUNNER_SCRIPT
+    file_path = os.path.join('./', file_name)
+    _copy_file(container, file_path, this_project_path_in_container)
+
+    file_name = TEST_RUNNER_DEPENDENCY_FILE
+    file_path = os.path.join('./', file_name)
+    _copy_file(container, file_path, this_project_path_in_container)
+    _run_cmds(container, ["pip", "install", "-r", "requirements.txt"], this_project_path_in_container)
+
+    # download project
     print("Downloading projects from GitHub.")
-    _run_cmds(container, ["git", "clone", THIS_PROJECT_URL, THIS_PROJECT_FOLDER], project_folder)
-    _run_cmds(container, ["pip", "install", "-r", "requirements.txt"], os.path.join(project_folder, THIS_PROJECT_FOLDER))
     _run_cmds(container, ["git", "clone", target_project_url, TARGET_PROJECT_FOLDER], project_folder)
     print("Projects downloaded.")
 
