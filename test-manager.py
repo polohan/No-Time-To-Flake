@@ -89,21 +89,17 @@ def _run_cmds(container: Container, commands: List[str], workdir: str = None, st
         pipe (FileIO, None): a file-like object to stream the output to. Default to None
         force_stdout (bool): whether to also print to stdout when pipe is not None.
     """
-    exit_code, output = container.exec_run(commands, privileged=True, socket=stream, workdir=workdir)
+    exit_code, output = container.exec_run(commands, privileged=True, stream=stream, workdir=workdir)
     if not stream:
         if exit_code != 0:
             print(output.decode(), end="")
             raise Exception(f"exec_run exits with non-zero exit code: {exit_code}")
     else:
-        while output.readable:
-            line = output.readline()
-            if line == b'':
-                break
+        for data in output:
             try:
-                decoded_data = line.decode('utf-8')
+                decoded_data = data.decode()
             except UnicodeDecodeError:
-                decoded_data = line
-
+                decoded_data = data
             if pipe:
                 print(decoded_data, end="", file=pipe)
                 if force_stdout:
