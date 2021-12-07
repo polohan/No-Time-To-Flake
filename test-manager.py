@@ -239,14 +239,14 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     
     return container
 
-def run_test(container: Container, command: str, faketime: str = '', switch: List[str] = None, timezone: str = '', project_folder: str = '/home', output_file: str = '', overwrite: bool = False) -> None:
+def run_test(container: Container, command: str, faketime: str = '', switch: str = None, timezone: str = '', project_folder: str = '/home', output_file: str = '', overwrite: bool = False) -> None:
     """Run a single test run in the container.
 
     Args:
         container (Container): the target container to run the test in
         command (str): the command to start the test for target project
         faketime (str, optional): the faketime format string. Defaults to '' if using actual time.
-        switch (List[str], optional): times to switch between. Defaults to None.
+        switch (str, optional): the signifier in test output to reset the time. Defaults to None.
         timezone (str, optional): the TZ timezone string. Defaults to '' if using actual timezone.
         project_folder (str, optional): the folder that contains the target project and tool. Defaults to '/home'.
         output_file (str, optional): the path of the file to write the output to.
@@ -262,13 +262,20 @@ def run_test(container: Container, command: str, faketime: str = '', switch: Lis
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         write_pipe = open(output_file, 'w', encoding="utf-8")
 
-    _run_cmds(container, ['python3',
-                            os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
-                            '-f', faketime,
-                            '-tz', timezone
-                        ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
+    if not switch:
+        _run_cmds(container, ['python3',
+                                os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
+                                '-f', faketime,
+                                '-tz', timezone
+                            ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
+    else:
+        _run_cmds(container, ['python3',
+                                os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
+                                '-e', switch,
+                                '-tz', timezone
+                            ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
 
-def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str, container_id: str = '') -> None:
+def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str, switch: str = 'UNSPECIFIED', container_id: str = '') -> None:
     """Start the whole test process
 
     Args:
@@ -324,15 +331,19 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
     for factor in increment_factors:
         run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-inc-{factor}i.out'), faketime=f'+0 i{factor}.0')
 
+    # switching runs
+    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-switch.out'), switch=switch)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
     parser.add_argument("-i", "--image", type=str, help="the Docker image URL", default="ubuntu:20.04")
     parser.add_argument("-d", "--dependency", type=str,
         help="the path to the files that contains the commands necessary to install all dependencies and the project")
+    parser.add_argument("-e", "--ending", type=str, help="the signifier in test output to reset the time")
     parser.add_argument("-p", "--path", type=str, help='the folder to put the output file in', default='./output')
     parser.add_argument("--id", type=str, help="the Docker container ID to run in")
     parser.add_argument("project", type=str, help="the GitHub project URL")
     parser.add_argument("command", type=str, help="the command to run the test")
 
     args = parser.parse_args()
-    start(args.image, args.dependency, args.project, args.command, args.path, args.id)
+    start(args.image, args.dependency, args.project, args.command, args.path, args.ending, args.id)
