@@ -106,16 +106,6 @@ def _run_cmds(container: Container, commands: List[str], workdir: str = None, st
                     print(decoded_data, end="")
             else:
                     print(decoded_data, end="")
-        
-def _test_faketime_compatibility(container: Container) -> bool:
-    """Test whether the faketime will hang in this container.
-
-    Args:
-        container (Container): the container to run the test on
-
-    Returns:
-        bool: whether the faketime test hang or not
-    """
 
 def _install_faketime(container: Container, workdir: str = '/') -> None:
     """Install libfaketime in this container.

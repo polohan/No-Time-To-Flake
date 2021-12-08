@@ -25,7 +25,7 @@ def _test_runner_simple(command, faketime, timezone, output_file_name):
     if faketime:
         test_env["LD_PRELOAD"] = LD_PRELOAD_VAL
         test_env["FAKETIME"] = faketime
-        test_env["FAKETIME_DONT_FAKE_MONOTONIC"] = 1
+        test_env["FAKETIME_DONT_FAKE_MONOTONIC"] = "1"
     if timezone:
         test_env["TZ"] = timezone
 
@@ -43,7 +43,7 @@ def _test_runner_switch(command, switch, timezone, output_file_name):
     test_env = os.environ.copy()
     test_env["LD_PRELOAD"] = LD_PRELOAD_VAL_MT
     test_env["FAKETIME_NO_CACHE"] = "1"
-    test_env["FAKETIME_DONT_FAKE_MONOTONIC"] = 1
+    test_env["FAKETIME_DONT_FAKE_MONOTONIC"] = "1"
     if timezone:
         test_env["TZ"] = timezone
 
