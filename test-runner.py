@@ -53,7 +53,7 @@ def _test_runner_switch(command, switch, timezone, output_file_name):
     with open(os.path.join(LOG_FILE_DIR, output_file_name), 'w') as f, subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, env=test_env, bufsize=1) as process:
         while process.poll() is None:
             line = process.stdout.readline()
-            if line[:len(switch)] == switch:
+            if switch in line:
                 _reset_faketime(faketime=f'@{curr_year}-12-31 23:59:59')
             print(line, end='', flush=True)
             print(line, end='', file=f)
