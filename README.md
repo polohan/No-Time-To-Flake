@@ -15,8 +15,7 @@ to install required packages.
 ## Usage
 ### test-manager.py
 ```
-usage: test-manager.py [-h] [-i IMAGE] [-d DEPENDENCY] [-e ENDING] [-p PATH] [--id ID]
-                       project command
+usage: test-manager.py [-h] [-i IMAGE] [-d DEPENDENCY] [-p PATH] [--id ID] project command
 
 Run command at different time and in different timezone.
 
@@ -31,8 +30,6 @@ optional arguments:
   -d DEPENDENCY, --dependency DEPENDENCY
                         the path to the files that contains the commands necessary to install all
                         dependencies and the project
-  -e ENDING, --ending ENDING
-                        the signifier in test output to reset the time
   -p PATH, --path PATH  the folder to put the output file in
   --id ID               the Docker container ID to run in
 ```
@@ -41,7 +38,7 @@ Additionally, test.runner.py can be use as a stand-alone tool to run a command w
 ### test-runner.py
 faketime string's format can be found in faketime's GitHub repo.
 ```
-usage: test-runner.py [-h] (-f FAKETIME | -e ENDING) [-p PRELOAD] [-tz TIMEZONE] command
+usage: test-runner.py [-h] -f FAKETIME [-p PRELOAD] [-tz TIMEZONE] [--no-cache] command
 
 Run command at different time and in different timezone.
 
@@ -52,12 +49,11 @@ optional arguments:
   -h, --help            show this help message and exit
   -f FAKETIME, --faketime FAKETIME
                         the faketime string
-  -e ENDING, --ending ENDING
-                        the signifier in test output to reset the time
   -p PRELOAD, --preload PRELOAD
                         path to the faketime preload library
   -tz TIMEZONE, --timezone TIMEZONE
                         timezone to run the command in
+  --no-cache            disable libfaketime's caching
 ```
 ## Example usage
 ### test-manager.py
