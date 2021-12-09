@@ -20,12 +20,12 @@ SCRIPT_FOLDER = "bash"
 BASIC_DEPENDENCY_INSTALLATION_SCRIPT = "install_basic_dependency.sh"
 TEST_RUNNER_SCRIPT = "test-runner.py"
 TEST_RUNNER_DEPENDENCY_FILE = "requirements.txt"
-LIBFAKETIME_DOWNLOAD_SCRIPT = "download_libfaketime.sh"
 THIS_PROJECT_URL = "https://github.com/polohan/No-Time-To-Flake"
+LIBFAKETIME_PROJECT_URL = "https://github.com/polohan/libfaketime"
 THIS_PROJECT_FOLDER = "tool"
 RUNNER_SCRIPT = "test-runner.py"
 TARGET_PROJECT_FOLDER = "target"
-LIBFAKETIME_FOLDER = "libfaketime-0.9.9"
+LIBFAKETIME_FOLDER = "libfaketime"
 
 def _create_container(image_url: str) -> Container:
     """Create the Docker container to run the test sequence in.
@@ -117,11 +117,8 @@ def _install_faketime(container: Container, workdir: str = '/') -> None:
         workdir (str): the working directory to use when installing libfaketime
     """
     # download and unzip library
-    file_name = LIBFAKETIME_DOWNLOAD_SCRIPT
-    file_path = os.path.join(SCRIPT_FOLDER, LIBFAKETIME_DOWNLOAD_SCRIPT)
-    _copy_file(container, file_path, workdir)
-    dependency_cmd = ["bash", "-e", file_name, workdir]
-    _run_cmds(container, dependency_cmd)
+    dependency_cmd = ["git", "clone", LIBFAKETIME_PROJECT_URL, LIBFAKETIME_FOLDER]
+    _run_cmds(container, dependency_cmd, workdir)
 
     # run make test and wait to see if it hangs
     def _handler(signum, frame):
@@ -189,7 +186,6 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     print("Installing libfaketime.")
     _install_faketime(container)
     print("libfaketime installed.")
-    
 
     # copy other necessary file
     this_project_path_in_container = os.path.join(project_folder, THIS_PROJECT_FOLDER)
@@ -225,7 +221,7 @@ def prepare_container(image_url: str, dependency_file: str, target_project_url: 
     
     return container
 
-def run_test(container: Container, command: str, faketime: str = '', switch: str = None, timezone: str = '', project_folder: str = '/home', output_file: str = '', overwrite: bool = False) -> None:
+def run_test(container: Container, command: str, faketime: str = '', timezone: str = '', project_folder: str = '/home', output_file: str = '', overwrite: bool = False) -> None:
     """Run a single test run in the container.
 
     Args:
@@ -248,20 +244,13 @@ def run_test(container: Container, command: str, faketime: str = '', switch: str
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         write_pipe = open(output_file, 'w', encoding="utf-8")
 
-    if not switch:
-        _run_cmds(container, ['python3',
-                                os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
-                                '-f', faketime,
-                                '-tz', timezone
-                            ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
-    else:
-        _run_cmds(container, ['python3',
-                                os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
-                                '-e', switch,
-                                '-tz', timezone
-                            ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
+    _run_cmds(container, ['python3',
+                            os.path.join('../', THIS_PROJECT_FOLDER, RUNNER_SCRIPT),
+                            '-f', faketime,
+                            '-tz', timezone
+                        ] + [command], target_project_path, True, pipe=write_pipe, force_stdout=True)
 
-def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str, switch: str = 'UNSPECIFIED', container_id: str = '') -> None:
+def start(image_url: str, dependency_file: str, target_project_url: str, command: str, output_path: str, container_id: str = '') -> None:
     """Start the whole test process
 
     Args:
@@ -318,18 +307,18 @@ def start(image_url: str, dependency_file: str, target_project_url: str, command
         run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-fake-inc-{factor}i.out'), faketime=f'+0 i{factor}.0')
 
     # switching runs
-    run_test(container, command, output_file=os.path.join(output_path, target_project_name, 'test-switch.out'), switch=switch)
+    for gap in range(1, 21):
+        run_test(container, command, output_file=os.path.join(output_path, target_project_name, f'test-switch-{gap}.out'), faketime=f's {gap}')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Run command at different time and in different timezone.')
     parser.add_argument("-i", "--image", type=str, help="the Docker image URL", default="ubuntu:20.04")
     parser.add_argument("-d", "--dependency", type=str,
         help="the path to the files that contains the commands necessary to install all dependencies and the project")
-    parser.add_argument("-e", "--ending", type=str, help="the signifier in test output to reset the time")
     parser.add_argument("-p", "--path", type=str, help='the folder to put the output file in', default='./output')
     parser.add_argument("--id", type=str, help="the Docker container ID to run in")
     parser.add_argument("project", type=str, help="the GitHub project URL")
     parser.add_argument("command", type=str, help="the command to run the test")
 
     args = parser.parse_args()
-    start(args.image, args.dependency, args.project, args.command, args.path, args.ending, args.id)
+    start(args.image, args.dependency, args.project, args.command, args.path, args.id)
